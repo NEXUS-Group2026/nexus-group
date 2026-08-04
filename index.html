@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>株式会社NEXUS｜ホッとルーム・子ども探究大学・探究開花｜文京区本郷</title>
-<meta name="description" content="文京区本郷。不登校支援フリースクール「ホッとルーム」、探究学習塾「子ども探究大学」、文理対応・総合型選抜対策塾「探究開花」。9:00〜20:30まで、お子様の状況に合わせた3つの学びの場を提供します。">
+<title>株式会社NEXUS｜ホッとルーム・子ども探究大学・総合型選抜対策塾｜文京区本郷</title>
+<meta name="description" content="文京区本郷。不登校支援フリースクール「ホッとルーム」、探究学習塾「子ども探究大学」、総合型選抜対策塾。9:00〜20:30まで、お子様の状況に合わせた3つの学びの場を提供します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
   --tanq-p:#EAF0FA;
   --tanq-d:#1F3E78;
 
-  --kaika:#283C65;     /* 探究開花 */
+  --kaika:#283C65;     /* 総合型選抜対策塾 */
   --kaika-p:#E7EBF3;
   --kaika-d:#182640;
 
@@ -67,21 +67,22 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 }
 .hero-bg{position:absolute;inset:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;inset:0;background:rgba(26,24,24,.6);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,24,.55) 0%,rgba(26,24,24,.35) 50%,rgba(26,24,24,.65) 100%);}
 .hero-inner{position:relative;z-index:2;text-align:center;max-width:900px;}
-.hero-logo{font-size:clamp(32px,5vw,48px);color:#fff;margin-bottom:8px;font-weight:700;}
-.hero-subtitle{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:50px;letter-spacing:.05em;}
+.hero-logo{font-size:clamp(32px,5vw,52px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.4);}
+.hero-subtitle{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:50px;letter-spacing:.05em;text-shadow:0 1px 8px rgba(0,0,0,.5);}
 .hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px;}
 .hero-brand-card{
-  background:rgba(255,255,255,.95);padding:28px 20px;border-radius:4px;
+  background:rgba(255,255,255,.96);padding:28px 20px;border-radius:6px;
   transition:transform .3s,box-shadow .3s;text-decoration:none;cursor:pointer;
-  border-top:4px solid var(--amber);
+  border-top:4px solid var(--amber);box-shadow:0 6px 24px rgba(0,0,0,.15);
 }
-.hero-brand-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.2);}
+.hero-brand-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.25);}
 .hbc-icon{font-size:32px;margin-bottom:12px;}
-.hbc-name{font-size:18px;color:var(--ink);margin-bottom:8px;font-weight:700;}
+.hbc-name{font-size:18px;color:var(--ink);margin-bottom:4px;font-weight:700;}
+.hbc-sub{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:10px;letter-spacing:.04em;}
 .hbc-time{font-size:13px;color:var(--soft);letter-spacing:.03em;}
-.hero-cta{font-size:clamp(20px,4vw,32px);color:#fff;font-weight:700;line-height:1.6;}
+.hero-cta{font-size:clamp(20px,4vw,32px);color:#fff;font-weight:700;line-height:1.6;text-shadow:0 2px 16px rgba(0,0,0,.5);}
 
 @media(max-width:900px){
   .hero-brands{grid-template-columns:1fr;gap:16px;}
@@ -258,7 +259,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="brands">
         <span>ホッとルーム</span>
         <span>子ども探究大学</span>
-        <span>探究開花</span>
+        <span>総合型選抜対策塾</span>
       </div>
     </div>
     <nav class="nav-links">
@@ -273,26 +274,29 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img src="images/hero-section.jpg" alt="NEXUSの3つの教室"></div>
+  <div class="hero-bg"><img src="images/hero-future.jpg" alt="世界を見つめる子どもたち"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner wrap">
     <div class="hero-logo serif">NEXUSの教育</div>
-    <p class="hero-subtitle">長い教師歴が様々な教育を形をプロデュース</p>
+    <p class="hero-subtitle">長い教師歴が、様々な教育の形をプロデュース</p>
     
     <div class="hero-brands">
       <a href="hottroom.html" class="hero-brand-card">
         <div class="hbc-icon">❤️</div>
         <div class="hbc-name serif">ホッとルーム</div>
+        <div class="hbc-sub">不登校支援</div>
         <div class="hbc-time">9:00-15:30</div>
       </a>
       <a href="kodomotankyu.html" class="hero-brand-card">
         <div class="hbc-icon">💡</div>
         <div class="hbc-name serif">子ども探究大学</div>
+        <div class="hbc-sub">探究学習塾</div>
         <div class="hbc-time">16:00-18:50</div>
       </a>
       <a href="#contact" class="hero-brand-card">
         <div class="hbc-icon">🎓</div>
         <div class="hbc-name serif">総合型選抜対策塾</div>
+        <div class="hbc-sub">大学受験</div>
         <div class="hbc-time">17:00-20:30</div>
       </a>
     </div>
@@ -324,7 +328,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="tl-seg gap" style="width:1.4%"></div>
       <div class="tl-seg tanq" style="width:13.1%;opacity:.85"><span class="seg-label">少・青</span></div>
       <div class="tl-seg gap" style="width:1.4%"></div>
-      <div class="tl-seg kaika" style="flex:1"><span class="seg-label">探究開花</span></div>
+      <div class="tl-seg kaika" style="flex:1"><span class="seg-label">総合型選抜</span></div>
     </div>
 
     <!-- Hour markers -->
@@ -366,7 +370,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       </div>
       <div class="tl-row kaika">
         <div class="col-time">19:00 — 20:30</div>
-        <div class="col-brand">探究開花</div>
+        <div class="col-brand">総合型選抜対策塾</div>
         <div class="col-desc">中高生対象。文理対応の総合型選抜対策。探究活動の整理から志望理由書・面接まで一貫サポート。</div>
       </div>
     </div>
@@ -410,12 +414,12 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <a href="kodomotankyu.html" class="bc-link serif">詳しく見る →</a>
       </div>
 
-      <!-- 探究開花 -->
+      <!-- 総合型選抜対策塾 -->
       <div class="brand-card kaika">
         <div class="bc-tag">文理対応・総合型選抜対策塾</div>
-        <div class="bc-name serif">探究開花</div>
+        <div class="bc-name serif">総合型選抜対策塾</div>
         <div class="bc-time">平日 19:00〜20:30</div>
-        <img src="images/kaika-evening.jpg" alt="探究開花の夜の授業風景" class="bc-img">
+        <img src="images/kaika-evening.jpg" alt="総合型選抜対策塾の夜の授業風景" class="bc-img">
         <p class="bc-lead">文系も、理系も。探究を進路へ。中高生の「やってきたこと」を整理して、志望理由書・活動報告・面接に仕上げる。自分の探究を、合格につながる力へ。</p>
         <div class="bc-tags">
           <span>中学生・高校生</span><span>総合型選抜</span><span>志望理由書・面接</span>
@@ -537,7 +541,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     <div class="foot-grid">
       <div>
         <div class="foot-brand">株式会社 NEXUS</div>
-        <div class="foot-brands">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>探究開花（文理対応・総合型選抜対策塾）</div>
+        <div class="foot-brands">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>総合型選抜対策塾（文理対応）</div>
         <p style="font-size:13px;">文京区本郷 ／ 2026年10月1日 開校予定<br>nexusgroup.daihyou@gmail.com</p>
       </div>
       <div class="foot-col">
@@ -545,7 +549,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <ul>
           <li><a href="hottroom.html">ホッとルーム</a></li>
           <li><a href="kodomotankyu.html">子ども探究大学</a></li>
-          <li><a href="tankyukaika.html">探究開花</a></li>
+          <li><a href="tankyukaika.html">総合型選抜対策塾</a></li>
         </ul>
       </div>
       <div class="foot-col">
