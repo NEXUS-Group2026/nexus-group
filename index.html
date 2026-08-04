@@ -63,27 +63,27 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 
 /* ======= HERO ======= */
 .hero{
-  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:flex-start;
   overflow:hidden;padding:60px 0;
 }
 .hero-bg{position:absolute;inset:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,24,.55) 0%,rgba(26,24,24,.35) 50%,rgba(26,24,24,.65) 100%);}
-.hero-inner{position:relative;z-index:2;text-align:center;max-width:900px;}
-.hero-logo{font-size:clamp(32px,5vw,52px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.4);}
-.hero-subtitle{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:50px;letter-spacing:.05em;text-shadow:0 1px 8px rgba(0,0,0,.5);}
-.hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,24,24,.72) 0%,rgba(26,24,24,.5) 40%,rgba(26,24,24,.15) 100%);}
+.hero-inner{position:relative;z-index:2;text-align:left;max-width:660px;margin-left:0;}
+.hero-logo{font-size:clamp(30px,4.4vw,48px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.45);}
+.hero-subtitle{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:40px;letter-spacing:.05em;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+.hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
 .hero-brand-card{
-  background:rgba(255,255,255,.96);padding:28px 20px;border-radius:6px;
+  background:rgba(255,255,255,.96);padding:24px 14px;border-radius:6px;
   transition:transform .3s,box-shadow .3s;text-decoration:none;cursor:pointer;
-  border-top:4px solid var(--amber);box-shadow:0 6px 24px rgba(0,0,0,.15);
+  border-top:4px solid var(--amber);box-shadow:0 6px 24px rgba(0,0,0,.18);text-align:center;
 }
 .hero-brand-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.25);}
-.hbc-icon{font-size:32px;margin-bottom:12px;}
-.hbc-name{font-size:18px;color:var(--ink);margin-bottom:4px;font-weight:700;}
-.hbc-sub{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:10px;letter-spacing:.04em;}
-.hbc-time{font-size:13px;color:var(--soft);letter-spacing:.03em;}
-.hero-cta{font-size:clamp(20px,4vw,32px);color:#fff;font-weight:700;line-height:1.6;text-shadow:0 2px 16px rgba(0,0,0,.5);}
+.hbc-icon{font-size:28px;margin-bottom:10px;}
+.hbc-name{font-size:16px;color:var(--ink);margin-bottom:4px;font-weight:700;}
+.hbc-sub{font-size:11.5px;color:var(--amber);font-weight:600;margin-bottom:8px;letter-spacing:.03em;}
+.hbc-time{font-size:12.5px;color:var(--soft);letter-spacing:.02em;}
+.hero-cta{font-size:clamp(20px,3.4vw,30px);color:#fff;font-weight:700;line-height:1.5;text-shadow:0 2px 16px rgba(0,0,0,.55);}
 
 @media(max-width:900px){
   .hero-brands{grid-template-columns:1fr;gap:16px;}
@@ -396,7 +396,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <div class="bc-name serif">ホッとルーム</div>
         <div class="bc-time">平日 9:30〜15:30 ／ 第1部・第2部</div>
         <img src="images/hot-warm.jpg" alt="ホッとルームで子どもと大人が寄り添う様子" class="bc-img">
-        <p class="bc-lead"><strong>お子さんが「疲れていた」だけなら、ここで回復できます。</strong></p>
         <p class="bc-desc">学校に登校できていないお子さんを否定しません。責めません。成績を急かしません。まずは安心できる関係をつくることから始めます。自分のペースで過ごし、やりたいことが見つかったら探究する。そんな自由な時間をつくります。</p>
         <div class="bc-tags">
           <span>年長〜高校生</span><span>個別ペース</span><span>親の相談OK</span>
