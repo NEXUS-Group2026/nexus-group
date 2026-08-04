@@ -3,850 +3,562 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexus Group | 教育で、人と組織を動かす。</title>
+<title>株式会社NEXUS｜ホッとルーム・子ども探究大学・探究開花｜文京区本郷</title>
+<meta name="description" content="文京区本郷。不登校支援フリースクール「ホッとルーム」、探究学習塾「子ども探究大学」、文理対応・総合型選抜対策塾「探究開花」。9:00〜20:30まで、お子様の状況に合わせた3つの学びの場を提供します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/* ======= TOKENS ======= */
 :root{
-  --teal:#0d6e6e;
-  --teal-light:#e6f4f4;
-  --teal-mid:#1a9090;
-  --navy:#1a2e44;
-  --gold:#c17f2a;
-  --gold-light:#fdf3e3;
-  --ink:#1c1c1a;
-  --ink-mid:#4a4a47;
-  --ink-soft:#888884;
-  --paper:#fafaf7;
-  --paper-warm:#f4f2ed;
-  --rule:rgba(28,28,26,0.1);
-  --white:#fff;
+  --bg:#FDFAF5;
+  --white:#FFFFFF;
+  --ink:#1A1818;
+  --soft:#6B6560;
+  --line:#E5DED4;
+
+  --hot:#5E8C6A;       /* ホッとルーム */
+  --hot-p:#F0F7F2;
+  --hot-d:#3A5E45;
+
+  --tanq:#3560A8;      /* 子ども探究大学 */
+  --tanq-p:#EAF0FA;
+  --tanq-d:#1F3E78;
+
+  --kaika:#283C65;     /* 探究開花 */
+  --kaika-p:#E7EBF3;
+  --kaika-d:#182640;
+
+  --amber:#B8893C;
+  --amber-p:#FDF5E7;
 }
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.7;overflow-x:hidden}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;font-size:15px;overflow-x:hidden;}
+.serif{font-family:'Shippori Mincho',serif;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:66px;background:rgba(250,250,247,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.nav-logo{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:600;letter-spacing:0.14em;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px}
-.nav-logo-dot{width:8px;height:8px;background:var(--teal);border-radius:50%}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{font-size:12px;letter-spacing:0.06em;color:var(--ink-mid);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--teal)}
-.nav-cta{background:var(--teal);color:#fff;font-size:11px;letter-spacing:0.1em;padding:9px 22px;text-decoration:none;border-radius:2px;transition:background .2s}
-.nav-cta:hover{background:var(--teal-mid)}
+/* ======= HEADER ======= */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:16px 0;
+  transition:background .35s,box-shadow .35s,padding .35s;
+}
+header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1140px;margin:0 auto;padding:0 28px;}
+.brand{color:#fff;font-size:15px;font-weight:700;letter-spacing:.06em;display:flex;flex-direction:column;gap:4px;line-height:1.2;}
+.brand .co{font-size:11px;opacity:.7;font-weight:400;letter-spacing:.1em;}
+.brand .brands{display:flex;gap:10px;font-size:12px;font-weight:400;}
+.brand .brands span{opacity:.85;}
+.brand .brands span::after{content:'｜';opacity:.4;margin-left:10px;}
+.brand .brands span:last-child::after{content:'';}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.04em;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{background:var(--amber);color:#fff;font-size:12.5px;font-weight:700;padding:10px 20px;border-radius:2px;letter-spacing:.04em;white-space:nowrap;}
+.nav-cta:hover{background:var(--amber-p);color:var(--amber);}
 
-/* HERO */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:66px}
-.hero-left{padding:72px 52px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule)}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:28px}
-.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--teal)}
-.hero-h1{font-family:'Noto Serif JP',serif;font-size:40px;font-weight:600;line-height:1.5;letter-spacing:0.02em;color:var(--navy);margin-bottom:8px}
-.hero-h1-sub{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:400;color:var(--ink-soft);letter-spacing:0.06em;margin-bottom:28px}
-.hero-lead{font-size:13px;color:var(--ink-mid);line-height:2;margin-bottom:40px;max-width:380px;padding-left:16px;border-left:3px solid var(--teal)}
-.hero-problems{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px}
-.hero-problem{background:var(--paper-warm);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
-.hero-problem-label{font-size:10px;letter-spacing:0.12em;color:var(--gold);margin-bottom:6px}
-.hero-problem-title{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:4px}
-.hero-problem-text{font-size:11px;color:var(--ink-soft);line-height:1.7}
-.hero-btns{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.btn-primary{background:var(--teal);color:#fff;font-size:12px;letter-spacing:0.08em;padding:13px 30px;text-decoration:none;border-radius:2px;transition:background .2s}
-.btn-primary:hover{background:var(--teal-mid)}
-.btn-secondary{font-size:12px;color:var(--ink-mid);text-decoration:none;display:flex;align-items:center;gap:6px;letter-spacing:0.04em}
-.btn-secondary::after{content:'→';font-size:14px}
+/* ======= HERO ======= */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:flex-end;
+  overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(26,24,24,.72) 0%,rgba(26,24,24,.5) 40%,rgba(26,24,24,.84) 100%);
+}
+.hero-inner{position:relative;z-index:2;padding-bottom:80px;width:100%;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:.18em;color:var(--amber);margin-bottom:22px;
+  border:1px solid rgba(184,137,60,.45);padding:7px 14px;border-radius:20px;
+}
+.hero h1{
+  font-family:'Shippori Mincho',serif;font-weight:800;
+  font-size:clamp(36px,5.2vw,70px);line-height:1.32;color:#fff;
+  margin-bottom:20px;letter-spacing:.02em;
+}
+.hero h1 em{font-style:normal;color:var(--amber);}
+.hero-sub{font-size:15.5px;color:rgba(255,255,255,.82);margin-bottom:40px;max-width:540px;font-weight:300;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-a{background:var(--amber);color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:2px;letter-spacing:.04em;transition:background .2s;}
+.btn-a:hover{background:#fff;color:var(--ink);}
+.btn-b{border:1px solid rgba(255,255,255,.55);color:#fff;font-size:14px;font-weight:500;padding:14px 28px;border-radius:2px;letter-spacing:.04em;transition:all .2s;}
+.btn-b:hover{background:#fff;color:var(--ink);}
 
-.hero-right{background:var(--navy);display:flex;flex-direction:column}
-.hero-right-top{flex:1;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid rgba(255,255,255,0.1)}
-.hero-catch{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:400;color:#fff;line-height:1.7;letter-spacing:0.04em;margin-bottom:20px}
-.hero-catch em{font-style:normal;color:#5fc9c9;border-bottom:1px solid #5fc9c9}
-.hero-catch-sub{font-size:12px;color:rgba(255,255,255,0.55);line-height:2}
-.hero-right-bottom{display:grid;grid-template-columns:1fr 1fr}
-.hero-stat{padding:24px 28px;border-right:1px solid rgba(255,255,255,0.08);border-top:1px solid rgba(255,255,255,0.08)}
-.hero-stat:last-child{border-right:none}
-.hero-stat-num{font-family:'Noto Serif JP',serif;font-size:28px;color:#fff;line-height:1;margin-bottom:6px}
-.hero-stat-num span{font-size:14px;color:#5fc9c9}
-.hero-stat-label{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.6}
 
-/* SECTION COMMON */
-section{border-top:1px solid var(--rule)}
-.section-inner{padding:72px 52px}
-.section-label{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
-.section-label::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
-.section-title{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:600;color:var(--navy);letter-spacing:0.04em;margin-bottom:14px;line-height:1.4}
-.section-body{font-size:13px;color:var(--ink-mid);line-height:2;max-width:600px;margin-bottom:48px}
+/* ======= TIMELINE ======= */
+.timeline{background:#fff;padding:80px 0;}
+.tl-head{text-align:center;margin-bottom:52px;}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--amber);text-transform:uppercase;}
+.eyebrow::before{content:'';flex-shrink:0;width:28px;height:1px;background:var(--amber);}
+.tl-head .eyebrow{justify-content:center;}
+.tl-head .eyebrow::before,.tl-head .eyebrow::after{content:'';width:28px;height:1px;background:var(--amber);}
+h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:var(--ink);font-weight:700;line-height:1.55;letter-spacing:.02em;}
 
-/* ISSUES */
-.issues-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.issue-card{border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.issue-header{background:var(--navy);padding:20px 24px;display:flex;align-items:center;gap:12px}
-.issue-num{font-family:'Noto Serif JP',serif;font-size:13px;color:var(--gold);letter-spacing:0.1em}
-.issue-title{font-size:15px;font-weight:500;color:#fff;letter-spacing:0.04em}
-.issue-body{padding:20px 24px;background:var(--white)}
-.issue-items{list-style:none;display:flex;flex-direction:column;gap:8px}
-.issue-items li{font-size:12px;color:var(--ink-mid);padding-left:14px;position:relative;line-height:1.7}
-.issue-items li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:1px;background:var(--teal)}
-.issue-arrow{text-align:center;font-size:22px;color:var(--ink-soft);margin:8px 0}
-.issue-resolve{background:var(--teal-light);border:1px solid var(--teal);border-radius:6px;padding:14px 20px;text-align:center;font-size:13px;font-weight:500;color:var(--teal);letter-spacing:0.06em}
+/* Visual bar */
+.tl-bar{
+  display:flex;height:54px;border-radius:4px;overflow:hidden;margin-bottom:36px;
+  gap:2px;background:var(--line);
+}
+.tl-seg{display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;position:relative;transition:filter .2s;}
+.tl-seg:hover{filter:brightness(1.1);}
+.tl-seg .seg-label{font-size:11px;font-weight:700;color:#fff;white-space:nowrap;letter-spacing:.03em;text-align:center;padding:0 6px;}
+.tl-seg.hot{background:var(--hot);}
+.tl-seg.tanq{background:var(--tanq);}
+.tl-seg.kaika{background:var(--kaika);}
+.tl-seg.gap{background:var(--line);cursor:default;}
+.tl-seg.gap:hover{filter:none;}
 
-/* SERVICES */
-.services-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.service-block{padding:32px 28px;border-right:1px solid var(--rule);display:flex;flex-direction:column}
-.service-block:last-child{border-right:none}
-.service-tag-pill{display:inline-block;background:var(--teal-light);color:var(--teal);font-size:10px;letter-spacing:0.1em;padding:3px 12px;border-radius:20px;margin-bottom:14px}
-.service-link{display:inline-block;margin-top:auto;padding-top:16px;font-size:11px;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal);padding-bottom:1px;letter-spacing:0.04em;width:fit-content}
-.service-name{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:12px;line-height:1.4}
-.service-items{list-style:none;display:flex;flex-direction:column;gap:7px}
-.service-items li{font-size:12px;color:var(--ink-mid);padding-left:16px;position:relative;line-height:1.7}
-.service-items li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-size:11px}
+/* Hour markers */
+.tl-markers{display:flex;position:relative;margin-bottom:40px;}
+.tl-mark{position:absolute;font-size:11px;color:var(--soft);transform:translateX(-50%);letter-spacing:.02em;}
 
-/* PRICING */
-.pricing-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
-.price-card{border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.price-card.recommended{border:2px solid var(--teal)}
-.price-header{padding:20px 24px;background:var(--paper-warm)}
-.price-header.dark{background:var(--navy)}
-.price-badge{display:inline-block;background:var(--gold);color:#fff;font-size:10px;letter-spacing:0.1em;padding:3px 12px;border-radius:2px;margin-bottom:10px}
-.price-name{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:4px}
-.price-name.white{color:#fff}
-.price-desc{font-size:11px;color:var(--ink-soft)}
-.price-desc.light{color:rgba(255,255,255,0.55)}
-.price-body{padding:24px}
-.price-free{background:var(--teal-light);border-radius:4px;padding:8px 14px;text-align:center;font-size:12px;color:var(--teal);font-weight:500;margin-bottom:16px;letter-spacing:0.04em}
-.price-free.gold{background:var(--gold-light);color:var(--gold)}
-.price-num{font-family:'Noto Serif JP',serif;font-size:32px;color:var(--navy);line-height:1;margin-bottom:4px}
-.price-num span{font-size:15px}
-.price-annual{font-size:12px;color:var(--ink-soft);margin-bottom:20px}
-.price-includes{list-style:none;display:flex;flex-direction:column;gap:8px}
-.price-includes li{font-size:12px;color:var(--ink-mid);padding-left:18px;position:relative;line-height:1.7}
-.price-includes li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-size:11px}
-.price-custom{background:var(--paper-warm);border:1px solid var(--rule);border-radius:6px;padding:16px 20px;font-size:12px;color:var(--ink-mid);line-height:1.8}
-.price-custom strong{color:var(--navy);font-weight:500}
+/* Detail rows */
+.tl-rows{display:flex;flex-direction:column;gap:3px;}
+.tl-row{
+  display:grid;grid-template-columns:120px 200px 1fr;align-items:center;
+  gap:0;border-radius:3px;overflow:hidden;
+  border:1px solid var(--line);
+}
+.tl-row .col-time{padding:16px 18px;font-size:13px;font-weight:700;letter-spacing:.03em;background:var(--bg);color:var(--soft);}
+.tl-row .col-brand{padding:16px 18px;font-weight:700;font-size:14px;color:#fff;}
+.tl-row .col-desc{padding:16px 20px;font-size:13px;color:var(--soft);background:#fff;}
+.tl-row.hot .col-brand{background:var(--hot);}
+.tl-row.tanq .col-brand{background:var(--tanq);}
+.tl-row.kaika .col-brand{background:var(--kaika);}
+.tl-row.gap-row .col-time{color:var(--line);}
+.tl-row.gap-row .col-brand{background:var(--bg);color:var(--soft);font-weight:400;font-size:12px;letter-spacing:.05em;}
+.tl-row.gap-row .col-desc{color:var(--line);}
 
-/* EFFECTS */
-.effects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.effect-card{padding:28px 20px;border-right:1px solid var(--rule);text-align:center}
-.effect-card:last-child{border-right:none}
-.effect-icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px}
-.effect-icon.teal{background:var(--teal-light)}
-.effect-icon.gold{background:var(--gold-light)}
-.effect-highlight{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:600;color:var(--teal);margin-bottom:6px}
-.effect-title{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:8px}
-.effect-text{font-size:11px;color:var(--ink-soft);line-height:1.8}
+/* ======= BRANDS ======= */
+.brands{padding:90px 0;background:var(--bg);}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;}
+.brand-card{background:#fff;padding:44px 36px 48px;position:relative;overflow:hidden;transition:transform .3s;}
+.brand-card:hover{transform:translateY(-4px);}
+.brand-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+.brand-card.hot::before{background:var(--hot);}
+.brand-card.tanq::before{background:var(--tanq);}
+.brand-card.kaika::before{background:var(--kaika);}
+.bc-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;padding:5px 12px;border-radius:20px;margin-bottom:20px;}
+.hot .bc-tag{background:var(--hot-p);color:var(--hot-d);}
+.tanq .bc-tag{background:var(--tanq-p);color:var(--tanq-d);}
+.kaika .bc-tag{background:var(--kaika-p);color:var(--kaika-d);}
+.bc-name{font-family:'Shippori Mincho',serif;font-size:26px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.bc-time{font-size:12px;color:var(--soft);margin-bottom:20px;letter-spacing:.04em;}
+.bc-img{width:100%;height:190px;object-fit:cover;border-radius:2px;margin-bottom:22px;}
+.bc-lead{font-size:14px;color:var(--soft);margin-bottom:22px;line-height:1.9;}
+.bc-desc{font-size:14px;color:var(--soft);margin-bottom:20px;line-height:1.95;}
+.bc-desc strong{font-weight:600;color:var(--hot);}
+.bc-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px;}
+.bc-tags span{font-size:11.5px;border:1px solid var(--line);padding:5px 11px;border-radius:20px;color:var(--soft);}
+.bc-link{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.05em;
+  padding:12px 22px;border-radius:2px;border:2px solid;transition:all .2s;
+}
+.hot .bc-link{border-color:var(--hot);color:var(--hot);}
+.hot .bc-link:hover{background:var(--hot);color:#fff;}
+.tanq .bc-link{border-color:var(--tanq);color:var(--tanq);}
+.tanq .bc-link:hover{background:var(--tanq);color:#fff;}
+.kaika .bc-link{border-color:var(--kaika);color:var(--kaika);}
+.kaika .bc-link:hover{background:var(--kaika);color:#fff;}
 
-/* STRENGTHS */
-.strengths-section{background:var(--navy)}
-.strengths-section .section-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.strengths-section .section-label{color:rgba(255,255,255,0.4)}
-.strengths-section .section-label::before{background:rgba(255,255,255,0.3)}
-.strengths-section .section-title{color:#fff}
-.strengths-section .section-body{color:rgba(255,255,255,0.55);margin-bottom:0}
-.strengths-right{display:flex;flex-direction:column;gap:0}
-.strength-item{padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08)}
-.strength-item:first-child{border-top:1px solid rgba(255,255,255,0.08)}
-.strength-num{font-size:10px;letter-spacing:0.14em;color:#5fc9c9;margin-bottom:6px}
-.strength-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:6px;letter-spacing:0.04em}
-.strength-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.85}
+/* ======= CLASSROOM ======= */
+.classroom{background:#fff;padding:90px 0;}
+.cl-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:52px;}
+.cl-photo{position:relative;overflow:hidden;aspect-ratio:4/3;}
+.cl-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.cl-photo:hover img{transform:scale(1.04);}
+.cl-cap{position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(transparent,rgba(26,24,24,.72));}
+.cl-cap p{color:#fff;font-size:13px;letter-spacing:.05em;}
+.cl-info{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.cl-stat{background:var(--bg);padding:34px 28px;}
+.cl-stat .num{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:700;color:var(--ink);}
+.cl-stat .num span{font-size:15px;font-family:'Noto Sans JP',sans-serif;font-weight:400;color:var(--soft);margin-left:4px;}
+.cl-stat p{font-size:13px;color:var(--soft);margin-top:8px;}
+.cl-access{background:var(--kaika);padding:34px 28px;}
+.cl-access .al{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:8px;}
+.cl-access p{color:#fff;font-size:14px;font-weight:500;line-height:1.9;}
 
-/* FLOW */
-.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-top:0}
-.flow-step{padding:28px 22px;border-right:1px solid var(--rule);position:relative}
-.flow-step:last-child{border-right:none}
-.flow-step::after{content:'→';position:absolute;right:-12px;top:32px;font-size:14px;color:var(--ink-soft);z-index:1}
-.flow-step:last-child::after{display:none}
-.flow-num{font-family:'Noto Serif JP',serif;font-size:28px;color:var(--teal-light);line-height:1;margin-bottom:10px;border-bottom:1px solid var(--rule);padding-bottom:10px}
-.flow-title{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:6px;letter-spacing:0.02em}
-.flow-text{font-size:11px;color:var(--ink-soft);line-height:1.8}
+/* ======= FOUNDER ======= */
+.founder{background:var(--bg);padding:90px 0;}
+.founder-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:center;}
+.founder-img{border-radius:3px;overflow:hidden;}
+.founder-img img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.founder-copy h3{font-family:'Shippori Mincho',serif;font-size:clamp(20px,2.4vw,28px);color:var(--ink);margin-bottom:24px;font-weight:700;line-height:1.6;}
+.founder-copy p{font-size:14px;color:var(--soft);margin-bottom:16px;line-height:1.95;}
+.founder-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+.founder-badges span{font-size:12px;border:1px solid var(--line);padding:7px 14px;border-radius:20px;color:var(--soft);}
 
-/* SUPPORT */
-.support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:0}
-.support-card{background:var(--paper-warm);border:1px solid var(--rule);border-radius:8px;padding:24px}
-.support-title{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
-.support-text{font-size:12px;color:var(--ink-mid);line-height:1.85}
+/* ======= FAQ ======= */
+.faq{background:#fff;padding:90px 0;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:50px;border-top:1px solid var(--line);}
+.fq{padding:28px 0;border-bottom:1px solid var(--line);}
+.fq:nth-child(odd){padding-right:48px;}
+.fq:nth-child(even){padding-left:48px;border-left:1px solid var(--line);}
+.fq h4{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--ink);margin-bottom:10px;font-weight:600;line-height:1.6;}
+.fq h4::before{content:'Q. ';color:var(--amber);}
+.fq p{font-size:13.5px;color:var(--soft);padding-left:20px;}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule)}
-.about-left{padding:64px 52px;border-right:1px solid var(--rule)}
-.about-right{padding:64px 52px;background:var(--paper-warm)}
-.about-name{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:600;color:var(--navy);margin-bottom:4px}
-.about-title{font-size:12px;color:var(--ink-soft);letter-spacing:0.06em;margin-bottom:20px}
-.about-text{font-size:13px;color:var(--ink-mid);line-height:2;margin-bottom:20px}
-.about-partner-label{font-size:10px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
-.about-career{margin-top:20px}
-.about-career-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
-.about-career-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:8px}
-.about-career-list li{font-size:12px;color:var(--ink-mid);padding-left:14px;position:relative;line-height:1.7}
-.about-career-list li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:1px;background:var(--teal)}
-.about-partner{background:var(--white);border:1px solid var(--rule);border-radius:6px;padding:16px 20px}
-.about-partner-name{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:4px}
-.about-partner-text{font-size:12px;color:var(--ink-soft);line-height:1.75}
+/* ======= CTA ======= */
+.cta{background:var(--kaika);padding:90px 0;text-align:center;}
+.cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,36px);color:#fff;margin-bottom:18px;font-weight:700;}
+.cta p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:38px;max-width:580px;margin-left:auto;margin-right:auto;}
+.cta .btn-a{display:inline-block;}
 
-/* CTA */
-.cta-band{background:var(--teal);border-top:none}
-.cta-band .section-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;padding:60px 52px}
-.cta-band .section-label{color:rgba(255,255,255,0.5);margin-bottom:12px}
-.cta-band .section-label::before{background:rgba(255,255,255,0.4)}
-.cta-band .section-title{color:#fff;margin-bottom:10px}
-.cta-band .section-body{color:rgba(255,255,255,0.75);margin-bottom:0}
-.cta-white{background:#fff;color:var(--teal);font-size:12px;font-weight:500;letter-spacing:0.1em;padding:15px 36px;text-decoration:none;border-radius:2px;white-space:nowrap;transition:opacity .2s}
-.cta-white:hover{opacity:.9}
+/* ======= FOOTER ======= */
+footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:48px;}
+.foot-brand{font-size:16px;color:#fff;font-weight:700;margin-bottom:10px;font-family:'Shippori Mincho',serif;}
+.foot-brands{font-size:12.5px;color:#7a7880;margin-bottom:14px;line-height:2;}
+.foot-col h5{font-size:12.5px;color:#fff;font-weight:600;letter-spacing:.06em;margin-bottom:16px;}
+.foot-col ul{list-style:none;}
+.foot-col li{font-size:13px;margin-bottom:9px;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr}
-.contact-left{padding:64px 52px;border-right:1px solid var(--rule)}
-.contact-right{padding:64px 52px;background:var(--paper-warm)}
-.contact-info{display:flex;flex-direction:column;gap:20px;margin-top:32px}
-.contact-info-item{}
-.contact-info-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
-.contact-info-value{font-size:13px;color:var(--ink-mid)}
-.form-group{margin-bottom:22px}
-.form-label{display:block;font-size:11px;letter-spacing:0.08em;color:var(--ink-mid);margin-bottom:8px}
-.form-input,.form-textarea{width:100%;border:none;border-bottom:1px solid var(--rule);background:transparent;font-family:'Noto Sans JP',sans-serif;font-size:13px;color:var(--ink);padding:10px 0;outline:none;transition:border-color .2s}
-.form-input:focus,.form-textarea:focus{border-bottom-color:var(--teal)}
-.form-textarea{height:90px;resize:none}
-.form-submit{width:100%;background:var(--teal);color:#fff;border:none;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:0.12em;padding:15px;cursor:pointer;margin-top:8px;border-radius:2px;transition:background .2s}
-.form-submit:hover{background:var(--teal-mid)}
+/* ======= REVEAL ======= */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.rv.in{opacity:1;transform:none;}
 
-/* FAQ */
-.faq-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);border-radius:8px;overflow:hidden}
-.faq-item{padding:22px 28px;border-bottom:1px solid var(--rule)}
-.faq-item:last-child{border-bottom:none}
-.faq-q{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:8px;display:flex;gap:12px}
-.faq-q::before{content:'Q.';color:var(--teal);flex-shrink:0}
-.faq-a{font-size:12px;color:var(--ink-mid);line-height:1.85;padding-left:26px}
-
-/* FOOTER */
-footer{border-top:1px solid var(--rule);padding:36px 52px;display:flex;align-items:center;justify-content:space-between}
-.footer-logo{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;letter-spacing:0.12em;color:var(--navy);display:flex;align-items:center;gap:8px}
-.footer-info{font-size:11px;color:var(--ink-soft);text-align:right;line-height:1.8}
-
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.hero-eyebrow{animation:fadeUp .6s ease both}
-.hero-h1{animation:fadeUp .6s .08s ease both}
-.hero-lead{animation:fadeUp .6s .16s ease both}
-.hero-btns{animation:fadeUp .6s .24s ease both}
-
-/* MOBILE */
+/* ======= RESPONSIVE ======= */
 @media(max-width:900px){
-  nav{padding:0 20px}
-  .nav-links{display:none}
-  .hero,.issues-grid,.services-wrap,.pricing-wrap,.strengths-section .section-inner,.about-grid,.contact-grid,.cta-band .section-inner{grid-template-columns:1fr}
-  .hero-left,.about-left,.contact-left{border-right:none;border-bottom:1px solid var(--rule)}
-  .hero-right-bottom,.effects-grid{grid-template-columns:1fr 1fr}
-  .flow-grid,.support-grid{grid-template-columns:1fr 1fr}
-  .section-inner,.hero-left,.about-left,.about-right,.contact-left,.contact-right{padding:48px 24px}
-  .cta-band .section-inner{padding:48px 24px}
-  footer{flex-direction:column;gap:16px;padding:28px 24px;text-align:center}
-  .footer-info{text-align:center}
+  .nav-links{display:none;}
+  .brands-grid{grid-template-columns:1fr;}
+  .cl-grid{grid-template-columns:1fr;}
+  .cl-info{grid-template-columns:1fr 1fr;}
+  .founder-grid{grid-template-columns:1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .fq:nth-child(even){padding-left:0;border-left:none;}
+  .fq:nth-child(odd){padding-right:0;}
+  .foot-grid{grid-template-columns:1fr;}
+  .tl-row{grid-template-columns:1fr;border-radius:3px;}
+  .tl-row .col-time{padding:10px 16px 4px;}
+  .tl-row .col-brand{padding:4px 16px 10px;}
+  .tl-row .col-desc{display:none;}
+  .tl-bar{display:none;}
+  .tl-markers{display:none;}
+}
+@media(max-width:600px){
+  .wrap{padding:0 18px;}
+  section,.timeline,.brands,.classroom,.founder,.faq,.cta{padding:64px 0;}
+  .brand .brands{display:none;}
+  .nav-cta{font-size:11.5px;padding:9px 14px;}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">
-    <span class="nav-logo-dot"></span>
-    Nexus Group
-  </a>
-
-  <ul class="nav-links">
-    <li><a href="#issues">課題と解決</a></li>
-    <li><a href="#services">サービス</a></li>
-    <li><a href="#about">代表について</a></li>
-    <li><a href="#contact">お問い合わせ</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">無料相談を申し込む</a>
-</nav>
+<header id="hdr">
+  <div class="nav">
+    <div class="brand">
+      <span class="co">株式会社 NEXUS</span>
+      <div class="brands">
+        <span>ホッとルーム</span>
+        <span>子ども探究大学</span>
+        <span>探究開花</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#timeline">時間割</a>
+      <a href="#brands">3つの学びの場</a>
+      <a href="#classroom">教室</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="soudan.html" class="nav-cta">無料相談</a>
+  </div>
+</header>
 
 <!-- HERO -->
-<section class="hero" style="border-top:none">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Education & Human Development</div>
-    <h1 class="hero-h1">「教育」で、<br>人と組織を<br>動かす。</h1>
-    <p class="hero-h1-sub">Nexus Group — 4つの事業領域</p>
-    <p class="hero-lead">福利厚生・個別学習支援・教育イベント派遣・教育コンサルティング。Nexus Groupは教育を軸に、施設・個人・法人・教育者のあらゆるニーズに応えます。</p>
-    <div class="hero-problems" style="grid-template-columns:1fr 1fr">
-      <div class="hero-problem">
-        <div class="hero-problem-label">事業 01</div>
-        <div class="hero-problem-title">福利厚生サービス</div>
-        <div class="hero-problem-text">あらゆる企業・事業所の人材定着を、子育て支援・研修で実現</div>
-      </div>
-      <div class="hero-problem">
-        <div class="hero-problem-label">事業 02</div>
-        <div class="hero-problem-title">令和のてらこや</div>
-        <div class="hero-problem-text">家庭教師・少人数塾で知・徳・体をトータルサポート</div>
-      </div>
-      <div class="hero-problem">
-        <div class="hero-problem-label">事業 03</div>
-        <div class="hero-problem-title">教育イベント派遣業</div>
-        <div class="hero-problem-text">英語・アート・伝統芸能など多彩な教育プログラムを法人へ派遣</div>
-      </div>
-      <div class="hero-problem">
-        <div class="hero-problem-label">事業 04</div>
-        <div class="hero-problem-title">教育コンサルティング</div>
-        <div class="hero-problem-text">授業づくり・カリキュラム編成を講師・教育者に伴走サポート</div>
-      </div>
-    </div>
+<section class="hero">
+  <div class="hero-bg"><img src="images/tanq-kids.jpg" alt="NEXUSの教室で学ぶ子どもたち"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-badge">文京区本郷 ／ 2026年10月1日 開校</div>
+    <h1 class="serif"><em>9:00</em>から<em>20:30</em>まで。<br>その子に合った<br>学びの場がある。</h1>
+    <p class="hero-sub">不登校支援フリースクール「ホッとルーム」、探究学習塾「子ども探究大学」、総合型選抜対策塾「探究開花」。3つの学びの場で、年長から高校生まで。</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">無料相談を申し込む</a>
-      <a href="#service-detail" class="btn-secondary">各サービスを見る</a>
+      <a href="soudan.html" class="btn-a">無料相談を申し込む</a>
+      <a href="#timeline" class="btn-b">一日の流れを見る</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-right-top">
-      <p class="hero-catch">
-        教育を、<br>
-        <em>もっと身近に。</em><br>
-        もっと本質的に。
-      </p>
-      <p class="hero-catch-sub">代表・奥村直之（教員歴16年）が設計した、現場発のサービスです。<br>施設・ご家庭・法人、いずれのご相談もお気軽にどうぞ。</p>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="timeline">
+  <div class="wrap">
+    <div class="tl-head rv">
+      <div class="eyebrow">DAILY SCHEDULE</div>
+      <h2 class="hl serif" style="margin-top:14px;">平日の一日で見るNEXUS</h2>
+      <p style="margin-top:14px;color:var(--soft);font-size:14px;">3つのサービスが、一つの教室で一日を通してつながっています。</p>
     </div>
-    <div class="hero-right-bottom">
-      <div class="hero-stat">
-        <div class="hero-stat-num"><span>4つの</span>事業</div>
-        <div class="hero-stat-label">福利厚生 / 個別学習 / イベント / コンサル</div>
+
+    <!-- Visual proportional bar -->
+    <div class="tl-bar rv" style="position:relative;">
+      <!-- 690 min total: 9:00-20:30 -->
+      <!-- hot1: 180/690=26.1%, gap:10/690=1.4%, hot2:180/690=26.1%, gap2:50/690=7.3%, tanq1:70/690=10.1%, gap3:10/690=1.4%, tanq2:90/690=13.1%, gap4:10/690=1.4%, kaika:90/690=13.1% -->
+      <div class="tl-seg hot" style="width:26.1%"><span class="seg-label">ホッとルーム①</span></div>
+      <div class="tl-seg gap" style="width:1.4%"></div>
+      <div class="tl-seg hot" style="width:26.1%;opacity:.85"><span class="seg-label">ホッとルーム②</span></div>
+      <div class="tl-seg gap" style="width:7.2%"><span style="font-size:10px;color:var(--soft);">準備</span></div>
+      <div class="tl-seg tanq" style="width:10.1%"><span class="seg-label">幼・少</span></div>
+      <div class="tl-seg gap" style="width:1.4%"></div>
+      <div class="tl-seg tanq" style="width:13.1%;opacity:.85"><span class="seg-label">少・青</span></div>
+      <div class="tl-seg gap" style="width:1.4%"></div>
+      <div class="tl-seg kaika" style="flex:1"><span class="seg-label">探究開花</span></div>
+    </div>
+
+    <!-- Hour markers -->
+    <div class="tl-markers rv" style="height:22px;position:relative;margin-bottom:32px;">
+      <span class="tl-mark" style="left:0%;transform:none;">9:00</span>
+      <span class="tl-mark" style="left:26.1%">12:00</span>
+      <span class="tl-mark" style="left:53.6%">15:10</span>
+      <span class="tl-mark" style="left:60.9%">16:00</span>
+      <span class="tl-mark" style="left:88.4%">19:00</span>
+      <span class="tl-mark" style="left:100%;transform:translateX(-100%);">20:30</span>
+    </div>
+
+    <!-- Detail rows -->
+    <div class="tl-rows rv">
+      <div class="tl-row hot">
+        <div class="col-time">9:00 — 12:00</div>
+        <div class="col-brand">ホッとルーム 第1部</div>
+        <div class="col-desc">不登校・登校渋りのお子様が、自分のペースで安心して過ごす時間。探究活動・学習サポート・休憩も自由に選べます。</div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num"><span>教員歴</span>16年</div>
-        <div class="hero-stat-label">代表自らが設計・統括</div>
+      <div class="tl-row hot">
+        <div class="col-time">12:10 — 15:10</div>
+        <div class="col-brand">ホッとルーム 第2部</div>
+        <div class="col-desc">午後も同じく、安心できる居場所として開室。保護者の状況に合わせて第1部・第2部を選べます。</div>
+      </div>
+      <div class="tl-row gap-row">
+        <div class="col-time">15:10 — 16:00</div>
+        <div class="col-brand">準　備　時　間</div>
+        <div class="col-desc"></div>
+      </div>
+      <div class="tl-row tanq">
+        <div class="col-time">16:00 — 17:10</div>
+        <div class="col-brand">子ども探究大学 幼・少年部</div>
+        <div class="col-desc">年長〜小学2年生対象。70分のコンパクトなプログラム。好奇心をくすぐるテーマで、遊び感覚の探究学習。</div>
+      </div>
+      <div class="tl-row tanq">
+        <div class="col-time">17:20 — 18:50</div>
+        <div class="col-brand">子ども探究大学 少・青年部</div>
+        <div class="col-desc">小学3年生〜中学生対象。90分の探究ゼミ。テーマを自分で選び、調査・制作・発表まで取り組みます。</div>
+      </div>
+      <div class="tl-row kaika">
+        <div class="col-time">19:00 — 20:30</div>
+        <div class="col-brand">探究開花</div>
+        <div class="col-desc">中高生対象。文理対応の総合型選抜対策。探究活動の整理から志望理由書・面接まで一貫サポート。</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE DETAIL: 福利厚生 -->
-<section id="service-detail" style="border-top:1px solid var(--rule)">
-  <div class="hero" style="min-height:auto;padding-top:0;border-top:none">
-    <div class="hero-left">
-      <div class="hero-eyebrow">Service 01 — 介護・医療・福祉施設向け</div>
-      <h2 class="hero-h1" style="font-size:32px">人材が定着する<br>施設へ。</h2>
-      <p class="hero-h1-sub">総合人材定着ソリューション</p>
-      <p class="hero-lead">子育て世代の離職と外国人スタッフの問題——この2つを1つのパッケージで同時解決します。窓口はNexus Group 1社のみ。</p>
-      <div class="hero-problems">
-        <div class="hero-problem">
-          <div class="hero-problem-label">子育て支援</div>
-          <div class="hero-problem-title">放課後学習・保護者相談</div>
-          <div class="hero-problem-text">週1回施設に出向き学習サポート。教育相談・メルマガ・特別プログラムも提供。</div>
-        </div>
-        <div class="hero-problem">
-          <div class="hero-problem-label">スタッフ研修</div>
-          <div class="hero-problem-title">外国人・マネジメント研修</div>
-          <div class="hero-problem-text">日本語・マナー・組織力向上・リーダーシップ研修を年4回実施。</div>
-        </div>
-      </div>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">無料相談を申し込む</a>
-        <a href="#contact" class="btn-secondary">詳細を問い合わせる</a>
-      </div>
+<!-- THREE BRANDS -->
+<section class="brands" id="brands">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">3 SERVICES</div>
+      <h2 class="hl serif" style="margin-top:14px;">不登校でも、退屈な学校生活でも。<br>その子に合った場所がある。</h2>
+      <p style="margin-top:14px;color:var(--soft);font-size:14px;max-width:620px;">NEXUSは3つのサービスで、お子さんの状況に寄り添います。親だけで抱え込まずに、まずは相談してください。</p>
     </div>
-    <div class="hero-right">
-      <div class="hero-right-top">
-        <p class="hero-catch">
-          職員1名が定着するだけで、<br>
-          <em>年間50〜100万円</em>の<br>
-          採用コストが削減できる。
-        </p>
-        <p class="hero-catch-sub">「子育て支援完備」と求人に明記できます。<br>採用競争力を高め、選ばれる施設へ。</p>
-      </div>
-      <div class="hero-right-bottom">
-        <div class="hero-stat">
-          <div class="hero-stat-num">最大<span>30〜40%</span></div>
-          <div class="hero-stat-label">離職率改善の期待値</div>
+    <div class="brands-grid rv" style="margin-top:52px;">
+
+      <!-- ホッとルーム -->
+      <div class="brand-card hot">
+        <div class="bc-tag">不登校支援フリースクール</div>
+        <div class="bc-name serif">ホッとルーム</div>
+        <div class="bc-time">平日 9:00〜15:10 ／ 第1部・第2部</div>
+        <img src="images/hot-warm.jpg" alt="ホッとルームで子どもと大人が寄り添う様子" class="bc-img">
+        <p class="bc-lead"><strong>お子さんが「疲れていた」だけなら、ここで回復できます。</strong></p>
+        <p class="bc-desc">学校に行きづらいお子さんを否定しません。責めません。成績を急かしません。まずは安心できる関係をつくることから始めます。自分のペースで過ごし、やりたいことが見つかったら探究する。そんな自由な時間をつくります。</p>
+        <div class="bc-tags">
+          <span>年長〜高校生</span><span>個別ペース</span><span>親の相談OK</span>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span>初月</span>無料</div>
-          <div class="hero-stat-label">ベーシックプランから始められる</div>
-        </div>
+        <a href="hottroom.html" class="bc-link serif">詳しく見る →</a>
       </div>
+
+      <!-- 子ども探究大学 -->
+      <div class="brand-card tanq">
+        <div class="bc-tag">探究学習塾</div>
+        <div class="bc-name serif">子ども探究大学</div>
+        <div class="bc-time">平日 16:00〜18:50 ／ 幼・少年部・少・青年部</div>
+        <img src="images/tanq-kids.jpg" alt="子ども探究大学の授業" class="bc-img">
+        <p class="bc-lead">「なんで？」という問いから始まる探究学習。テーマを自分で選び、仮説を立て、調査して、発表する。AIも道具として使いながら、知的好奇心を次のステップへ。</p>
+        <div class="bc-tags">
+          <span>年長〜中学生</span><span>少人数</span><span>探究・制作・発表</span>
+        </div>
+        <a href="kodomotankyu.html" class="bc-link serif">詳しく見る →</a>
+      </div>
+
+      <!-- 探究開花 -->
+      <div class="brand-card kaika">
+        <div class="bc-tag">文理対応・総合型選抜対策塾</div>
+        <div class="bc-name serif">探究開花</div>
+        <div class="bc-time">平日 19:00〜20:30</div>
+        <img src="images/kaika-evening.jpg" alt="探究開花の夜の授業風景" class="bc-img">
+        <p class="bc-lead">文系も、理系も。探究を進路へ。中高生の「やってきたこと」を整理して、志望理由書・活動報告・面接に仕上げる。自分の探究を、合格につながる力へ。</p>
+        <div class="bc-tags">
+          <span>中学生・高校生</span><span>総合型選抜</span><span>志望理由書・面接</span>
+        </div>
+        <a href="tankyukaika.html" class="bc-link serif">詳しく見る →</a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- SERVICE DETAIL: 令和のてらこや -->
-<section style="border-top:1px solid var(--rule)">
-  <div class="hero" style="min-height:auto;padding-top:0;border-top:none">
-    <div class="hero-left">
-      <div class="hero-eyebrow">Service 02 — 個人・ご家庭向け</div>
-      <h2 class="hero-h1" style="font-size:36px">令和のてらこや</h2>
-      <p class="hero-h1-sub">オーダーメイド型家庭教師・少人数塾</p>
-      <p class="hero-lead">幼稚園・学校・塾で伸び悩んでいるお子様、さらに学力を伸ばしたいお子様へ。英語ネイティブレベルの講師・AI講師も在籍。その子の発達段階に応じた、完全オーダーメイド教育をお届けします。</p>
-      <div class="hero-problems" style="grid-template-columns:1fr 1fr 1fr">
-        <div class="hero-problem">
-          <div class="hero-problem-label">家庭教師</div>
-          <div class="hero-problem-title">60分 10,000円〜</div>
-          <div class="hero-problem-text">週1からOK。マンツーマンで深く関わります。</div>
-        </div>
-        <div class="hero-problem">
-          <div class="hero-problem-label">少人数塾</div>
-          <div class="hero-problem-title">60分 12,000円〜</div>
-          <div class="hero-problem-text">週1からOK。仲間と切磋琢磨。</div>
-        </div>
-        <div class="hero-problem">
-          <div class="hero-problem-label">特別活動</div>
-          <div class="hero-problem-title">休日外出プログラム</div>
-          <div class="hero-problem-text">土日祝日／別料金。体験から学ぶ探究活動。</div>
-        </div>
-      </div>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">詳細・相談はこちら</a>
-      </div>
+<!-- CLASSROOM -->
+<section class="classroom" id="classroom">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">CLASSROOM</div>
+      <h2 class="hl serif" style="margin-top:14px;">文京区本郷の教室</h2>
     </div>
-    <div class="hero-right">
-      <div class="hero-right-top">
-        <p class="hero-catch">
-          知識・思考 ×<br>
-          非認知能力 ×<br>
-          <em>語学・AI教育</em>
-        </p>
-        <p class="hero-catch-sub">16年の教育経験とAIの融合。英会話・AI・知育の専門講師が勢ぞろい。<br>お子様一人ひとりに合わせた完全オーダーメイド教育をお届けします。</p>
+    <div class="cl-grid rv" style="margin-top:52px;">
+      <div class="cl-photo">
+        <img src="images/classroom-empty.jpg" alt="整えられた教室の様子">
+        <div class="cl-cap"><p>整えられた教室空間　— PC環境完備</p></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- 令和のてらこや 詳細 -->
-<section style="border-top:1px solid var(--rule);background:var(--paper-warm)">
-  <div class="section-inner">
-    <div class="section-label">令和のてらこや — 詳細</div>
-    <h2 class="section-title">NEXUSの特長 〜16年の経験と、AIの融合〜</h2>
-    <p class="section-body">優秀な講師陣がお子様一人ひとりに合わせた教育プログラムを設計。保護者様・お子様・講師が共通目標をもち、学習を実施。学力向上だけでなく、前向きな心・粘り強さ・やり抜く意思など「非認知能力」の育成も目標とします。</p>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px">
-      <div style="background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:24px">
-        <div class="section-label" style="margin-bottom:12px">対応科目と料金</div>
-        <ul class="service-items" style="margin-bottom:16px">
-          <li>主要5教科</li>
-          <li>英語・英会話</li>
-          <li>知育・IQ教育</li>
-          <li>AI（Claude活用）</li>
-          <li>書写・書道</li>
-        </ul>
-        <div style="background:var(--teal-light);border-radius:6px;padding:10px 14px;font-size:12px;color:var(--teal);font-weight:500">60分 9,000円〜（期間限定　特別価格！！）</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:24px">
-        <div class="section-label" style="margin-bottom:12px">AI教育システム</div>
-        <p style="font-size:12px;color:var(--ink-mid);line-height:1.85;margin-bottom:12px">AIシステムを活用した教材・テスト予測問題を導入。代表が研究・精査し、質の高い教材を提供します。</p>
-        <div style="background:var(--gold-light);border-radius:6px;padding:10px 14px;font-size:11px;color:var(--gold)">Claudeを用いた教育システム開発済み</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--rule);border-radius:8px;padding:24px">
-        <div class="section-label" style="margin-bottom:12px">講師陣</div>
-        <p style="font-size:11px;color:var(--ink-soft);margin-bottom:6px;letter-spacing:0.04em">大学生以上</p>
-        <p style="font-size:12px;color:var(--ink-mid);line-height:1.8;margin-bottom:10px">東京大学・千葉大学・早稲田大学・立教大学・国際基督教大学 など</p>
-        <p style="font-size:11px;color:var(--ink-soft);margin-bottom:6px;letter-spacing:0.04em">高校生</p>
-        <p style="font-size:12px;color:var(--ink-mid);line-height:1.8">中央大系列・立教大系列 など</p>
-      </div>
-    </div>
-
-    <div class="section-label" style="margin-bottom:16px">指導実績（一部）</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">高２</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">言語「論破に負けるな！社会人に必要なコミュニケーション能力を身に付けよう」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">高１</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">英会話「学校じゃ身に付かない英会話」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">中３</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">国語「受験対策！思考力を伸ばす文章読解法〜非論理を論理的に定義しよう〜」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">中２</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">知育「MENSA知能テストから学ぶ論理的思考力」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">小６</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">算数「受験対策！具体的な数字と抽象的な数字〜比例配分・比例式の予習〜」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">小２</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">国語・書写「字と鉛筆の持ち方を整えて、愛される文章を書こう」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">小１</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">算数・知育「ブロックでかたまりを作ろう。これで比の意味も分かっちゃう」</div>
-      </div>
-      <div style="background:var(--white);border:0.5px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
-        <div style="min-width:32px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">年中</div>
-        <div style="font-size:12px;color:var(--ink-mid);line-height:1.75">知育「洗濯ばさみで飛行機を作ろう〜これはなに？なぜその形にしたのかな？〜」</div>
-      </div>
-      <div style="background:var(--teal-light);border:0.5px solid var(--teal);border-radius:6px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;grid-column:1/-1">
-        <div style="min-width:48px;font-size:10px;color:var(--teal);font-weight:500;letter-spacing:0.06em">特別活動</div>
-        <div style="font-size:12px;color:var(--teal);line-height:1.75">外出プログラム「すべて自分たちの力で実施する、浅草めぐり」　など多数</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE DETAIL: 教育イベント -->
-<section style="border-top:1px solid var(--rule)">
-  <div class="hero" style="min-height:auto;padding-top:0;border-top:none">
-    <div class="hero-left">
-      <div class="hero-eyebrow">Service 03 — 法人向け</div>
-      <h2 class="hero-h1" style="font-size:32px">教育イベント<br>派遣業</h2>
-      <p class="hero-h1-sub">あなたの事業所に、本物の教育体験を。</p>
-      <p class="hero-lead">パートナー協定を結んだ教育事業者を貴施設へ派遣します。英語・プログラミング・アートから伝統芸能まで、多彩な教育の機会を提供。</p>
-      <div class="hero-problems" style="grid-template-columns:1fr 1fr 1fr">
-        <div class="hero-problem">
-          <div class="hero-problem-label">文化・芸術</div>
-          <div class="hero-problem-title">アート・書道・伝統芸能</div>
+      <div class="cl-info">
+        <div class="cl-stat">
+          <div class="num">19<span>㎡</span></div>
+          <p>少人数制に最適なコンパクトな教室。<br>大人数でなく、一人ひとりに向き合います。</p>
         </div>
-        <div class="hero-problem">
-          <div class="hero-problem-label">テクノロジー</div>
-          <div class="hero-problem-title">英語・プログラミング・IQ知育</div>
+        <div class="cl-stat">
+          <div class="num">2<span>F</span></div>
+          <p>文京区本郷、2階。<br>エレベーターあり。駅からのアクセスも便利な立地です。</p>
         </div>
-        <div class="hero-problem">
-          <div class="hero-problem-label">身体・健康</div>
-          <div class="hero-problem-title">スポーツ・体育・運動</div>
+        <div class="cl-access">
+          <div class="al">所在地</div>
+          <p>東京都文京区本郷<br>（詳細住所はお問い合わせ後にご案内します）</p>
         </div>
-      </div>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">イベント内容を相談する</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-right-top">
-        <p class="hero-catch">
-          プログラムの<br>
-          企画から運営まで、<br>
-          <em>すべておまかせ。</em>
-        </p>
-        <p class="hero-catch-sub">教育プログラムの企画・運営が難しい法人様でも安心。<br>ご要望に合わせてコーディネートします。</p>
-      </div>
-      <div class="hero-right-bottom">
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span>1イベント</span></div>
-          <div class="hero-stat-label">20万円〜（内容により相談）</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span>多彩な</span>ジャンル</div>
-          <div class="hero-stat-label">パートナー事業者と連携</div>
+        <div class="cl-stat">
+          <div class="num">10<span>月</span></div>
+          <p>2026年10月1日 開校予定。<br>体験・見学は開校前からご案内しています。</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE DETAIL: 講師向けコンサル -->
-<section style="border-top:1px solid var(--rule)">
-  <div class="hero" style="min-height:auto;padding-top:0;border-top:none">
-    <div class="hero-left">
-      <div class="hero-eyebrow">Service 04 — 講師・教育者向け</div>
-      <h2 class="hero-h1" style="font-size:32px">教育・授業づくり<br>コンサルティング</h2>
-      <p class="hero-lead">生徒さんへの指導方法や学習指導の組み立て、カリキュラム編成など、さまざまな教育プログラムに伴走します。教員・塾講師・家庭教師・習い事の先生など、教育に関わるすべての方を支援します。</p>
-      <div class="hero-problems">
-        <div class="hero-problem">
-          <div class="hero-problem-label">指導法の改善</div>
-          <div class="hero-problem-title">授業づくり・指導方法の設計</div>
-          <div class="hero-problem-text">どう教えるか、どう組み立てるか。現場に即した指導法を一緒に考えます。</div>
-        </div>
-        <div class="hero-problem">
-          <div class="hero-problem-label">カリキュラム設計</div>
-          <div class="hero-problem-title">教育プログラムの編成・改善</div>
-          <div class="hero-problem-text">年間計画・単元設計・評価方法まで、トータルでサポートします。</div>
-        </div>
+<!-- FOUNDER -->
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="founder-grid">
+      <div class="founder-img rv">
+        <img src="images/classroom-use.jpg" alt="教室で子どもと1対1で向き合う様子">
       </div>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">相談・お問い合わせ</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-right-top">
-        <p class="hero-catch">
-          授業は、<br>
-          <em>設計次第で</em><br>
-          変わる。
-        </p>
-        <p class="hero-catch-sub">現場で培った16年の経験をもとに、<br>指導の本質から一緒に考えます。</p>
-      </div>
-      <div class="hero-right-bottom">
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span>個別</span>伴走型</div>
-          <div class="hero-stat-label">一人ひとりに合わせたサポート</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num"><span>料金は</span>相談</div>
-          <div class="hero-stat-label">まずはお気軽にご連絡を</div>
+      <div class="founder-copy rv">
+        <div class="eyebrow">FOUNDER'S MESSAGE</div>
+        <h3 class="serif" style="margin-top:16px;">「できない子」ではなく、<br>「疲れた子」だったんです。</h3>
+        <p style="margin-top:0;">16年間の教育現場で、何度も見てきました。学校に行けなくなった子どもたちの親御さんは、必ず自分を責めています。「どこが悪かったんだろう」と。</p>
+        <p>でも、多くの場合、子どもたちは「できない」わけではなく、その環境が合わずに「疲れ果てていた」だけです。親の皆さんが感じている罪悪感や焦りは、本来は必要ありません。</p>
+        <p>NEXUSは、教育の正解を強制する場所ではありません。お子さんが「ここなら大丈夫」と思える居場所をつくることが私たちの役目です。親御さんも、子どもさんも、一緒に悩みながら進んでいく。そういう場所にしたいと思っています。</p>
+        <div class="founder-badges">
+          <span>公立中・国際学校で教員歴16年</span>
+          <span>不登校支援の現場活動</span>
+          <span>JAPAN MENSA会員</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ISSUES & SOLUTION -->
-<section id="issues">
-  <div class="section-inner">
-    <div class="section-label">Problems & Solution</div>
-    <h2 class="section-title">4つのサービスで、あらゆる課題に応える</h2>
-    <p class="section-body">施設の人材定着から個人の学習支援、法人向けイベント、教育者へのコンサルまで。Nexus Groupは幅広いニーズに対応します。</p>
-    <div class="issues-grid" style="grid-template-columns:repeat(4,1fr)">
-      <div class="issue-card">
-        <div class="issue-header">
-          <span class="issue-num">01</span>
-          <span class="issue-title">福利厚生サービス</span>
-        </div>
-        <div class="issue-body">
-          <div style="font-size:11px;color:var(--gold);letter-spacing:0.1em;margin-bottom:10px">あらゆる企業・事業所向け</div>
-          <ul class="issue-items">
-            <li>子育て世代の離職・採用難</li>
-            <li>外国人スタッフの問題</li>
-            <li>採用コスト50〜100万円超</li>
-            <li>管理職・新人の育成不足</li>
-          </ul>
-          <div class="issue-arrow">↓</div>
-          <div class="issue-resolve">放課後学習支援・研修で人材定着を実現</div>
-        </div>
-      </div>
-      <div class="issue-card">
-        <div class="issue-header">
-          <span class="issue-num">02</span>
-          <span class="issue-title">令和のてらこや</span>
-        </div>
-        <div class="issue-body">
-          <div style="font-size:11px;color:var(--gold);letter-spacing:0.1em;margin-bottom:10px">個人・ご家庭向け</div>
-          <ul class="issue-items">
-            <li>学校・塾で伸び悩んでいる</li>
-            <li>学力と非認知能力を伸ばしたい</li>
-            <li>英語・AI・知育など専門的に学びたい</li>
-            <li>その子に合った学び方を探している</li>
-          </ul>
-          <div class="issue-arrow">↓</div>
-          <div class="issue-resolve">知・徳・体の三観点をカスタマイズした完全オーダーメイド学習</div>
-        </div>
-      </div>
-      <div class="issue-card">
-        <div class="issue-header">
-          <span class="issue-num">03</span>
-          <span class="issue-title">教育イベント派遣業</span>
-        </div>
-        <div class="issue-body">
-          <div style="font-size:11px;color:var(--gold);letter-spacing:0.1em;margin-bottom:10px">法人向け</div>
-          <ul class="issue-items">
-            <li>特別プログラムを提供したい</li>
-            <li>英語・アートなど多彩な体験を</li>
-            <li>企画・運営が社内では難しい</li>
-            <li>伝統芸能など専門性の高い内容も</li>
-          </ul>
-          <div class="issue-arrow">↓</div>
-          <div class="issue-resolve">パートナー協定教育事業者を派遣。1イベント20万円〜</div>
-        </div>
-      </div>
-      <div class="issue-card">
-        <div class="issue-header">
-          <span class="issue-num">04</span>
-          <span class="issue-title">教育コンサルティング</span>
-        </div>
-        <div class="issue-body">
-          <div style="font-size:11px;color:var(--gold);letter-spacing:0.1em;margin-bottom:10px">講師・教育者向け</div>
-          <ul class="issue-items">
-            <li>指導方法を改善したい</li>
-            <li>授業の組み立て方で悩んでいる</li>
-            <li>カリキュラム設計に自信がない</li>
-            <li>一人で考えるのに限界を感じている</li>
-          </ul>
-          <div class="issue-arrow">↓</div>
-          <div class="issue-resolve">授業づくり・カリキュラム編成を伴走サポート</div>
-        </div>
-      </div>
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="hl serif" style="margin-top:14px;">保護者の方からよくいただくご質問</h2>
     </div>
-  </div>
-</section>
-
-<!-- SERVICES (概要) -->
-<section id="services" style="background:var(--paper-warm)">
-  <div class="section-inner">
-    <div class="section-label">Our Services</div>
-    <h2 class="section-title">提供サービス一覧</h2>
-    <p class="section-body">Nexus Groupは4つの柱でご支援します。</p>
-    <div class="services-wrap" style="grid-template-columns:repeat(4,1fr)">
-      <div class="service-block" style="border-right:1px solid var(--rule)">
-        <div class="service-tag-pill">あらゆる企業・事業所向け</div>
-        <div class="service-name">福利厚生<br>サービス</div>
-        <ul class="service-items">
-          <li><strong style="color:var(--navy)">放課後 学習支援</strong>　週1回、施設内に出向いて個別サポート</li>
-          <li><strong style="color:var(--navy)">保護者 教育相談</strong>　月2回・予約制のオンライン相談</li>
-          <li><strong style="color:var(--navy)">教育メルマガ</strong>　2週に1回配信</li>
-          <li><strong style="color:var(--navy)">外国人スタッフ研修</strong>　日本語・マナー・組織力向上</li>
-          <li><strong style="color:var(--navy)">マネジメント研修</strong>　リーダーシップ・目標管理</li>
-        </ul>
-        <div style="margin-top:16px;padding:12px 14px;background:var(--teal-light);border-radius:6px;font-size:11px;color:var(--teal);line-height:1.8">窓口はNexus Group 1社のみ</div>
+    <div class="faq-grid rv">
+      <div class="fq">
+        <h4>不登校は「本人の甘え」ですか？</h4>
+        <p>いいえ。多くの場合、お子さんは学校に行きたいのに「体が動かない」「朝が怖い」という状態です。親御さんが責めるのではなく、まずは「今、疲れているんだ」と理解してあげることが最初の一歩です。</p>
       </div>
-      <div class="service-block" style="border-right:1px solid var(--rule)">
-        <div class="service-tag-pill" style="background:var(--gold-light);color:var(--gold)">個人・ご家庭向け ★人気</div>
-        <div class="service-name">令和のてらこや</div>
-        <ul class="service-items">
-          <li><strong style="color:var(--navy)">家庭教師</strong>　60分 10,000円〜</li>
-          <li><strong style="color:var(--navy)">少人数塾</strong>　60分 12,000円〜</li>
-          <li>英会話・AI・知育などの専門講師が勢ぞろい</li>
-          <li>知・徳・体の三観点をカスタマイズ</li>
-          <li>東大・早稲田・ICUなど優秀な講師陣</li>
-        </ul>
-        <div style="margin-top:16px;padding:12px 14px;background:var(--gold-light);border-radius:6px;font-size:11px;color:var(--gold);line-height:1.8">主要5教科 / 英語 / AI / 書道など<br>60分 9,000円〜（期間限定　特別価格！！）</div>
-        <a href="#contact" class="service-link">詳細はお問い合わせから →</a>
+      <div class="fq">
+        <h4>うちの子が他の子どもたちと一緒にいられるか不安です</h4>
+        <p>ホッとルームは少人数で、スタッフがお子さんのペースに合わせます。いきなり集団活動をさせることはありません。状況に応じて、1対1の時間から始めることもできます。</p>
       </div>
-      <div class="service-block" style="border-right:1px solid var(--rule)">
-        <div class="service-tag-pill">法人向け</div>
-        <div class="service-name">教育イベント<br>派遣業</div>
-        <ul class="service-items">
-          <li>パートナー協定教育事業者を派遣</li>
-          <li><strong style="color:var(--navy)">英語・プログラミング・IQ知育</strong></li>
-          <li><strong style="color:var(--navy)">アート・スポーツ・伝統芸能</strong></li>
-          <li>企画から運営まですべておまかせ</li>
-        </ul>
-        <div style="margin-top:16px;padding:12px 14px;background:var(--gold-light);border-radius:6px;font-size:12px;color:var(--gold);font-weight:500">1イベント 20万円〜</div>
-        <a href="#contact" class="service-link">詳細はお問い合わせから →</a>
+      <div class="fq">
+        <h4>不登校が続くと、将来が不安です</h4>
+        <p>確かに親御さんの不安はよく分かります。ただ、今は個別対応や通信制高校、高卒認定試験など、学びの道がいくつもあります。焦らず、その子の立ち直りを見守ることが大切です。</p>
       </div>
-      <div class="service-block">
-        <div class="service-tag-pill" style="background:#f0f0f8;color:var(--navy)">講師・教育者向け</div>
-        <div class="service-name">教育・授業づくり<br>コンサルティング</div>
-        <ul class="service-items">
-          <li>生徒への指導方法・学習指導の組み立て</li>
-          <li>カリキュラム編成のサポート</li>
-          <li>さまざまな教育プログラムに伴走</li>
-          <li>教員・塾講師・家庭教師など対象</li>
-        </ul>
-        <a href="#contact" class="service-link">まずはご相談ください →</a>
+      <div class="fq">
+        <h4>学習が遅れてしまうのでは？</h4>
+        <p>お子さんが安心して落ち着くまで、教科学習は二の次です。まずは心の回復を優先します。その過程で、やりたいことが見つかり、そこから学習が始まるケースが多いです。</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="about-grid">
-    <div class="about-left">
-      <div class="section-label">About</div>
-      <div class="about-name">奥村 直之</div>
-      <div class="about-title">教育支援事業グループ "NEXUS Group" 代表</div>
-      <div class="about-career">
-        <div class="about-career-label">職歴</div>
-        <ul class="about-career-list">
-          <li>元東京都公立中学校教員（10年）</li>
-          <li>元東京都教育研究開発委員</li>
-          <li>元立教大学系属校教諭（3年・イギリス在住）</li>
-          <li>元台湾日本人学校教員（3年・台湾在住）</li>
-          <li>教育支援事業団体「NEXUS Group」設立</li>
-          <li>不登校支援事業・子ども食堂運営</li>
-        </ul>
-        <div class="about-career-label" style="margin-top:16px">特技・資格</div>
-        <ul class="about-career-list">
-          <li>書道家（日展・読売書法展等に出品・受賞。映画「陰陽師０」書道演技監督。イギリス・トラファルガースクエア、日台交流フェス等でパフォーマンス）</li>
-          <li>英語（英検準1〜1級レベル）・中国語（日常会話程度）</li>
-          <li>JAPAN MENSA 会員</li>
-          <li>AI（Claudeを用いた教育システム開発）</li>
-        </ul>
+      <div class="fq">
+        <h4>親の面談はどのくらいの頻度ですか？</h4>
+        <p>月1回程度の面談で、お子さんの様子をお伝えします。保護者の悩みや不安についても、スタッフが真摯に向き合いますので、遠慮なくお相談ください。</p>
       </div>
-    </div>
-    <div class="about-right">
-      <div class="section-label">Partner</div>
-      <div class="about-partner-label">協賛パートナー（Nexus Groupより委託）</div>
-      <div class="about-partner">
-        <div class="about-partner-name">株式会社アウトインプラス</div>
-        <div class="about-partner-name" style="margin-top:12px">紙切り噺家　林家喜之輔</div>
-        <div class="about-partner-name" style="margin-top:12px">アトリエ　宙</div>
-        <div class="about-partner-name" style="margin-top:12px">書道家　武田早紀</div>
-        <div class="about-partner-name" style="margin-top:12px">Aile for period</div>
+      <div class="fq">
+        <h4>どんなお子さんが来ていますか？</h4>
+        <p>学校に行きづらいお子さん、登校渋りのお子さん、発達の特性があるお子さん、才能を活かしたいお子さんなど、様々です。その子の「今」を受け入れるのが私たちです。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-band">
-  <div class="section-inner">
-    <div>
-      <div class="section-label">Get Started</div>
-      <h2 class="section-title">まずは、無料でお試しください。</h2>
-      <p class="section-body">福利厚生・令和のてらこや・教育イベント派遣・教育コンサルティング——4つのサービスで、施設・ご家庭・法人・教育者のあらゆるニーズにお応えします。まずはお気軽にご連絡ください。</p>
+<section class="cta">
+  <div class="wrap">
+    <div class="rv">
+      <h2 class="serif">一人で抱え込まないでください。</h2>
+      <p>お子さんが学校に行けなくなったとき、親御さんは必ず自分を責めます。でもそれは間違いです。<br>NEXUSでは、親御さんの気持ちも、お子さんの気持ちも、両方を大切にします。<br>まずは、気軽に相談してください。</p>
+      <a href="soudan.html" class="btn-a">無料相談を申し込む（LINE）</a>
     </div>
-    <a href="#contact" class="cta-white">無料相談を申し込む →</a>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" style="border-top:none">
-  <div class="contact-grid">
-    <div class="contact-left">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">お問い合わせ</h2>
-      <p style="font-size:13px;color:var(--ink-mid);line-height:2;margin-top:8px">下記フォームよりお気軽にご連絡ください。2営業日以内にご返信いたします。</p>
-      <div class="contact-info">
-        <div class="contact-info-item">
-          <div class="contact-info-label">代表</div>
-          <div class="contact-info-value">奥村 直之</div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-value">nexusgroup.daihyou@gmail.com</div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">所在地</div>
-          <div class="contact-info-value">〒150-0041<br>東京都渋谷区神南１－１１－４<br>FPGリンクス神南５F</div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">受付時間</div>
-          <div class="contact-info-value">平日 9:00 – 18:00</div>
-        </div>
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">株式会社 NEXUS</div>
+        <div class="foot-brands">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>探究開花（文理対応・総合型選抜対策塾）</div>
+        <p style="font-size:13px;">文京区本郷 ／ 2026年10月1日 開校予定<br>nexusgroup.daihyou@gmail.com</p>
+      </div>
+      <div class="foot-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="hottroom.html">ホッとルーム</a></li>
+          <li><a href="kodomotankyu.html">子ども探究大学</a></li>
+          <li><a href="tankyukaika.html">探究開花</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>情報</h5>
+        <ul>
+          <li><a href="#timeline">時間割・スケジュール</a></li>
+          <li><a href="#classroom">教室・アクセス</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="soudan.html">無料相談</a></li>
+        </ul>
       </div>
     </div>
-    <div class="contact-right">
-      <form action="https://formspree.io/f/xojrzyvr" method="POST">
-        <div class="form-group">
-          <label class="form-label">施設名・会社名 *</label>
-          <input type="text" name="施設名・会社名" class="form-input" placeholder="〇〇介護施設" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">お名前 *</label>
-          <input type="text" name="お名前" class="form-input" placeholder="山田 太郎" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">メールアドレス *</label>
-          <input type="email" name="email" class="form-input" placeholder="taro@example.com" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">電話番号</label>
-          <input type="tel" name="電話番号" class="form-input" placeholder="03-0000-0000">
-        </div>
-        <div class="form-group">
-          <label class="form-label">ご相談内容・現在の課題</label>
-          <textarea name="ご相談内容" class="form-textarea" placeholder="例：外国人スタッフの定着に悩んでいます。職員数は約30名で…"></textarea>
-        </div>
-        <button type="submit" class="form-submit">送信する</button>
-      </form>
+    <div class="foot-bottom">
+      <span>© 2026 株式会社NEXUS. All Rights Reserved.</span>
+      <span>9:00から20:30まで、その子に合った学びの場を。</span>
     </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-logo">
-    <span class="nav-logo-dot"></span>
-    Nexus Group
-  </div>
-  <div class="footer-info">
-    代表 奥村直之<br>
-    © 2026 Nexus Group. All rights reserved.
   </div>
 </footer>
 
 <script>
-function handleSubmit(e){
-  e.preventDefault();
-  const btn=e.target.querySelector('.form-submit');
-  btn.textContent='送信しました。ありがとうございます。';
-  btn.style.background='#2a6e3f';
-  btn.disabled=true;
-}
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach(el=>{
-    if(el.isIntersecting){el.target.style.opacity='1';el.target.style.transform='translateY(0)'}
-  });
-},{threshold:0.1});
-document.querySelectorAll('.service-block,.effect-card,.support-card,.strength-item,.flow-step,.faq-item').forEach(el=>{
-  el.style.opacity='0';el.style.transform='translateY(16px)';
-  el.style.transition='opacity .5s ease, transform .5s ease';
-  obs.observe(el);
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('s', scrollY > 50);
 });
+const rvEls = document.querySelectorAll('.rv');
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
+}), {threshold:.1});
+rvEls.forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
