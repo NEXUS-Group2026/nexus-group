@@ -62,33 +62,31 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 
 /* ======= HERO ======= */
 .hero{
-  position:relative;min-height:100vh;display:flex;align-items:flex-end;
-  overflow:hidden;
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;padding:60px 0;
 }
 .hero-bg{position:absolute;inset:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
-.hero-bg::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(26,24,24,.72) 0%,rgba(26,24,24,.5) 40%,rgba(26,24,24,.84) 100%);
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:rgba(26,24,24,.6);}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:900px;}
+.hero-logo{font-size:clamp(32px,5vw,48px);color:#fff;margin-bottom:8px;font-weight:700;}
+.hero-subtitle{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:50px;letter-spacing:.05em;}
+.hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px;}
+.hero-brand-card{
+  background:rgba(255,255,255,.95);padding:28px 20px;border-radius:4px;
+  transition:transform .3s,box-shadow .3s;text-decoration:none;cursor:pointer;
+  border-top:4px solid var(--amber);
 }
-.hero-inner{position:relative;z-index:2;padding-bottom:80px;width:100%;}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:12px;letter-spacing:.18em;color:var(--amber);margin-bottom:22px;
-  border:1px solid rgba(184,137,60,.45);padding:7px 14px;border-radius:20px;
+.hero-brand-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.2);}
+.hbc-icon{font-size:32px;margin-bottom:12px;}
+.hbc-name{font-size:18px;color:var(--ink);margin-bottom:8px;font-weight:700;}
+.hbc-time{font-size:13px;color:var(--soft);letter-spacing:.03em;}
+.hero-cta{font-size:clamp(20px,4vw,32px);color:#fff;font-weight:700;line-height:1.6;}
+
+@media(max-width:900px){
+  .hero-brands{grid-template-columns:1fr;gap:16px;}
+  .hero-brand-card{padding:24px 16px;}
 }
-.hero h1{
-  font-family:'Shippori Mincho',serif;font-weight:800;
-  font-size:clamp(36px,5.2vw,70px);line-height:1.32;color:#fff;
-  margin-bottom:20px;letter-spacing:.02em;
-}
-.hero h1 em{font-style:normal;color:var(--amber);}
-.hero-sub{font-size:15.5px;color:rgba(255,255,255,.82);margin-bottom:40px;max-width:540px;font-weight:300;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-a{background:var(--amber);color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:2px;letter-spacing:.04em;transition:background .2s;}
-.btn-a:hover{background:#fff;color:var(--ink);}
-.btn-b{border:1px solid rgba(255,255,255,.55);color:#fff;font-size:14px;font-weight:500;padding:14px 28px;border-radius:2px;letter-spacing:.04em;transition:all .2s;}
-.btn-b:hover{background:#fff;color:var(--ink);}
 
 
 /* ======= TIMELINE ======= */
@@ -275,14 +273,32 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img src="images/tanq-kids.jpg" alt="NEXUSの教室で学ぶ子どもたち"></div>
+  <div class="hero-bg"><img src="images/hero-section.jpg" alt="NEXUSの3つの教室"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-inner wrap">
-    <div class="hero-badge">文京区本郷 ／ 2026年10月1日 開校</div>
-    <h1 class="serif"><em>9:00</em>から<em>20:30</em>まで。<br>その子に合った<br>学びの場がある。</h1>
-    <p class="hero-sub">不登校支援フリースクール「ホッとルーム」、探究学習塾「子ども探究大学」、総合型選抜対策塾「探究開花」。3つの学びの場で、年長から高校生まで。</p>
-    <div class="hero-btns">
-      <a href="soudan.html" class="btn-a">無料相談を申し込む</a>
-      <a href="#timeline" class="btn-b">一日の流れを見る</a>
+    <div class="hero-logo serif">NEXUSの教育</div>
+    <p class="hero-subtitle">長い教師歴が様々な教育を形をプロデュース</p>
+    
+    <div class="hero-brands">
+      <a href="hottroom.html" class="hero-brand-card">
+        <div class="hbc-icon">❤️</div>
+        <div class="hbc-name serif">ホッとルーム</div>
+        <div class="hbc-time">9:00-15:30</div>
+      </a>
+      <a href="kodomotankyu.html" class="hero-brand-card">
+        <div class="hbc-icon">💡</div>
+        <div class="hbc-name serif">子ども探究大学</div>
+        <div class="hbc-time">16:00-18:50</div>
+      </a>
+      <a href="#contact" class="hero-brand-card">
+        <div class="hbc-icon">🎓</div>
+        <div class="hbc-name serif">総合型選抜対策塾</div>
+        <div class="hbc-time">17:00-20:30</div>
+      </a>
+    </div>
+    
+    <div class="hero-cta serif">
+      あなたに合った学びの場が、ここにある。
     </div>
   </div>
 </section>
