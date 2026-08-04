@@ -44,6 +44,7 @@ a{color:inherit;text-decoration:none;}
 header{
   position:fixed;top:0;left:0;right:0;z-index:100;
   padding:16px 0;
+  background:linear-gradient(180deg,rgba(26,24,24,.45) 0%,rgba(26,24,24,0) 100%);
   transition:background .35s,box-shadow .35s,padding .35s;
 }
 header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
@@ -179,9 +180,10 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .cl-stat .num{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:700;color:var(--ink);}
 .cl-stat .num span{font-size:15px;font-family:'Noto Sans JP',sans-serif;font-weight:400;color:var(--soft);margin-left:4px;}
 .cl-stat p{font-size:13px;color:var(--soft);margin-top:8px;}
-.cl-access{background:var(--kaika);padding:34px 28px;}
-.cl-access .al{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:8px;}
-.cl-access p{color:#fff;font-size:14px;font-weight:500;line-height:1.9;}
+.cl-access{background:var(--kaika);padding:30px 28px;}
+.cl-access .al{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:10px;letter-spacing:.05em;}
+.cl-access p{color:#fff;font-size:13px;font-weight:400;line-height:1.85;}
+.cl-access p strong{font-weight:700;font-size:14px;}
 
 /* ======= FOUNDER ======= */
 .founder{background:var(--bg);padding:90px 0;}
@@ -285,19 +287,19 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <div class="hbc-icon">❤️</div>
         <div class="hbc-name serif">ホッとルーム</div>
         <div class="hbc-sub">不登校支援</div>
-        <div class="hbc-time">9:00-15:30</div>
+        <div class="hbc-time">9:30-15:30</div>
       </a>
       <a href="kodomotankyu.html" class="hero-brand-card">
         <div class="hbc-icon">💡</div>
         <div class="hbc-name serif">子ども探究大学</div>
         <div class="hbc-sub">探究学習塾</div>
-        <div class="hbc-time">16:00-18:50</div>
+        <div class="hbc-time">16:00-18:30</div>
       </a>
       <a href="#contact" class="hero-brand-card">
         <div class="hbc-icon">🎓</div>
         <div class="hbc-name serif">総合型選抜対策塾</div>
         <div class="hbc-sub">大学受験</div>
-        <div class="hbc-time">17:00-20:30</div>
+        <div class="hbc-time">19:00-20:20</div>
       </a>
     </div>
     
@@ -318,60 +320,61 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 
     <!-- Visual proportional bar -->
     <div class="tl-bar rv" style="position:relative;">
-      <!-- 690 min total: 9:00-20:30 -->
+      <!-- 650 min total: 9:30-20:20 -->
       <!-- hot1: 180/690=26.1%, gap:10/690=1.4%, hot2:180/690=26.1%, gap2:50/690=7.3%, tanq1:70/690=10.1%, gap3:10/690=1.4%, tanq2:90/690=13.1%, gap4:10/690=1.4%, kaika:90/690=13.1% -->
-      <div class="tl-seg hot" style="width:26.1%"><span class="seg-label">ホッとルーム①</span></div>
-      <div class="tl-seg gap" style="width:1.4%"></div>
-      <div class="tl-seg hot" style="width:26.1%;opacity:.85"><span class="seg-label">ホッとルーム②</span></div>
-      <div class="tl-seg gap" style="width:7.2%"><span style="font-size:10px;color:var(--soft);">準備</span></div>
-      <div class="tl-seg tanq" style="width:10.1%"><span class="seg-label">幼・少</span></div>
-      <div class="tl-seg gap" style="width:1.4%"></div>
-      <div class="tl-seg tanq" style="width:13.1%;opacity:.85"><span class="seg-label">少・青</span></div>
-      <div class="tl-seg gap" style="width:1.4%"></div>
+      <div class="tl-seg hot" style="width:23.1%"><span class="seg-label">ホッとルーム①</span></div>
+      <div class="tl-seg gap" style="width:9.2%"><span style="font-size:10px;color:var(--soft);">休憩</span></div>
+      <div class="tl-seg hot" style="width:23.1%;opacity:.85"><span class="seg-label">ホッとルーム②</span></div>
+      <div class="tl-seg gap" style="width:4.6%"><span style="font-size:10px;color:var(--soft);">準備</span></div>
+      <div class="tl-seg tanq" style="width:9.2%"><span class="seg-label">幼・少</span></div>
+      <div class="tl-seg gap" style="width:1.5%"></div>
+      <div class="tl-seg tanq" style="width:12.3%;opacity:.85"><span class="seg-label">少・青</span></div>
+      <div class="tl-seg gap" style="width:4.6%"></div>
       <div class="tl-seg kaika" style="flex:1"><span class="seg-label">総合型選抜</span></div>
     </div>
 
     <!-- Hour markers -->
     <div class="tl-markers rv" style="height:22px;position:relative;margin-bottom:32px;">
-      <span class="tl-mark" style="left:0%;transform:none;">9:00</span>
-      <span class="tl-mark" style="left:26.1%">12:00</span>
-      <span class="tl-mark" style="left:53.6%">15:10</span>
-      <span class="tl-mark" style="left:60.9%">16:00</span>
-      <span class="tl-mark" style="left:88.4%">19:00</span>
-      <span class="tl-mark" style="left:100%;transform:translateX(-100%);">20:30</span>
+      <span class="tl-mark" style="left:0%;transform:none;">9:30</span>
+      <span class="tl-mark" style="left:23.1%">12:00</span>
+      <span class="tl-mark" style="left:32.3%">13:00</span>
+      <span class="tl-mark" style="left:55.4%">15:30</span>
+      <span class="tl-mark" style="left:60%">16:00</span>
+      <span class="tl-mark" style="left:87.7%">19:00</span>
+      <span class="tl-mark" style="left:100%;transform:translateX(-100%);">20:20</span>
     </div>
 
     <!-- Detail rows -->
     <div class="tl-rows rv">
       <div class="tl-row hot">
-        <div class="col-time">9:00 — 12:00</div>
+        <div class="col-time">9:30 — 12:00</div>
         <div class="col-brand">ホッとルーム 第1部</div>
-        <div class="col-desc">不登校・登校渋りのお子様が、自分のペースで安心して過ごす時間。探究活動・学習サポート・休憩も自由に選べます。</div>
+        <div class="col-desc">学校に登校できていないお子様が、自分のペースで安心して過ごす時間。探究活動・学習サポート・休憩も自由に選べます。</div>
       </div>
       <div class="tl-row hot">
-        <div class="col-time">12:10 — 15:10</div>
+        <div class="col-time">13:00 — 15:30</div>
         <div class="col-brand">ホッとルーム 第2部</div>
         <div class="col-desc">午後も同じく、安心できる居場所として開室。保護者の状況に合わせて第1部・第2部を選べます。</div>
       </div>
       <div class="tl-row gap-row">
-        <div class="col-time">15:10 — 16:00</div>
+        <div class="col-time">15:30 — 16:00</div>
         <div class="col-brand">準　備　時　間</div>
         <div class="col-desc"></div>
       </div>
       <div class="tl-row tanq">
-        <div class="col-time">16:00 — 17:10</div>
+        <div class="col-time">16:00 — 17:00</div>
         <div class="col-brand">子ども探究大学 幼・少年部</div>
-        <div class="col-desc">年長〜小学2年生対象。70分のコンパクトなプログラム。好奇心をくすぐるテーマで、遊び感覚の探究学習。</div>
+        <div class="col-desc">年長〜小学6年生対象。60分のプログラム。好奇心をくすぐるテーマで、遊び感覚の探究学習に取り組みます。</div>
       </div>
       <div class="tl-row tanq">
-        <div class="col-time">17:20 — 18:50</div>
+        <div class="col-time">17:10 — 18:30</div>
         <div class="col-brand">子ども探究大学 少・青年部</div>
-        <div class="col-desc">小学3年生〜中学生対象。90分の探究ゼミ。テーマを自分で選び、調査・制作・発表まで取り組みます。</div>
+        <div class="col-desc">小学4年生〜高校1年生対象。80分の探究ゼミ。テーマを自分で選び、調査・制作・発表まで取り組みます。</div>
       </div>
       <div class="tl-row kaika">
-        <div class="col-time">19:00 — 20:30</div>
+        <div class="col-time">19:00 — 20:20</div>
         <div class="col-brand">総合型選抜対策塾</div>
-        <div class="col-desc">中高生対象。文理対応の総合型選抜対策。探究活動の整理から志望理由書・面接まで一貫サポート。</div>
+        <div class="col-desc">高校生対象。80分。文理対応の総合型選抜対策。探究活動の整理から志望理由書・面接まで一貫サポート。</div>
       </div>
     </div>
   </div>
@@ -391,10 +394,10 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="brand-card hot">
         <div class="bc-tag">不登校支援フリースクール</div>
         <div class="bc-name serif">ホッとルーム</div>
-        <div class="bc-time">平日 9:00〜15:10 ／ 第1部・第2部</div>
+        <div class="bc-time">平日 9:30〜15:30 ／ 第1部・第2部</div>
         <img src="images/hot-warm.jpg" alt="ホッとルームで子どもと大人が寄り添う様子" class="bc-img">
         <p class="bc-lead"><strong>お子さんが「疲れていた」だけなら、ここで回復できます。</strong></p>
-        <p class="bc-desc">学校に行きづらいお子さんを否定しません。責めません。成績を急かしません。まずは安心できる関係をつくることから始めます。自分のペースで過ごし、やりたいことが見つかったら探究する。そんな自由な時間をつくります。</p>
+        <p class="bc-desc">学校に登校できていないお子さんを否定しません。責めません。成績を急かしません。まずは安心できる関係をつくることから始めます。自分のペースで過ごし、やりたいことが見つかったら探究する。そんな自由な時間をつくります。</p>
         <div class="bc-tags">
           <span>年長〜高校生</span><span>個別ペース</span><span>親の相談OK</span>
         </div>
@@ -405,11 +408,11 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="brand-card tanq">
         <div class="bc-tag">探究学習塾</div>
         <div class="bc-name serif">子ども探究大学</div>
-        <div class="bc-time">平日 16:00〜18:50 ／ 幼・少年部・少・青年部</div>
+        <div class="bc-time">平日 16:00〜18:30 ／ 幼・少年部・少・青年部</div>
         <img src="images/tanq-kids.jpg" alt="子ども探究大学の授業" class="bc-img">
-        <p class="bc-lead">「なんで？」という問いから始まる探究学習。テーマを自分で選び、仮説を立て、調査して、発表する。AIも道具として使いながら、知的好奇心を次のステップへ。</p>
+        <p class="bc-lead">「なんで？」という問いから始まる探究学習。テーマを自分で選び、仮説を立て、調査して、発表する。本校オリジナルシステム、AIチューターとともに学びを深める、新世代型探究学習をあなたに。</p>
         <div class="bc-tags">
-          <span>年長〜中学生</span><span>少人数</span><span>探究・制作・発表</span>
+          <span>年長〜高校1年生</span><span>少人数</span><span>探究・制作・発表</span>
         </div>
         <a href="kodomotankyu.html" class="bc-link serif">詳しく見る →</a>
       </div>
@@ -418,9 +421,9 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="brand-card kaika">
         <div class="bc-tag">文理対応・総合型選抜対策塾</div>
         <div class="bc-name serif">総合型選抜対策塾</div>
-        <div class="bc-time">平日 19:00〜20:30</div>
+        <div class="bc-time">平日 19:00〜20:20 ／ 高校生対象</div>
         <img src="images/kaika-evening.jpg" alt="総合型選抜対策塾の夜の授業風景" class="bc-img">
-        <p class="bc-lead">文系も、理系も。探究を進路へ。中高生の「やってきたこと」を整理して、志望理由書・活動報告・面接に仕上げる。自分の探究を、合格につながる力へ。</p>
+        <p class="bc-lead">文系も、理系も。探究を進路へ。中高生の「やってきたこと」を整理して、志望理由書・活動報告・面接に仕上げる。自分の探究を、合格につながる力へ。総合型選抜は、新しい社会で輝く人材を育てる通過点です。</p>
         <div class="bc-tags">
           <span>中学生・高校生</span><span>総合型選抜</span><span>志望理由書・面接</span>
         </div>
@@ -450,15 +453,16 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         </div>
         <div class="cl-stat">
           <div class="num">2<span>F</span></div>
-          <p>文京区本郷、2階。<br>エレベーターあり。駅からのアクセスも便利な立地です。</p>
+          <p>本郷の閑静な住宅街に位置する本校。<br>落ち着いた環境で、安心して学ぶことができます。</p>
         </div>
-        <div class="cl-access">
-          <div class="al">所在地</div>
-          <p>東京都文京区本郷<br>（詳細住所はお問い合わせ後にご案内します）</p>
-        </div>
-        <div class="cl-stat">
+        <div class="cl-stat" style="grid-column:1 / -1;">
           <div class="num">10<span>月</span></div>
-          <p>2026年10月1日 開校予定。<br>体験・見学は開校前からご案内しています。</p>
+          <p>2026年10月1日 開校予定。体験・見学は随時受け付けております。</p>
+        </div>
+        <div class="cl-access" style="grid-column:1 / -1;">
+          <div class="al">アクセス</div>
+          <p><strong>〒113-0033　東京都文京区本郷2-23-12 2階</strong></p>
+          <p style="margin-top:12px;">東京メトロ丸ノ内線・都営大江戸線「本郷三丁目駅」徒歩2分<br>JR中央・総武線／東京メトロ千代田線「御茶ノ水・新御茶ノ水駅」徒歩8分<br>都営三田線「水道橋駅」徒歩6分／東京メトロ南北線「後楽園駅」徒歩10分</p>
         </div>
       </div>
     </div>
