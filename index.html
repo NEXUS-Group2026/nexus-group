@@ -73,11 +73,11 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .hero-bg{position:absolute;inset:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,24,24,.72) 0%,rgba(26,24,24,.5) 40%,rgba(26,24,24,.15) 100%);}
-.hero-inner{position:relative;z-index:2;text-align:left;max-width:900px;margin-left:0;}
-.hero-logo{font-size:clamp(26px,4.2vw,48px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.45);white-space:nowrap;width:max-content;max-width:none;}
-.hero-logo-sub{font-size:clamp(18px,2.7vw,34px);font-weight:600;opacity:.95;margin-left:8px;white-space:nowrap;}
-.hero-subtitle{font-size:clamp(18px,2.5vw,32px);color:rgba(255,255,255,.9);margin-bottom:40px;letter-spacing:.03em;text-shadow:0 1px 8px rgba(0,0,0,.5);font-family:'Shippori Mincho',serif;font-weight:500;}
-.hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
+.hero-inner{position:relative;z-index:2;text-align:left;max-width:820px;margin-left:0;}
+.hero-logo{font-size:clamp(26px,4.2vw,46px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.45);white-space:nowrap;width:max-content;max-width:none;}
+.hero-logo-sub{font-size:clamp(17px,2.5vw,30px);font-weight:600;opacity:.95;margin-left:8px;white-space:nowrap;}
+.hero-subtitle{font-size:clamp(16px,2.2vw,26px);color:rgba(255,255,255,.9);margin-bottom:38px;letter-spacing:.03em;text-shadow:0 1px 8px rgba(0,0,0,.5);font-family:'Shippori Mincho',serif;font-weight:500;}
+.hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px;max-width:720px;}
 .hero-brand-card{
   background:rgba(255,255,255,.96);padding:24px 14px;border-radius:6px;
   transition:transform .3s,box-shadow .3s;text-decoration:none;cursor:pointer;
@@ -215,7 +215,8 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .cta{background:var(--kaika);padding:90px 0;text-align:center;}
 .cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,36px);color:#fff;margin-bottom:18px;font-weight:700;}
 .cta p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:38px;max-width:580px;margin-left:auto;margin-right:auto;}
-.cta .btn-a{display:inline-block;}
+.cta .btn-a{display:inline-block;background:var(--amber);color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:3px;transition:.2s;}
+.cta .btn-a:hover{background:#fff;color:var(--ink);}
 
 /* ======= FOOTER ======= */
 footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
@@ -305,7 +306,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <div class="hbc-sub">探究学習塾</div>
         <div class="hbc-time">16:00-18:30</div>
       </a>
-      <a href="#contact" class="hero-brand-card">
+      <a href="tankyukaika.html" class="hero-brand-card">
         <div class="hbc-icon">🎓</div>
         <div class="hbc-name serif">総合型選抜対策塾</div>
         <div class="hbc-sub">大学受験</div>
@@ -324,10 +325,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <p style="margin-top:14px;color:var(--soft);font-size:14px;">3つのサービスが、一つの教室で一日を通してつながっています。</p>
     </div>
 
-    <!-- Visual proportional bar -->
     <div class="tl-bar rv" style="position:relative;">
-      <!-- 650 min total: 9:30-20:20 -->
-      <!-- hot1: 180/690=26.1%, gap:10/690=1.4%, hot2:180/690=26.1%, gap2:50/690=7.3%, tanq1:70/690=10.1%, gap3:10/690=1.4%, tanq2:90/690=13.1%, gap4:10/690=1.4%, kaika:90/690=13.1% -->
       <div class="tl-seg hot" style="width:23.1%"><span class="seg-label">ホッとルーム①</span></div>
       <div class="tl-seg gap" style="width:9.2%"><span style="font-size:10px;color:var(--soft);">休憩</span></div>
       <div class="tl-seg hot" style="width:23.1%;opacity:.85"><span class="seg-label">ホッとルーム②</span></div>
@@ -339,7 +337,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="tl-seg kaika" style="flex:1"><span class="seg-label">総合型選抜</span></div>
     </div>
 
-    <!-- Hour markers -->
     <div class="tl-markers rv" style="height:22px;position:relative;margin-bottom:32px;">
       <span class="tl-mark" style="left:0%;transform:none;">9:30</span>
       <span class="tl-mark" style="left:23.1%">12:00</span>
@@ -350,7 +347,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <span class="tl-mark" style="left:100%;transform:translateX(-100%);">20:20</span>
     </div>
 
-    <!-- Detail rows -->
     <div class="tl-rows rv">
       <div class="tl-row hot">
         <div class="col-time">9:30 — 12:00</div>
@@ -396,12 +392,12 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
     <div class="brands-grid rv" style="margin-top:52px;">
 
-      <!-- ホッとルーム -->
       <div class="brand-card hot">
         <div class="bc-tag">不登校支援フリースクール</div>
         <div class="bc-name serif">ホッとルーム</div>
         <div class="bc-time">平日 9:30〜15:30 ／ 第1部・第2部</div>
         <img src="images/hot-warm.jpg" alt="ホッとルームで子どもと大人が寄り添う様子" class="bc-img">
+        <p class="bc-lead"><strong>お子さんが「疲れていた」だけなら、ここで回復できます。</strong></p>
         <p class="bc-desc">学校に登校できていないお子さんを否定しません。責めません。成績を急かしません。まずは安心できる関係をつくることから始めます。自分のペースで過ごし、やりたいことが見つかったら探究する。そんな自由な時間をつくります。</p>
         <div class="bc-tags">
           <span>年長〜高校生</span><span>個別ペース</span><span>親の相談OK</span>
@@ -409,7 +405,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <a href="hottroom.html" class="bc-link serif">詳しく見る →</a>
       </div>
 
-      <!-- 子ども探究大学 -->
       <div class="brand-card tanq">
         <div class="bc-tag">探究学習塾</div>
         <div class="bc-name serif">子ども探究大学</div>
@@ -422,7 +417,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <a href="kodomotankyu.html" class="bc-link serif">詳しく見る →</a>
       </div>
 
-      <!-- 総合型選抜対策塾 -->
       <div class="brand-card kaika">
         <div class="bc-tag">文理対応・総合型選抜対策塾</div>
         <div class="bc-name serif">総合型選抜対策塾</div>
@@ -448,7 +442,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
     <div class="cl-grid rv" style="margin-top:52px;">
       <div class="cl-photo">
-        <img src="images/classroom-empty.jpg" alt="整えられた教室の様子">
+        <img src="images/room-real.jpg" alt="整えられた教室の様子">
         <div class="cl-cap"><p>整えられた教室空間　— PC環境完備</p></div>
       </div>
       <div class="cl-info">
@@ -523,7 +517,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       </div>
       <div class="fq">
         <h4>親の面談はどのくらいの頻度ですか？</h4>
-        <p>月1回程度の面談で、お子さんの様子をお伝えします。保護者の悩みや不安についても、スタッフが真摯に向き合いますので、遠慮なくお相談ください。</p>
+        <p>月1回程度の面談で、お子さんの様子をお伝えします。保護者の悩みや不安についても、スタッフが真摯に向き合いますので、遠慮なくご相談ください。</p>
       </div>
       <div class="fq">
         <h4>どんなお子さんが来ていますか？</h4>
@@ -573,7 +567,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
     <div class="foot-bottom">
       <span>© 2026 株式会社NEXUS. All Rights Reserved.</span>
-      <span>9:00から20:30まで、その子に合った学びの場を。</span>
+      <span>9:30から20:20まで、その子に合った学びの場を。</span>
     </div>
   </div>
 </footer>
