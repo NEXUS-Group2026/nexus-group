@@ -58,8 +58,12 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .nav-links{display:flex;gap:28px;}
 .nav-links a{color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.04em;}
 .nav-links a:hover{color:#fff;}
-.nav-cta{background:var(--amber);color:#fff;font-size:12.5px;font-weight:700;padding:10px 20px;border-radius:2px;letter-spacing:.04em;white-space:nowrap;}
-.nav-cta:hover{background:var(--amber-p);color:var(--amber);}
+.nav-actions{display:flex;gap:9px;align-items:center;}
+.nav-cta{font-size:12.5px;font-weight:700;padding:10px 18px;border-radius:3px;letter-spacing:.03em;white-space:nowrap;transition:.2s;display:inline-flex;align-items:center;gap:6px;}
+.nav-cta.line{background:#06C755;color:#fff;}
+.nav-cta.line:hover{background:#05a648;}
+.nav-cta.mail{background:var(--amber);color:#fff;}
+.nav-cta.mail:hover{background:var(--amber-p);color:var(--amber);}
 
 /* ======= HERO ======= */
 .hero{
@@ -248,7 +252,8 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   .wrap{padding:0 18px;}
   section,.timeline,.brands,.classroom,.founder,.faq,.cta{padding:64px 0;}
   .brand .brands{display:none;}
-  .nav-cta{font-size:11.5px;padding:9px 14px;}
+  .nav-cta{font-size:11px;padding:8px 11px;}
+  .nav-actions{gap:6px;}
 }
 </style>
 </head>
@@ -270,7 +275,10 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <a href="#classroom">教室</a>
       <a href="#faq">よくある質問</a>
     </nav>
-    <a href="soudan.html" class="nav-cta">無料相談</a>
+    <div class="nav-actions">
+      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="nav-cta line">LINE相談</a>
+      <a href="soudan.html" class="nav-cta mail">メール問い合わせ</a>
+    </div>
   </div>
 </header>
 
@@ -396,6 +404,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <div class="bc-name serif">ホッとルーム</div>
         <div class="bc-time">平日 9:30〜15:30 ／ 第1部・第2部</div>
         <img src="images/hot-warm.jpg" alt="ホッとルームで子どもと大人が寄り添う様子" class="bc-img">
+        <p class="bc-lead"><strong>お子さんが「疲れていた」だけなら、ここで回復できます。</strong></p>
         <p class="bc-desc">学校に登校できていないお子さんを否定しません。責めません。成績を急かしません。まずは安心できる関係をつくることから始めます。自分のペースで過ごし、やりたいことが見つかったら探究する。そんな自由な時間をつくります。</p>
         <div class="bc-tags">
           <span>年長〜高校生</span><span>個別ペース</span><span>親の相談OK</span>
@@ -533,7 +542,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     <div class="rv">
       <h2 class="serif">一人で抱え込まないでください。</h2>
       <p>お子さんが学校に行けなくなったとき、親御さんは必ず自分を責めます。でもそれは間違いです。<br>NEXUSでは、親御さんの気持ちも、お子さんの気持ちも、両方を大切にします。<br>まずは、気軽に相談してください。</p>
-      <a href="soudan.html" class="btn-a">無料相談を申し込む（LINE）</a>
+      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="btn-a">無料相談を申し込む（LINE）</a>
     </div>
   </div>
 </section>
@@ -561,7 +570,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
           <li><a href="#timeline">時間割・スケジュール</a></li>
           <li><a href="#classroom">教室・アクセス</a></li>
           <li><a href="#faq">よくある質問</a></li>
-          <li><a href="soudan.html">無料相談</a></li>
+          <li><a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener">無料相談（LINE）</a></li>
         </ul>
       </div>
     </div>
