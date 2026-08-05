@@ -73,9 +73,10 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .hero-bg{position:absolute;inset:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,24,24,.72) 0%,rgba(26,24,24,.5) 40%,rgba(26,24,24,.15) 100%);}
-.hero-inner{position:relative;z-index:2;text-align:left;max-width:660px;margin-left:0;}
-.hero-logo{font-size:clamp(30px,4.4vw,48px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.45);}
-.hero-subtitle{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:40px;letter-spacing:.05em;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+.hero-inner{position:relative;z-index:2;text-align:left;max-width:900px;margin-left:0;}
+.hero-logo{font-size:clamp(26px,4.2vw,48px);color:#fff;margin-bottom:8px;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.45);white-space:nowrap;width:max-content;max-width:none;}
+.hero-logo-sub{font-size:clamp(18px,2.7vw,34px);font-weight:600;opacity:.95;margin-left:8px;white-space:nowrap;}
+.hero-subtitle{font-size:clamp(18px,2.5vw,32px);color:rgba(255,255,255,.9);margin-bottom:40px;letter-spacing:.03em;text-shadow:0 1px 8px rgba(0,0,0,.5);font-family:'Shippori Mincho',serif;font-weight:500;}
 .hero-brands{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
 .hero-brand-card{
   background:rgba(255,255,255,.96);padding:24px 14px;border-radius:6px;
@@ -87,11 +88,12 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .hbc-name{font-size:16px;color:var(--ink);margin-bottom:4px;font-weight:700;}
 .hbc-sub{font-size:11.5px;color:var(--amber);font-weight:600;margin-bottom:8px;letter-spacing:.03em;}
 .hbc-time{font-size:12.5px;color:var(--soft);letter-spacing:.02em;}
-.hero-cta{font-size:clamp(20px,3.4vw,30px);color:#fff;font-weight:700;line-height:1.5;text-shadow:0 2px 16px rgba(0,0,0,.55);}
 
 @media(max-width:900px){
   .hero-brands{grid-template-columns:1fr;gap:16px;}
   .hero-brand-card{padding:24px 16px;}
+  .hero-logo{white-space:normal;width:auto;font-size:clamp(24px,7vw,40px);}
+  .hero-logo-sub{display:block;margin-left:0;margin-top:6px;white-space:normal;}
 }
 
 
@@ -287,7 +289,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   <div class="hero-bg"><img src="images/hero-future.jpg" alt="世界を見つめる子どもたち"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner wrap">
-    <div class="hero-logo serif">NEXUSの教育</div>
+    <div class="hero-logo serif">NEXUSの教育<span class="hero-logo-sub">〜あなたに合った学びの場が、ここにある〜</span></div>
     <p class="hero-subtitle">長い教師歴が、様々な教育の形をプロデュース</p>
     
     <div class="hero-brands">
@@ -309,10 +311,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <div class="hbc-sub">大学受験</div>
         <div class="hbc-time">19:00-20:20</div>
       </a>
-    </div>
-    
-    <div class="hero-cta serif">
-      あなたに合った学びの場が、ここにある。
     </div>
   </div>
 </section>
