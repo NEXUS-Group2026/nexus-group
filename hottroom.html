@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホッとルーム｜不登校支援フリースクール｜株式会社NEXUS 文京区本郷</title>
+<meta name="description" content="学校に登校できていないお子様のための、不登校支援フリースクール「ホッとルーム」。文京区本郷。自分のペースで安心して過ごせる居場所を。まずは無料相談から。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FDFAF5;--white:#FFFFFF;--ink:#1A1818;--soft:#6B6560;--line:#E5DED4;
+  --hot:#5E8C6A;--hot-p:#F0F7F2;--hot-d:#3A5E45;--hot-deep:#2E4B37;
+  --amber:#B8893C;--amber-p:#FDF5E7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.9;font-size:15px;overflow-x:hidden;}
+.serif{font-family:'Shippori Mincho',serif;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+.narrow{max-width:820px;margin:0 auto;padding:0 28px;}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:15px 0;
+  background:linear-gradient(180deg,rgba(46,75,55,.5) 0%,rgba(46,75,55,0) 100%);
+  transition:background .35s,box-shadow .35s,padding .35s;}
+header.s{background:rgba(46,75,55,.97);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1080px;margin:0 auto;padding:0 28px;gap:16px;}
+.brand{color:#fff;font-size:14px;font-weight:700;letter-spacing:.05em;display:flex;flex-direction:column;gap:2px;line-height:1.3;}
+.brand .co{font-size:10.5px;opacity:.75;font-weight:400;letter-spacing:.08em;}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{color:rgba(255,255,255,.85);font-size:13px;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{background:var(--amber);color:#fff;font-size:12.5px;font-weight:700;padding:10px 20px;border-radius:3px;white-space:nowrap;}
+.nav-cta:hover{background:#fff;color:var(--amber);}
+
+/* hero */
+.hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(30,45,34,.82) 0%,rgba(30,45,34,.55) 50%,rgba(30,45,34,.2) 100%);}
+.hero-inner{position:relative;z-index:2;padding:120px 0 70px;max-width:640px;}
+.hero-tag{display:inline-block;font-size:12px;letter-spacing:.14em;color:#fff;background:var(--hot);padding:7px 15px;border-radius:20px;margin-bottom:24px;}
+.hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(30px,4.6vw,50px);line-height:1.42;color:#fff;font-weight:800;margin-bottom:22px;text-shadow:0 2px 20px rgba(0,0,0,.35);}
+.hero p{font-size:15.5px;color:rgba(255,255,255,.92);margin-bottom:34px;text-shadow:0 1px 10px rgba(0,0,0,.4);}
+.hero-btns{display:flex;gap:13px;flex-wrap:wrap;}
+.btn-a{background:var(--amber);color:#fff;font-weight:700;font-size:14px;padding:15px 30px;border-radius:3px;transition:.2s;}
+.btn-a:hover{background:#fff;color:var(--ink);}
+.btn-b{border:1px solid rgba(255,255,255,.6);color:#fff;font-size:14px;padding:14px 26px;border-radius:3px;transition:.2s;}
+.btn-b:hover{background:#fff;color:var(--ink);}
+
+/* section basics */
+section{position:relative;}
+.eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:12px;letter-spacing:.18em;font-weight:600;color:var(--hot);text-transform:uppercase;margin-bottom:14px;}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--hot);}
+h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(23px,3vw,34px);color:var(--ink);font-weight:700;line-height:1.5;}
+
+/* empathy */
+.empathy{padding:90px 0;background:var(--hot-p);}
+.empathy .narrow{text-align:center;}
+.empathy h2{margin-bottom:26px;}
+.empathy p{font-size:15.5px;color:#41504a;margin-bottom:18px;line-height:2;}
+.empathy .lead{font-size:18px;color:var(--hot-d);font-weight:600;font-family:'Shippori Mincho',serif;}
+
+/* feature split */
+.split{padding:80px 0;}
+.split.alt{background:#fff;}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.split.rev .split-grid{direction:rtl;}
+.split.rev .split-grid>*{direction:ltr;}
+.split-img{border-radius:6px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 12px 40px rgba(0,0,0,.1);}
+.split-img img{width:100%;height:100%;object-fit:cover;}
+.split-copy h3{font-family:'Shippori Mincho',serif;font-size:clamp(20px,2.4vw,27px);color:var(--ink);margin-bottom:18px;font-weight:700;line-height:1.55;}
+.split-copy p{font-size:14.5px;color:var(--soft);margin-bottom:14px;line-height:1.95;}
+.split-copy p strong{color:var(--hot-d);font-weight:600;}
+
+/* flow / 1日の過ごし方 */
+.flow{padding:90px 0;background:var(--bg);}
+.flow-head{text-align:center;margin-bottom:20px;}
+.flow-note{text-align:center;font-size:14px;color:var(--soft);max-width:640px;margin:0 auto 50px;}
+.parts{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:0 auto 40px;}
+.part{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px 30px 34px;}
+.part-label{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--hot);padding:5px 14px;border-radius:20px;margin-bottom:8px;}
+.part-time{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:16px;}
+.part-time span{font-size:13px;color:var(--soft);font-family:'Noto Sans JP';font-weight:400;margin-left:6px;}
+.part ul{list-style:none;}
+.part li{font-size:13.5px;color:var(--soft);padding-left:20px;position:relative;margin-bottom:9px;}
+.part li::before{content:'';position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--hot);}
+.flow-free{max-width:900px;margin:0 auto;background:var(--hot-p);border-radius:8px;padding:26px 30px;font-size:14px;color:var(--hot-d);line-height:1.9;}
+.flow-free strong{font-weight:700;}
+
+/* price */
+.price{padding:90px 0;background:#fff;}
+.price-head{text-align:center;margin-bottom:14px;}
+.price-note{text-align:center;font-size:14px;color:var(--soft);max-width:640px;margin:0 auto 46px;}
+.ptable{max-width:760px;margin:0 auto 30px;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.ptable table{width:100%;border-collapse:collapse;}
+.ptable th,.ptable td{padding:16px 18px;text-align:center;font-size:14px;border-bottom:1px solid var(--line);}
+.ptable thead th{background:var(--hot);color:#fff;font-weight:600;font-size:13px;letter-spacing:.02em;}
+.ptable tbody tr:last-child td{border-bottom:none;}
+.ptable td:first-child{font-weight:700;color:var(--ink);background:var(--bg);}
+.ptable .disc{color:var(--hot-d);font-weight:700;}
+.ptable td .yen{font-size:12px;color:var(--soft);font-weight:400;}
+.price-extra{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.pe-card{background:var(--bg);border-radius:8px;padding:22px 24px;}
+.pe-card .pe-label{font-size:13px;color:var(--soft);margin-bottom:6px;}
+.pe-card .pe-val{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);}
+.pe-card .pe-val span{font-size:13px;font-weight:400;color:var(--soft);font-family:'Noto Sans JP';}
+.price-disc{max-width:760px;margin:26px auto 0;font-size:12.5px;color:var(--soft);line-height:1.85;}
+
+/* faq */
+.faq{padding:90px 0;background:var(--bg);}
+.faq-head{text-align:center;margin-bottom:46px;}
+.faq-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line);}
+.fq{border-bottom:1px solid var(--line);padding:26px 0;}
+.fq h4{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--ink);margin-bottom:11px;font-weight:600;line-height:1.6;}
+.fq h4::before{content:'Q. ';color:var(--hot);font-weight:700;}
+.fq p{font-size:13.5px;color:var(--soft);padding-left:22px;line-height:1.9;}
+
+/* cta */
+.cta{padding:90px 0;background:var(--hot-deep);text-align:center;}
+.cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(23px,3vw,34px);color:#fff;margin-bottom:18px;font-weight:700;}
+.cta p{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto;line-height:2;}
+.cta .btn-a{display:inline-block;}
+.cta-back{display:inline-block;margin-top:24px;font-size:13px;color:rgba(255,255,255,.7);}
+.cta-back:hover{color:#fff;}
+
+/* footer */
+footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.foot-brand{font-size:15px;color:#fff;font-weight:700;margin-bottom:10px;font-family:'Shippori Mincho',serif;}
+.foot-txt{font-size:12.5px;line-height:2;}
+.foot-col h5{font-size:12.5px;color:#fff;font-weight:600;letter-spacing:.05em;margin-bottom:15px;}
+.foot-col ul{list-style:none;}
+.foot-col li{font-size:13px;margin-bottom:9px;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12px;}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;}
+.rv.in{opacity:1;transform:none;}
+
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .split-grid{grid-template-columns:1fr;gap:30px;}
+  .split.rev .split-grid{direction:ltr;}
+  .parts{grid-template-columns:1fr;}
+  .price-extra{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .ptable{overflow-x:auto;}
+}
+@media(max-width:600px){
+  .wrap,.narrow{padding:0 18px;}
+  section,.empathy,.split,.flow,.price,.faq,.cta{padding:60px 0;}
+  .hero-inner{padding:100px 0 56px;}
+  .ptable th,.ptable td{padding:12px 10px;font-size:12.5px;}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <span class="co">株式会社 NEXUS</span>
+      <span>ホッとルーム</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">ホッとルームとは</a>
+      <a href="#flow">1日の過ごし方</a>
+      <a href="#price">料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="soudan.html" class="nav-cta">無料相談</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="images/hot-hero.jpg" alt="ホッとルームで思い思いに過ごす子どもたち"></div>
+  <div class="hero-inner wrap">
+    <span class="hero-tag">不登校支援フリースクール</span>
+    <h1 class="serif">学校に行けなくても、<br>ここが「行ける場所」に。</h1>
+    <p>ホッとルームは、学校に登校できていないお子様のための居場所です。<br>勉強を急かしません。まずは、安心して過ごせることから。</p>
+    <div class="hero-btns">
+      <a href="soudan.html" class="btn-a">無料相談を申し込む</a>
+      <a href="#flow" class="btn-b">1日の過ごし方を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- EMPATHY -->
+<section class="empathy" id="about">
+  <div class="narrow rv">
+    <div class="eyebrow" style="justify-content:center;">ABOUT</div>
+    <h2 class="hl serif">「行きたくない」の裏には、<br>「もう、がんばれない」があります。</h2>
+    <p class="lead">お子さんは、決して怠けているわけではありません。</p>
+    <p>朝、体が動かない。教室を思うと胸が苦しくなる。理由をうまく言葉にできない。<br>それは「甘え」ではなく、心と体が限界まで疲れているサインです。</p>
+    <p>ホッとルームは、そんなお子さんが「何もしなくていい」ところから始められる場所です。<br>安心できる関係ができて、少しずつ元気が戻ってきたら、そのとき初めて「やってみたいこと」に手を伸ばせばいい。私たちは、そのペースにとことん寄り添います。</p>
+  </div>
+</section>
+
+<!-- SPLIT 1: 居場所 -->
+<section class="split alt">
+  <div class="wrap">
+    <div class="split-grid rv">
+      <div class="split-img"><img src="images/hot-reading.jpg" alt="窓際で静かに本を読む生徒"></div>
+      <div class="split-copy">
+        <div class="eyebrow">安心できる居場所</div>
+        <h3 class="serif">「ただ、いていい」時間があります。</h3>
+        <p>本を読んでも、ぼんやり過ごしても、絵を描いても大丈夫。<strong>「今日は何もしたくない」も、立派な選択</strong>として受け止めます。</p>
+        <p>少人数だから、大勢の中でしんどくなることもありません。同じ空間にいても、干渉しすぎない。ひとりになりたいときは、ひとりで過ごせる。そんな距離感を大切にしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT 2: チューター -->
+<section class="split rev">
+  <div class="wrap">
+    <div class="split-grid rv">
+      <div class="split-img"><img src="images/hot-tutor.jpg" alt="チューターと穏やかに話す生徒"></div>
+      <div class="split-copy">
+        <div class="eyebrow">チューターとの関わり</div>
+        <h3 class="serif">正解より、その子の「今」を。</h3>
+        <p>ホッとルームのチューターは、勉強を教え込む人ではありません。<strong>まずは、その子の話を聞く人</strong>です。</p>
+        <p>好きなゲームの話でも、昨日見た動画の話でもいい。雑談から少しずつ信頼が生まれ、「この人になら話せる」という安心が育ちます。学びは、その安心の上に、自然と戻ってきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT 3: 保護者 -->
+<section class="split alt">
+  <div class="wrap">
+    <div class="split-grid rv">
+      <div class="split-img"><img src="images/hot-counsel.jpg" alt="保護者とチューターの面談"></div>
+      <div class="split-copy">
+        <div class="eyebrow">保護者へのサポート</div>
+        <h3 class="serif">がんばっているのは、<br>お子さんだけではありません。</h3>
+        <p>「私の育て方が悪かったのか」——多くの親御さんが、そう自分を責めています。でも、それは違います。</p>
+        <p><strong>ホッとルームは、保護者の方の伴走者でもあります。</strong>定期的な面談で、お子さんの様子を共有し、ご家庭での関わり方も一緒に考えます。一人で抱え込まないでください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow" id="flow">
+  <div class="wrap">
+    <div class="flow-head rv">
+      <div class="eyebrow" style="justify-content:center;">DAILY FLOW</div>
+      <h2 class="hl serif">1日の過ごし方</h2>
+    </div>
+    <p class="flow-note rv">第1部・第2部のどちらかに通って過ごし、その後ご帰宅いただくのが基本です。<br>「午前中だけ」「午後だけ」など、お子さんの体調やご家庭の状況に合わせて選べます。</p>
+    <div class="parts rv">
+      <div class="part">
+        <span class="part-label">第1部</span>
+        <div class="part-time">9:30 – 12:00 <span>午前</span></div>
+        <ul>
+          <li>登校（来られる時間に、来られる範囲で）</li>
+          <li>読書・探究・学習など、自分で選んで過ごす</li>
+          <li>チューターとの雑談・相談</li>
+          <li>休憩も自由。疲れたら休んでOK</li>
+        </ul>
+      </div>
+      <div class="part">
+        <span class="part-label">第2部</span>
+        <div class="part-time">13:00 – 15:30 <span>午後</span></div>
+        <ul>
+          <li>午後から登校したいお子さんはこちら</li>
+          <li>制作・工作・PCなど、興味に応じた活動</li>
+          <li>チューターとの1対1の時間</li>
+          <li>その日の振り返り・帰宅</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flow-free rv">
+      <strong>◎ 第1部・第2部の両方で過ごすこともできます。</strong><br>
+      朝から夕方まで、1日を通してここで過ごしたいお子さんは、両方をご利用いただけます（料金は割引適用）。無理に長くいる必要はありません。「今日は午前だけ」でも大丈夫です。
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price" id="price">
+  <div class="wrap">
+    <div class="price-head rv">
+      <div class="eyebrow" style="justify-content:center;">PRICE</div>
+      <h2 class="hl serif">料金のご案内</h2>
+    </div>
+    <p class="price-note rv">通う回数に応じて選べます。第1部・第2部は同額。<br>両方を1日通してご利用の場合は、20%割引が適用されます。</p>
+    <div class="ptable rv">
+      <table>
+        <thead>
+          <tr>
+            <th>通所回数</th>
+            <th>第1部のみ／第2部のみ</th>
+            <th>1日通し（第1部＋第2部）<br>20%OFF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>週2回</td><td>20,000<span class="yen">円</span></td><td class="disc">32,000<span class="yen">円</span></td></tr>
+          <tr><td>週3回</td><td>28,000<span class="yen">円</span></td><td class="disc">44,800<span class="yen">円</span></td></tr>
+          <tr><td>週4回</td><td>38,000<span class="yen">円</span></td><td class="disc">60,800<span class="yen">円</span></td></tr>
+          <tr><td>週5回</td><td>46,000<span class="yen">円</span></td><td class="disc">73,600<span class="yen">円</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="price-extra rv">
+      <div class="pe-card">
+        <div class="pe-label">入会金</div>
+        <div class="pe-val">20,000<span>円</span></div>
+      </div>
+      <div class="pe-card">
+        <div class="pe-label">システム利用料</div>
+        <div class="pe-val">2,000<span>円 / 月</span></div>
+      </div>
+    </div>
+    <p class="price-disc rv">※ 表示はすべて月額・税込です。※ 入会金は初回のみ。※ 通所回数・コースはお子さんの状況に合わせてご相談いただけます。詳しくは無料相談にてご案内します。</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-head rv">
+      <div class="eyebrow" style="justify-content:center;">FAQ</div>
+      <h2 class="hl serif">よくあるご質問</h2>
+    </div>
+    <div class="faq-list rv">
+      <div class="fq">
+        <h4>ほとんど外に出られない状態でも通えますか？</h4>
+        <p>大丈夫です。まずは保護者の方だけの相談から始められます。お子さんが動けるようになるタイミングを、一緒に待ちます。見学だけ、短時間だけ、という始め方も歓迎です。</p>
+      </div>
+      <div class="fq">
+        <h4>他の子と話せなくても平気でしょうか？</h4>
+        <p>はい。無理に交流させることはありません。一人で静かに過ごすお子さんもたくさんいます。チューターとの1対1の時間から始めて、少しずつで大丈夫です。</p>
+      </div>
+      <div class="fq">
+        <h4>勉強が遅れているのが心配です。</h4>
+        <p>まずは心が元気を取り戻すことを最優先にします。落ち着いてくると、多くのお子さんが自分から学びに向かい始めます。そのときに、チューターが個別にサポートします。</p>
+      </div>
+      <div class="fq">
+        <h4>学校の出席扱いになりますか？</h4>
+        <p>フリースクールでの活動が在籍校の出席として認められるケースがあります（校長の判断によります）。在籍校との連携についても、ご相談に応じてサポートします。</p>
+      </div>
+      <div class="fq">
+        <h4>発達の特性がある子でも大丈夫ですか？</h4>
+        <p>はい。代表は発達特性やギフテッドのお子さんの支援に長く携わってきました。その子の特性を理解した上で、無理のない関わり方を大切にしています。</p>
+      </div>
+      <div class="fq">
+        <h4>親の面談はどのくらいありますか？</h4>
+        <p>月1回程度を目安に、お子さんの様子を共有する面談を行います。ご家庭での悩みや不安も、遠慮なくお話しください。保護者の方を支えることも私たちの役目です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap rv">
+    <h2 class="serif">まずは、お話を聞かせてください。</h2>
+    <p>「うちの子はどうしたらいいんだろう」——その気持ちを、一人で抱えないでください。<br>お子さんが来られなくても、保護者の方だけの相談で構いません。<br>LINEから、気軽にご連絡ください。</p>
+    <a href="soudan.html" class="btn-a">無料相談を申し込む（LINE）</a>
+    <br>
+    <a href="index.html" class="cta-back">← NEXUSトップに戻る</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">株式会社 NEXUS</div>
+        <p class="foot-txt">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>総合型選抜対策塾（文理対応）<br><br>〒113-0033 東京都文京区本郷2-23-12 2階<br>nexusgroup.daihyou@gmail.com</p>
+      </div>
+      <div class="foot-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="hottroom.html">ホッとルーム</a></li>
+          <li><a href="kodomotankyu.html">子ども探究大学</a></li>
+          <li><a href="tankyukaika.html">総合型選抜対策塾</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>情報</h5>
+        <ul>
+          <li><a href="index.html">NEXUSトップ</a></li>
+          <li><a href="#price">料金</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="soudan.html">無料相談</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 株式会社NEXUS. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('s',scrollY>50));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
