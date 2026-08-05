@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料相談・お問い合わせ｜株式会社NEXUS 文京区本郷</title>
+<meta name="description" content="株式会社NEXUS（ホッとルーム・子ども探究大学・総合型選抜対策塾）への無料相談・お問い合わせ。LINEまたはメールフォームからご連絡いただけます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FDFAF5;--white:#FFFFFF;--ink:#1A1818;--soft:#6B6560;--line:#E5DED4;
+  --hot:#5E8C6A;--hot-p:#F0F7F2;--hot-d:#3A5E45;--kaika:#283C65;
+  --amber:#B8893C;--amber-p:#FDF5E7;--line-green:#06C755;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.9;font-size:15px;}
+.serif{font-family:'Shippori Mincho',serif;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+header{background:var(--kaika);padding:14px 0;}
+.nav{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
+.brand{color:#fff;font-size:14px;font-weight:700;display:flex;flex-direction:column;gap:2px;line-height:1.3;}
+.brand .co{font-size:10.5px;opacity:.75;font-weight:400;}
+.nav-back{color:rgba(255,255,255,.85);font-size:13px;}
+.nav-back:hover{color:#fff;}
+
+.hero{background:var(--kaika);color:#fff;padding:50px 0 60px;text-align:center;}
+.hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(26px,4vw,38px);font-weight:700;margin-bottom:14px;}
+.hero p{font-size:14.5px;color:rgba(255,255,255,.85);max-width:560px;margin:0 auto;line-height:1.95;}
+
+.content{padding:56px 0 80px;}
+
+/* choose method */
+.methods{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:50px;}
+.method{border:1px solid var(--line);border-radius:10px;padding:30px 26px;text-align:center;background:#fff;}
+.method.line-m{border-top:4px solid var(--line-green);}
+.method.mail-m{border-top:4px solid var(--amber);}
+.method .m-icon{font-size:30px;margin-bottom:12px;}
+.method h3{font-family:'Shippori Mincho',serif;font-size:19px;margin-bottom:10px;font-weight:700;}
+.method p{font-size:13px;color:var(--soft);margin-bottom:20px;line-height:1.85;}
+.method .m-btn{display:inline-block;font-size:14px;font-weight:700;padding:13px 28px;border-radius:4px;color:#fff;transition:.2s;}
+.method.line-m .m-btn{background:var(--line-green);}
+.method.line-m .m-btn:hover{background:#05a648;}
+.method.mail-m .m-btn{background:var(--amber);}
+.method.mail-m .m-btn:hover{background:#a2782f;}
+
+.divider{text-align:center;margin:0 0 44px;position:relative;}
+.divider::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--line);}
+.divider span{position:relative;background:var(--bg);padding:0 18px;font-size:13px;color:var(--soft);}
+
+/* form */
+.form-head{margin-bottom:28px;}
+.form-head .eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:12px;letter-spacing:.16em;font-weight:600;color:var(--amber);margin-bottom:12px;}
+.form-head .eyebrow::before{content:'';width:26px;height:1px;background:var(--amber);}
+.form-head h2{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;margin-bottom:10px;}
+.form-head p{font-size:13.5px;color:var(--soft);}
+
+form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:36px 34px;}
+.field{margin-bottom:22px;}
+.field label{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+.field label .req{color:#C0392B;font-size:11px;margin-left:6px;}
+.field label .opt{color:var(--soft);font-size:11px;margin-left:6px;font-weight:400;}
+.field input,.field select,.field textarea{
+  width:100%;border:1px solid var(--line);border-radius:6px;padding:12px 14px;
+  font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg);transition:border .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--hot);background:#fff;}
+.field textarea{resize:vertical;min-height:130px;line-height:1.8;}
+.field .hint{font-size:12px;color:var(--soft);margin-top:6px;}
+.submit{width:100%;background:var(--amber);color:#fff;font-size:15px;font-weight:700;padding:16px;border:none;border-radius:6px;cursor:pointer;transition:.2s;font-family:inherit;}
+.submit:hover{background:#a2782f;}
+.form-note{font-size:12px;color:var(--soft);margin-top:18px;line-height:1.8;text-align:center;}
+
+footer{background:#141414;color:#8a8880;padding:40px 0 24px;text-align:center;}
+.footer-brand{color:#fff;font-family:'Shippori Mincho',serif;font-size:15px;font-weight:700;margin-bottom:8px;}
+.footer-txt{font-size:12.5px;line-height:1.9;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:24px;padding-top:18px;font-size:12px;}
+
+@media(max-width:640px){
+  .methods{grid-template-columns:1fr;}
+  form{padding:28px 22px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <span class="co">株式会社 NEXUS</span>
+      <span>無料相談・お問い合わせ</span>
+    </a>
+    <a href="index.html" class="nav-back">← トップに戻る</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="serif">まずは、お気軽にご相談ください</h1>
+    <p>お子さんのこと、ご家庭のこと、どんな小さなことでも構いません。<br>LINEまたはメールフォームから、ご連絡ください。</p>
+  </div>
+</section>
+
+<div class="content">
+  <div class="wrap">
+
+    <!-- method choice -->
+    <div class="methods">
+      <div class="method line-m">
+        <div class="m-icon">💬</div>
+        <h3 class="serif">LINEで相談</h3>
+        <p>すぐにやり取りしたい方へ。<br>友だち追加してメッセージを送るだけ。</p>
+        <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="m-btn">LINEで相談する</a>
+      </div>
+      <div class="method mail-m">
+        <div class="m-icon">✉️</div>
+        <h3 class="serif">メールで相談</h3>
+        <p>じっくり書いて伝えたい方へ。<br>下のフォームからお送りください。</p>
+        <a href="#form" class="m-btn">フォームへ</a>
+      </div>
+    </div>
+
+    <div class="divider"><span>メールフォームで相談する</span></div>
+
+    <!-- form -->
+    <div class="form-head" id="form">
+      <div class="eyebrow">CONTACT FORM</div>
+      <h2 class="serif">お問い合わせフォーム</h2>
+      <p>いただいた内容を確認のうえ、担当より折り返しご連絡いたします。</p>
+    </div>
+
+    <form action="https://formspree.io/f/xojrzyvr" method="POST">
+      <div class="field">
+        <label for="name">お名前<span class="req">必須</span></label>
+        <input type="text" id="name" name="お名前" required placeholder="例：山田 花子">
+      </div>
+
+      <div class="field">
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="email" name="メールアドレス" required placeholder="例：example@mail.com">
+      </div>
+
+      <div class="field">
+        <label for="tel">電話番号<span class="opt">任意</span></label>
+        <input type="tel" id="tel" name="電話番号" placeholder="例：090-1234-5678">
+      </div>
+
+      <div class="field">
+        <label for="service">ご相談内容の種類<span class="req">必須</span></label>
+        <select id="service" name="ご相談内容の種類" required>
+          <option value="">選択してください</option>
+          <option value="ホッとルーム（不登校支援）">ホッとルーム（不登校支援）</option>
+          <option value="子ども探究大学（探究学習塾）">子ども探究大学（探究学習塾）</option>
+          <option value="総合型選抜対策塾">総合型選抜対策塾</option>
+          <option value="どれか分からない・全般">どれか分からない・全般的な相談</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="child">お子さんの学年<span class="opt">任意</span></label>
+        <input type="text" id="child" name="お子さんの学年" placeholder="例：小学4年生 / 中学2年生">
+      </div>
+
+      <div class="field">
+        <label for="message">ご相談内容<span class="req">必須</span></label>
+        <textarea id="message" name="ご相談内容" required placeholder="お子さんの様子や、気になっていること、聞いてみたいことなど、どんなことでも構いません。うまくまとまっていなくても大丈夫です。"></textarea>
+        <div class="hint">※ 個人が特定される詳しい情報は、無理に書かなくて大丈夫です。</div>
+      </div>
+
+      <button type="submit" class="submit">この内容で送信する</button>
+      <p class="form-note">送信いただいた個人情報は、ご相談への対応のみに使用し、第三者に提供することはありません。</p>
+    </form>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand serif">株式会社 NEXUS</div>
+    <p class="footer-txt">〒113-0033 東京都文京区本郷2-23-12 2階<br>nexusgroup.daihyou@gmail.com</p>
+    <div class="footer-bottom">© 2026 株式会社NEXUS. All Rights Reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
