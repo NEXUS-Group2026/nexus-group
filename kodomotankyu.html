@@ -258,6 +258,10 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 /* ======= REVEAL ======= */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
 .rv.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none;}
+}
+
 
 /* ======= RESPONSIVE ======= */
 @media(max-width:900px){
@@ -287,6 +291,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   .hero-center{padding:130px 22px 56px;}
 }
 </style>
+<noscript><style>.rv{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
 
