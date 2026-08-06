@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>子ども探究大学｜AIチューターと学ぶ探究学習塾｜株式会社NEXUS（文京区本郷）</title>
+<meta name="description" content="文京区本郷の探究学習塾「子ども探究大学」。AIチューターと人間のチューターが二人三脚で、STEAMから哲学・心理学・人類学まで、子どもの『なぜ?』を止めない学びをサポートします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ======= TOKENS (index.htmlと共通) ======= */
+:root{
+  --bg:#FDFAF5;
+  --white:#FFFFFF;
+  --ink:#1A1818;
+  --soft:#6B6560;
+  --line:#E5DED4;
+
+  --hot:#5E8C6A;
+  --hot-p:#F0F7F2;
+  --hot-d:#3A5E45;
+
+  --tanq:#3560A8;
+  --tanq-p:#EAF0FA;
+  --tanq-d:#1F3E78;
+
+  --kaika:#283C65;
+  --kaika-p:#E7EBF3;
+  --kaika-d:#182640;
+
+  --amber:#B8893C;
+  --amber-p:#FDF5E7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;font-size:15px;overflow-x:hidden;}
+.serif{font-family:'Shippori Mincho',serif;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+
+/* ======= HEADER ======= */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:16px 0;
+  background:linear-gradient(180deg,rgba(26,24,24,.45) 0%,rgba(26,24,24,0) 100%);
+  transition:background .35s,box-shadow .35s,padding .35s;
+}
+header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1140px;margin:0 auto;padding:0 28px;}
+.brand{color:#fff;font-size:15px;font-weight:700;letter-spacing:.06em;display:flex;flex-direction:column;gap:4px;line-height:1.2;}
+.brand .co{font-size:11px;opacity:.7;font-weight:400;letter-spacing:.1em;}
+.brand .hdr-brandlist{display:flex;gap:10px;font-size:12px;font-weight:400;}
+.brand .hdr-brandlist span{opacity:.85;}
+.brand .hdr-brandlist span.on{opacity:1;color:#9DBBEE;font-weight:600;}
+.brand .hdr-brandlist span::after{content:'｜';opacity:.4;margin-left:10px;}
+.brand .hdr-brandlist span:last-child::after{content:'';}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.04em;}
+.nav-links a:hover{color:#fff;}
+.nav-actions{display:flex;gap:9px;align-items:center;}
+.nav-cta{font-size:12.5px;font-weight:700;padding:10px 18px;border-radius:3px;letter-spacing:.03em;white-space:nowrap;transition:.2s;display:inline-flex;align-items:center;gap:6px;}
+.nav-cta.line{background:#06C755;color:#fff;}
+.nav-cta.line:hover{background:#05a648;}
+.nav-cta.mail{background:var(--tanq);color:#fff;}
+.nav-cta.mail:hover{background:var(--tanq-p);color:var(--tanq);}
+
+/* ======= HERO ======= */
+.hero{
+  position:relative;min-height:92vh;display:flex;align-items:flex-end;
+  overflow:hidden;padding:60px 0 72px;
+}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,29,54,.35) 0%,rgba(19,29,54,.35) 40%,rgba(15,23,43,.88) 100%);}
+.hero-inner{position:relative;z-index:2;max-width:760px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:19px;letter-spacing:.12em;font-weight:800;color:#9DBBEE;text-transform:uppercase;margin-bottom:18px;}
+.hero-eyebrow::before{content:'';width:34px;height:2px;background:#9DBBEE;}
+.hero-h1{font-size:clamp(28px,4.6vw,50px);color:#fff;font-weight:700;line-height:1.5;text-shadow:0 2px 20px rgba(0,0,0,.4);margin-bottom:20px;}
+.hero-lead{font-size:clamp(14.5px,1.6vw,16.5px);color:rgba(255,255,255,.88);max-width:560px;margin-bottom:14px;line-height:1.95;}
+.hero-note{font-size:12px;color:rgba(255,255,255,.68);max-width:560px;margin-bottom:34px;line-height:1.85;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-btn{font-size:13.5px;font-weight:700;padding:14px 26px;border-radius:3px;letter-spacing:.03em;transition:.2s;display:inline-flex;align-items:center;gap:8px;}
+.hero-btn.line{background:#06C755;color:#fff;}
+.hero-btn.line:hover{background:#05a648;}
+.hero-btn.mail{background:#fff;color:var(--tanq-d);}
+.hero-btn.mail:hover{background:var(--tanq-p);}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-meta div{color:rgba(255,255,255,.75);font-size:12.5px;letter-spacing:.03em;border-left:2px solid #9DBBEE;padding-left:12px;}
+.hero-meta strong{display:block;color:#fff;font-size:14px;font-weight:600;margin-bottom:2px;}
+
+/* ======= SHARED SECTION BITS ======= */
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--tanq);text-transform:uppercase;}
+.eyebrow::before{content:'';flex-shrink:0;width:28px;height:1px;background:var(--tanq);}
+h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:var(--ink);font-weight:700;line-height:1.55;letter-spacing:.02em;}
+
+/* ======= STATEMENT ======= */
+.statement{background:var(--tanq-d);padding:100px 0;text-align:center;}
+.stmt-list{font-size:clamp(13px,1.6vw,15.5px);color:#9DBBEE;letter-spacing:.08em;margin-bottom:26px;line-height:1.9;}
+.stmt-main{font-size:clamp(24px,4vw,44px);color:#fff;font-weight:700;line-height:1.75;max-width:900px;margin:0 auto;}
+.stmt-main span{color:#fff;position:relative;white-space:nowrap;}
+.stmt-main span::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:.4em;background:var(--amber);opacity:.55;z-index:-1;}
+
+/* ======= INTRO ======= */
+.intro{background:#fff;padding:88px 0 76px;}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:44px;}
+.intro-copy p{font-size:14.5px;color:var(--soft);margin-bottom:16px;line-height:2;}
+.intro-stat{background:var(--tanq-p);border-radius:4px;padding:34px 30px;}
+.intro-stat p{font-size:13.5px;color:var(--tanq-d);line-height:1.95;margin-bottom:14px;}
+.intro-stat p:last-child{margin-bottom:0;}
+.intro-stat strong{font-size:15px;font-weight:700;display:block;margin-bottom:6px;}
+
+/* ======= AI TUTOR ======= */
+.aitutor{background:var(--bg);padding:90px 0;}
+.at-head{max-width:680px;}
+.at-note{
+  margin-top:28px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--tanq);
+  padding:20px 24px;border-radius:3px;font-size:13px;color:var(--soft);line-height:1.9;
+}
+.at-note strong{color:var(--tanq-d);font-weight:700;}
+.at-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
+.at-card{background:#fff;padding:36px 28px;position:relative;}
+.at-card::before{content:'';position:absolute;top:0;left:0;width:36px;height:3px;background:var(--tanq);}
+.at-num{font-family:'Shippori Mincho',serif;font-size:13px;color:var(--tanq);font-weight:700;letter-spacing:.08em;margin-bottom:14px;display:block;}
+.at-card h4{font-family:'Shippori Mincho',serif;font-size:17px;color:var(--ink);font-weight:700;margin-bottom:10px;line-height:1.6;}
+.at-card p{font-size:13px;color:var(--soft);line-height:1.9;}
+
+/* ======= SUBJECTS ======= */
+.subjects{background:#fff;padding:90px 0;}
+.subj-lead{max-width:680px;margin-top:14px;color:var(--soft);font-size:14px;line-height:1.95;}
+.subj-cols{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px;}
+.subj-col{background:var(--bg);padding:36px 34px;}
+.subj-col.steam{border-top:4px solid var(--tanq);}
+.subj-col.human{border-top:4px solid var(--kaika);}
+.subj-col h4{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;margin-bottom:6px;}
+.subj-col.steam h4{color:var(--tanq-d);}
+.subj-col.human h4{color:var(--kaika-d);}
+.subj-col .sc-sub{font-size:12px;color:var(--soft);margin-bottom:20px;letter-spacing:.03em;}
+.subj-chips{display:flex;flex-wrap:wrap;gap:9px;}
+.subj-chips span{font-size:12.5px;background:#fff;border:1px solid var(--line);padding:8px 15px;border-radius:20px;color:var(--soft);font-weight:500;}
+
+/* ======= FLOW ======= */
+.flow{background:var(--bg);padding:90px 0;}
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px;counter-reset:step;}
+.flow-step{background:#fff;padding:32px 24px;position:relative;}
+.flow-step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  font-family:'Shippori Mincho',serif;font-size:26px;color:var(--tanq-p);font-weight:700;
+  -webkit-text-stroke:1px var(--tanq);display:block;margin-bottom:16px;
+}
+.flow-step h4{font-family:'Shippori Mincho',serif;font-size:15.5px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.flow-step p{font-size:12.5px;color:var(--soft);line-height:1.85;}
+
+/* ======= CLASSES ======= */
+.classes{background:#fff;padding:90px 0;}
+.class-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px;}
+.class-block{background:#fff;}
+.cb-head{padding:22px 30px 0;}
+.cb-head .cb-time{display:inline-flex;align-items:baseline;gap:8px;font-family:'Shippori Mincho',serif;font-size:19px;font-weight:700;color:var(--tanq-d);}
+.cb-head .cb-time span{font-family:'Noto Sans JP',sans-serif;font-size:11.5px;font-weight:600;color:var(--soft);letter-spacing:.05em;}
+.cb-courses{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:18px;}
+.class-card{background:var(--bg);padding:30px 26px;border-top:4px solid var(--tanq);}
+.class-card .cc-age{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--tanq-d);background:var(--tanq-p);display:inline-block;padding:4px 11px;border-radius:20px;margin-bottom:14px;}
+.class-card h4{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;margin-bottom:6px;}
+.class-card .cc-time{font-size:12px;color:var(--soft);margin-bottom:14px;letter-spacing:.03em;}
+.class-card p{font-size:13px;color:var(--soft);line-height:1.85;}
+.flex-note{
+  margin-top:24px;background:var(--tanq-p);border-radius:3px;padding:18px 24px;
+  font-size:12.5px;color:var(--tanq-d);line-height:1.9;
+}
+.class-note{margin-top:2px;background:var(--tanq);padding:26px 34px;}
+.class-note p{color:#fff;font-size:13px;line-height:1.9;}
+.class-note a{text-decoration:underline;font-weight:700;}
+
+/* ---- PRICING ---- */
+.pricing{margin-top:80px;}
+.pr-sub{font-size:13px;color:var(--soft);max-width:640px;margin-top:14px;line-height:1.9;}
+
+.monitor{
+  margin-top:44px;background:var(--kaika-d);border-radius:4px;overflow:hidden;
+  display:grid;grid-template-columns:auto 1fr;
+}
+.monitor-flag{
+  background:var(--amber);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;
+  padding:22px 12px;font-size:13px;font-weight:700;letter-spacing:.15em;text-align:center;
+}
+.monitor-body{padding:34px 38px;}
+.monitor-body .m-label{font-size:11.5px;letter-spacing:.15em;color:#9DBBEE;font-weight:700;margin-bottom:10px;}
+.monitor-body h4{font-family:'Shippori Mincho',serif;color:#fff;font-size:22px;font-weight:700;margin-bottom:16px;line-height:1.6;}
+.monitor-price{display:flex;align-items:baseline;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
+.monitor-price .mp-main{font-family:'Shippori Mincho',serif;font-size:34px;color:#fff;font-weight:700;}
+.monitor-price .mp-unit{font-size:13px;color:rgba(255,255,255,.75);}
+.monitor-list{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:0;}
+.monitor-list li{list-style:none;font-size:12.5px;color:rgba(255,255,255,.8);position:relative;padding-left:14px;}
+.monitor-list li::before{content:'—';position:absolute;left:0;color:#9DBBEE;}
+
+.pr-table-wrap{margin-top:36px;}
+.pr-table-head{font-size:12.5px;color:var(--soft);letter-spacing:.05em;margin-bottom:16px;}
+.pr-table{width:100%;border-collapse:collapse;background:#fff;}
+.pr-table th,.pr-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:13.5px;}
+.pr-table th{font-size:11.5px;letter-spacing:.08em;color:var(--soft);font-weight:600;border-bottom:2px solid var(--line);}
+.pr-table td.pt-freq{font-weight:700;color:var(--ink);}
+.pr-table td.pt-unit{color:var(--soft);font-size:12.5px;}
+.pr-table tr.pt-rec{background:var(--tanq-p);}
+.pr-table tr.pt-rec td.pt-freq{color:var(--tanq-d);}
+.pt-badge{display:inline-block;font-size:10.5px;font-weight:700;background:var(--tanq);color:#fff;padding:3px 9px;border-radius:20px;margin-left:8px;letter-spacing:.04em;vertical-align:middle;}
+.pr-foot{font-size:12px;color:var(--soft);margin-top:14px;line-height:1.9;}
+.pr-enroll{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px;}
+.pr-enroll div{font-size:13px;color:var(--soft);}
+.pr-enroll strong{display:block;color:var(--ink);font-size:15px;font-weight:700;margin-bottom:2px;}
+
+.campaign{
+  margin-top:36px;background:var(--amber-p);border:1px solid var(--amber);border-radius:4px;
+  padding:26px 32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.campaign .cp-icon{font-size:26px;}
+.campaign p{font-size:13.5px;color:var(--ink);line-height:1.85;margin:0;}
+.campaign strong{color:var(--amber);font-size:15px;}
+
+/* ======= FAQ ======= */
+.faq{background:var(--bg);padding:90px 0;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:50px;border-top:1px solid var(--line);}
+.fq{padding:28px 0;border-bottom:1px solid var(--line);}
+.fq:nth-child(odd){padding-right:48px;}
+.fq:nth-child(even){padding-left:48px;border-left:1px solid var(--line);}
+.fq h4{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--ink);margin-bottom:10px;font-weight:600;line-height:1.6;}
+.fq h4::before{content:'Q. ';color:var(--tanq);}
+.fq p{font-size:13.5px;color:var(--soft);padding-left:20px;}
+
+/* ======= CTA ======= */
+.cta{background:var(--kaika);padding:90px 0;text-align:center;}
+.cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,36px);color:#fff;margin-bottom:18px;font-weight:700;}
+.cta p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:38px;max-width:580px;margin-left:auto;margin-right:auto;}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta .btn-a{display:inline-block;background:#06C755;color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:3px;transition:.2s;}
+.cta .btn-a:hover{background:#05a648;}
+.cta .btn-b{display:inline-block;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:3px;transition:.2s;}
+.cta .btn-b:hover{background:rgba(255,255,255,.1);}
+
+/* ======= FOOTER ======= */
+footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:48px;}
+.foot-brand{font-size:16px;color:#fff;font-weight:700;margin-bottom:10px;font-family:'Shippori Mincho',serif;}
+.foot-brands{font-size:12.5px;color:#7a7880;margin-bottom:14px;line-height:2;}
+.foot-col h5{font-size:12.5px;color:#fff;font-weight:600;letter-spacing:.06em;margin-bottom:16px;}
+.foot-col ul{list-style:none;}
+.foot-col li{font-size:13px;margin-bottom:9px;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+
+/* ======= REVEAL ======= */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.rv.in{opacity:1;transform:none;}
+
+/* ======= RESPONSIVE ======= */
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .intro-grid{grid-template-columns:1fr;gap:32px;}
+  .at-grid{grid-template-columns:1fr;}
+  .subj-cols{grid-template-columns:1fr;}
+  .flow-steps{grid-template-columns:1fr 1fr;}
+  .class-grid{grid-template-columns:1fr;}
+  .cb-courses{grid-template-columns:1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .fq:nth-child(even){padding-left:0;border-left:none;}
+  .fq:nth-child(odd){padding-right:0;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hero-meta{gap:18px;}
+}
+@media(max-width:600px){
+  .wrap{padding:0 18px;}
+  section,.intro,.aitutor,.subjects,.flow,.classes,.faq,.cta{padding:64px 0;}
+  .brand .hdr-brandlist{display:none;}
+  .nav-cta{font-size:11px;padding:8px 11px;}
+  .nav-actions{gap:6px;}
+  .flow-steps{grid-template-columns:1fr;}
+  .hero{min-height:auto;padding:120px 0 56px;}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="nav">
+    <div class="brand">
+      <span class="co">株式会社 NEXUS</span>
+      <div class="hdr-brandlist">
+        <span><a href="hottroom.html">ホッとルーム</a></span>
+        <span class="on">子ども探究大学</span>
+        <span><a href="tankyukaika.html">総合型選抜対策塾</a></span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#aitutor">AIチューター</a>
+      <a href="#subjects">学べる領域</a>
+      <a href="#classes">クラス・料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="nav-cta line">LINE相談</a>
+      <a href="soudan.html" class="nav-cta mail">メール問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="images/kodomotankyu-hero.jpg" alt="子ども探究大学の教室で、それぞれのテーマに没頭する子どもたち"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-eyebrow">子ども探究大学</div>
+    <h1 class="hero-h1 serif">精鋭のチューター陣・無限の「知」をもつAIチューターが、<br>あなたの好奇心を能力に。</h1>
+    <p class="hero-lead">子ども探究大学は、AIチューターと人間のチューターが二人三脚で寄り添う探究学習塾です。<br>いつ来てもいい！※<br>科学やテクノロジーだけでなく、哲学やビジネス探究まで<br>——子どもの「もっと知りたい」を、教科の枠で止めません。</p>
+    <p class="hero-note">※子ども探究大学は登校のフレックス制を設けています。基準となる時間を何時からスタートしてもよい、フレックス制を導入した、新世代型の探究学習塾です。</p>
+    <div class="hero-actions">
+      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="hero-btn line">LINEで無料相談</a>
+      <a href="soudan.html" class="hero-btn mail">体験授業を申し込む</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>低学年ブロック</strong>15:30〜18:00頃（スターター・ジュニア）</div>
+      <div><strong>高学年ブロック</strong>17:00〜19:30頃（ミドル・アドバンス）</div>
+      <div><strong>会場</strong>文京区本郷 本郷三丁目駅 徒歩2分</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="wrap rv">
+    <p class="stmt-list">各教科・科学・テクノロジー・IT/AI・英語・文芸・社会学……</p>
+    <h2 class="stmt-main serif">あなたの希望や目標に寄り添い、<br>多様な、<span>オーダーメイドの学び</span>を。</h2>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">ABOUT</div>
+      <h2 class="hl serif" style="margin-top:14px;">「決められた教科書」を、<br>卒業しませんか。</h2>
+    </div>
+    <div class="intro-grid rv">
+      <div class="intro-copy">
+        <p>多くの塾は、学校のテストの点数を上げることを目的にしています。それも大切なことです。でも、子どもの「なぜ？」は、いつも教科書の中に収まるとは限りません。</p>
+        <p>子ども探究大学では、子ども自身がテーマを選び、調べ、考え、人に伝える経験を積み重ねます。答えを教えるのではなく、問い続ける力を育てる場所です。</p>
+        <p>そのプロセスを支えるのが、AIチューターと人間のチューターの二人三脚。子ども一人ひとりのペースと興味に合わせて、学びをどこまでも深めていくことができます。</p>
+      </div>
+      <div class="intro-stat">
+        <p><strong>教科書の外側にも、学びはある</strong>STEAM教育に加え、哲学・心理学・人類学など、あらゆる学問分野をテーマにできます。</p>
+        <p><strong>「わからない」を置き去りにしない</strong>学年をさかのぼって復習することも、逆に先取りすることも自由。理解度に合わせて歩幅を調整します。</p>
+        <p><strong>人がそばにいる安心感</strong>AIはあくまで学びを支えるツール。最終的に寄り添うのは、いつも人間のチューターです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI TUTOR -->
+<section class="aitutor" id="aitutor">
+  <div class="wrap">
+    <div class="at-head rv">
+      <div class="eyebrow">AI CO-TUTOR</div>
+      <h2 class="hl serif" style="margin-top:14px;">AIチューターは、<br>質問し放題の探究パートナー。</h2>
+      <div class="at-note">
+        <strong>AIチューターについて</strong><br>
+        画面の中で動くチャット形式の本校専用の学習サイトです。本校の教育メソッドを学習したAIが、お子様が興味あること、調べてみたいことを24時間サポート。あなたの興味と知識がAIに蓄積され、使えば使うほど優秀なパートナーになっていきます。
+      </div>
+    </div>
+    <div class="at-grid rv">
+      <div class="at-card">
+        <span class="at-num">01 個別最適化</span>
+        <h4>その子だけの学習プラン</h4>
+        <p>興味の方向性や理解度をもとに、取り組むテーマや教材の難易度を一人ひとりに合わせて調整します。</p>
+      </div>
+      <div class="at-card">
+        <span class="at-num">02 24時間質問</span>
+        <h4>疑問に思った瞬間に聞ける</h4>
+        <p>「なぜ？」と思った気持ちを翌週まで持ち越しません。教室の外でも、AIチューターにいつでも質問できます。</p>
+      </div>
+      <div class="at-card">
+        <span class="at-num">03 さかのぼり学習</span>
+        <h4>学年の壁を越えて復習</h4>
+        <p>つまずいた単元まで自由にさかのぼり、理解できるところから学び直せます。焦らず土台を固められます。</p>
+      </div>
+      <div class="at-card">
+        <span class="at-num">04 探究対話</span>
+        <h4>「なぜ？」を深掘りする</h4>
+        <p>答えをすぐに教えるのではなく、対話形式で問いを重ねながら、子ども自身の考えを引き出します。</p>
+      </div>
+      <div class="at-card">
+        <span class="at-num">05 理解度分析</span>
+        <h4>次の一歩を見つける</h4>
+        <p>学びの記録を分析し、次に取り組むと良いテーマや単元を提案。チューターとの面談にも活用します。</p>
+      </div>
+      <div class="at-card">
+        <span class="at-num">06 人の目で見守る</span>
+        <h4>最後はいつも人が伴走</h4>
+        <p>AIが提案した学びの方向性を、人間のチューターが確認し、その子に合った声かけをおこないます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS -->
+<section class="subjects" id="subjects">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">FIELDS OF INQUIRY</div>
+      <h2 class="hl serif" style="margin-top:14px;">学問に、教科書の壁はありません。</h2>
+      <p class="subj-lead">STEAM教育はもちろん、哲学・心理学・人類学・経済学・言語学まで。テーマは子ども自身が選びます。「好きなこと」から始まる探究が、学びを深める一番の近道です。</p>
+    </div>
+    <div class="subj-cols rv">
+      <div class="subj-col steam">
+        <h4 class="serif">STEAM</h4>
+        <div class="sc-sub">Science / Technology / Engineering / Art / Mathematics</div>
+        <div class="subj-chips">
+          <span>科学</span><span>テクノロジー</span><span>工学・ものづくり</span><span>アート</span><span>数学</span><span>宇宙・地学</span><span>生物・自然</span>
+        </div>
+      </div>
+      <div class="subj-col human">
+        <h4 class="serif">人文・社会科学</h4>
+        <div class="sc-sub">Humanities & Social Sciences</div>
+        <div class="subj-chips">
+          <span>哲学</span><span>心理学</span><span>人類学</span><span>経済学</span><span>言語学</span><span>歴史学</span><span>社会学</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <h2 class="hl serif" style="margin-top:14px;">探究のサイクル</h2>
+    </div>
+    <div class="flow-steps rv">
+      <div class="flow-step">
+        <h4 class="serif">テーマ設定</h4>
+        <p>興味のあることから、自分だけの問いを見つけます。AIチューターとの対話がヒントになることも。</p>
+      </div>
+      <div class="flow-step">
+        <h4 class="serif">調査・実験</h4>
+        <p>本、実験、インタビュー、AIチューターへの質問——手段は自由。自分の力で調べ進めます。</p>
+      </div>
+      <div class="flow-step">
+        <h4 class="serif">探究対話</h4>
+        <p>チューターやAIとの対話で「なぜ？」をさらに深掘り。考えを言葉にして整理します。</p>
+      </div>
+      <div class="flow-step">
+        <h4 class="serif">発表・振り返り</h4>
+        <p>調べたことをまとめ、人に伝える。発表を通じて、学びが自分の力として定着します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section class="classes" id="classes">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">CLASSES</div>
+      <h2 class="hl serif" style="margin-top:14px;">クラス構成</h2>
+      <p class="pr-sub">年齢に合わせて4つのコースを用意。登校のフレックス制を採用しているので、それぞれの時間帯の中で、いつ来てもかまいません。</p>
+    </div>
+    <div class="class-grid rv">
+      <div class="class-block">
+        <div class="cb-head">
+          <div class="cb-time serif">低学年ブロック <span>15:30〜18:00頃</span></div>
+        </div>
+        <div class="cb-courses">
+          <div class="class-card">
+            <span class="cc-age">年長〜小学2年生</span>
+            <h4 class="serif">スターター探究コース</h4>
+            <div class="cc-time">60分</div>
+            <p>遊び感覚で好奇心をくすぐるテーマに取り組みます。「調べる・つくる・話す」を通して、探究の楽しさに触れる時間です。</p>
+          </div>
+          <div class="class-card">
+            <span class="cc-age">小学3年生〜小学6年生</span>
+            <h4 class="serif">ジュニア探究コース</h4>
+            <div class="cc-time">90分</div>
+            <p>テーマを自分で選び、調査・制作まで取り組みます。低学年ブロックの中でも、じっくり時間をかけて探究します。</p>
+          </div>
+        </div>
+      </div>
+      <div class="class-block">
+        <div class="cb-head">
+          <div class="cb-time serif">高学年ブロック <span>17:00〜19:30頃</span></div>
+        </div>
+        <div class="cb-courses">
+          <div class="class-card">
+            <span class="cc-age">中学1年生〜中学3年生</span>
+            <h4 class="serif">ミドル探究コース</h4>
+            <div class="cc-time">90分</div>
+            <p>テーマ設定から調査・発表まで、より専門性の高い探究に取り組みます。AIチューターも活用しながら深く掘り下げます。</p>
+          </div>
+          <div class="class-card">
+            <span class="cc-age">高校1年生〜高校3年生</span>
+            <h4 class="serif">アドバンス探究コース</h4>
+            <div class="cc-time">90分</div>
+            <p>自分の探究テーマを、企画・論文・発表まで仕上げます。総合型選抜対策塾（19:00〜）へのステップにもなります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-note rv">
+      各ブロックの時間帯は「登校フレックス制」です。決まった開始時刻に縛られず、この時間帯の中でお子さんの都合に合わせて登校いただけます。曜日ごとの詳細な運用は、体験授業・ご入会のお申込み時にご案内します。
+    </div>
+    <div class="pricing rv">
+      <div class="eyebrow">PRICE</div>
+      <h2 class="hl serif" style="margin-top:14px;">料金</h2>
+      <p class="pr-sub">まずは9月の開校前モニターコースで、じっくりお試しいただけます。10月からの本格開講に合わせて、通常コースへご案内します。</p>
+
+
+      <div class="monitor">
+        <div class="monitor-flag">９月限定</div>
+        <div class="monitor-body">
+          <div class="m-label">開校前モニターコース（2026年9月1日〜9月30日）</div>
+          <h4>1か月、じっくり試せる。</h4>
+          <div class="monitor-price">
+            <span class="mp-main serif">10,000円</span>
+            <span class="mp-unit">（税込）／ 80分 × 全4回・教材費込み</span>
+          </div>
+          <ul class="monitor-list">
+            <li>欠席時の返金なし</li>
+            <li>振替は空席がある場合のみ</li>
+            <li>10月以降は自動継続せず、改めて入会申込み</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pr-table-wrap">
+        <div class="pr-table-head">10月以降｜通常コース（税込・月額・週1回）</div>
+        <table class="pr-table">
+          <thead>
+            <tr><th>コース</th><th>対象</th><th>授業時間</th><th>月額料金</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="pt-freq">スターター探究コース</td>
+              <td class="pt-unit">年長〜小2</td>
+              <td class="pt-unit">60分×月4回</td>
+              <td>12,100円</td>
+            </tr>
+            <tr>
+              <td class="pt-freq">ジュニア探究コース</td>
+              <td class="pt-unit">小3〜小6</td>
+              <td class="pt-unit">90分×月4回</td>
+              <td>16,500円</td>
+            </tr>
+            <tr>
+              <td class="pt-freq">ミドル探究コース</td>
+              <td class="pt-unit">中1〜中3</td>
+              <td class="pt-unit">90分×月4回</td>
+              <td>18,700円</td>
+            </tr>
+            <tr>
+              <td class="pt-freq">アドバンス探究コース</td>
+              <td class="pt-unit">高1〜高3</td>
+              <td class="pt-unit">90分×月4回</td>
+              <td>19,800円</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pr-foot">※学年に応じて授業時間・料金が異なります。<br>※高校生の総合型選抜対策（志望理由書・小論文・面接等）は、別ブランド「総合型選抜対策塾」でご案内します。</p>
+
+        <div class="pr-enroll">
+          <div><strong>20,000円</strong>通常入会金（共通）</div>
+        </div>
+      </div>
+
+      <div class="campaign">
+        <div class="cp-icon">🎁</div>
+        <p><strong>開校記念キャンペーン</strong>　9月中に10月入会をお申し込みの方は、入会金20,000円が<strong>無料</strong>になります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="hl serif" style="margin-top:14px;">保護者の方からよくいただくご質問</h2>
+    </div>
+    <div class="faq-grid rv">
+      <div class="fq">
+        <h4>AIに学習を任せきりになりませんか？</h4>
+        <p>AIチューターはあくまで調べ学習や質問対応を支えるツールです。学びの方向づけや声かけは、常に人間のチューターがおこないます。なお、AIチューターの使用状況はチューターが管理するとともに、定期的に保護者様へお伝えいたします。</p>
+      </div>
+      <div class="fq">
+        <h4>うちの子は理系より哲学や歴史に興味があります。対応できますか？</h4>
+        <p>もちろんです。テーマは子ども自身の興味から出発します。STEAMに限らず、哲学・心理学・人類学など幅広い分野を探究できます。</p>
+      </div>
+      <div class="fq">
+        <h4>学校の勉強との両立はできますか？</h4>
+        <p>探究学習と教科学習は対立するものではありません。むしろ「なぜ？」を深める経験が、学校の学びへの興味にもつながっていきます。</p>
+      </div>
+      <div class="fq">
+        <h4>学年の違う内容を学ぶこともできますか？</h4>
+        <p>可能です。つまずいている単元まで自由にさかのぼって復習することも、興味のある分野を先取りすることもできます。</p>
+      </div>
+      <div class="fq">
+        <h4>人前での発表が苦手な子でも大丈夫ですか？</h4>
+        <p>発表の形は一つではありません。少人数での共有や、チューターとの1対1での発表など、その子に合った方法から始められます。</p>
+      </div>
+      <div class="fq">
+        <h4>体験授業はありますか？</h4>
+        <p>随時受け付けております。実際のAIチューターの使い方やクラスの雰囲気をご覧いただけます。LINEまたはフォームよりお申し込みください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="rv">
+      <h2 class="serif">好奇心に、限界をつくらない。</h2>
+      <p>「なぜ？」を持ち続けられる環境を、子どもたちに。<br>まずは体験授業で、AIチューターとの学びを体感してください。</p>
+      <div class="cta-actions">
+        <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="btn-a">LINEで相談する</a>
+        <a href="soudan.html" class="btn-b">フォームで問い合わせる</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">株式会社 NEXUS</div>
+        <div class="foot-brands">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>総合型選抜対策塾（文理対応）</div>
+        <p style="font-size:13px;">文京区本郷 ／ 2026年10月1日 開校予定<br>nexusgroup.daihyou@gmail.com</p>
+      </div>
+      <div class="foot-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="hottroom.html">ホッとルーム</a></li>
+          <li><a href="kodomotankyu.html">子ども探究大学</a></li>
+          <li><a href="tankyukaika.html">総合型選抜対策塾</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>情報</h5>
+        <ul>
+          <li><a href="#aitutor">AIチューター</a></li>
+          <li><a href="#subjects">学べる領域</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener">無料相談（LINE）</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 株式会社NEXUS. All Rights Reserved.</span>
+      <span>好奇心に、限界をつくらない。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('s', scrollY > 50);
+});
+const rvEls = document.querySelectorAll('.rv');
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
+}), {threshold:.1});
+rvEls.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
