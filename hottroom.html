@@ -34,7 +34,12 @@ header.s{background:rgba(46,75,55,.97);backdrop-filter:blur(8px);box-shadow:0 4p
 .brand .co{font-size:10.5px;opacity:.75;font-weight:400;letter-spacing:.08em;}
 .nav-home{display:inline-flex;align-items:center;justify-content:center;color:#fff;opacity:.8;transition:opacity .2s;margin-right:14px;flex-shrink:0;}
 .nav-home:hover{opacity:1;}
-.nav-home svg{width:18px;height:18px;display:block;}
+.nav-home svg{width:27px;height:27px;display:block;}
+.brand .hdr-brandlist{display:flex;gap:10px;font-size:12px;font-weight:400;margin-top:1px;}
+.brand .hdr-brandlist span{opacity:.85;}
+.brand .hdr-brandlist span.on{opacity:1;color:#B7E0C0;font-weight:600;}
+.brand .hdr-brandlist span::after{content:'｜';opacity:.4;margin-left:10px;}
+.brand .hdr-brandlist span:last-child::after{content:'';}
 .nav-links{display:flex;gap:24px;}
 .nav-links a{color:rgba(255,255,255,.85);font-size:13px;}
 .nav-links a:hover{color:#fff;}
@@ -164,6 +169,7 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
   section,.empathy,.split,.flow,.price,.faq,.cta{padding:60px 0;}
   .hero-inner{padding:100px 0 56px;}
   .ptable th,.ptable td{padding:12px 10px;font-size:12.5px;}
+  .brand .hdr-brandlist{display:none;}
 }
 </style>
 </head>
@@ -177,7 +183,11 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
     </a>
     <div class="brand">
       <span class="co">株式会社 NEXUS</span>
-      <span>ホッとルーム</span>
+      <div class="hdr-brandlist">
+        <span class="on">ホッとルーム</span>
+        <span><a href="kodomotankyu.html">子ども探究大学</a></span>
+        <span><a href="tankyukaika.html">総合型選抜対策塾</a></span>
+      </div>
     </div>
     </div>
     <nav class="nav-links">
