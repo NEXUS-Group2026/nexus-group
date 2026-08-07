@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>総合型選抜対策塾｜探究を、合格へ。｜株式会社NEXUS（文京区本郷）</title>
+<meta name="description" content="文京区本郷の総合型選抜対策塾。これまでの探究活動・興味関心を、大学入試で評価される「物語」に組み立て直す専門塾。志望理由書・小論文・面接まで、チューターが伴走します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ======= TOKENS (サイト共通) ======= */
+:root{
+  --bg:#FDFAF5;
+  --white:#FFFFFF;
+  --ink:#1A1818;
+  --soft:#6B6560;
+  --line:#E5DED4;
+
+  --hot:#5E8C6A;
+  --hot-p:#F0F7F2;
+  --hot-d:#3A5E45;
+
+  --tanq:#3560A8;
+  --tanq-p:#EAF0FA;
+  --tanq-d:#1F3E78;
+
+  --kaika:#283C65;
+  --kaika-p:#E7EBF3;
+  --kaika-d:#182640;
+
+  --amber:#B8893C;
+  --amber-p:#FDF5E7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;font-size:15px;overflow-x:hidden;}
+.serif{font-family:'Shippori Mincho',serif;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+
+/* ======= HEADER ======= */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:16px 0;
+  background:linear-gradient(180deg,rgba(26,24,24,.45) 0%,rgba(26,24,24,0) 100%);
+  transition:background .35s,box-shadow .35s,padding .35s;
+}
+header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1140px;margin:0 auto;padding:0 28px;}
+.nav-home{display:inline-flex;align-items:center;justify-content:center;color:#fff;opacity:.8;transition:opacity .2s;margin-right:16px;flex-shrink:0;}
+.nav-home:hover{opacity:1;}
+.nav-home svg{width:27px;height:27px;display:block;}
+.brand-group{display:flex;align-items:center;}
+.brand{color:#fff;font-size:15px;font-weight:700;letter-spacing:.06em;display:flex;flex-direction:column;gap:4px;line-height:1.2;}
+.brand .co{font-size:11px;opacity:.7;font-weight:400;letter-spacing:.1em;}
+.brand .hdr-brandlist{display:flex;gap:10px;font-size:12px;font-weight:400;}
+.brand .hdr-brandlist span{opacity:.85;}
+.brand .hdr-brandlist span.on{opacity:1;color:#B7C6E8;font-weight:600;}
+.brand .hdr-brandlist span::after{content:'｜';opacity:.4;margin-left:10px;}
+.brand .hdr-brandlist span:last-child::after{content:'';}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:rgba(255,255,255,.8);font-size:13px;letter-spacing:.04em;}
+.nav-links a:hover{color:#fff;}
+.nav-actions{display:flex;gap:9px;align-items:center;}
+.nav-cta{font-size:12.5px;font-weight:700;padding:10px 18px;border-radius:3px;letter-spacing:.03em;white-space:nowrap;transition:.2s;display:inline-flex;align-items:center;gap:6px;}
+.nav-cta.line{background:#06C755;color:#fff;}
+.nav-cta.line:hover{background:#05a648;}
+.nav-cta.mail{background:var(--kaika);color:#fff;}
+.nav-cta.mail:hover{background:var(--kaika-p);color:var(--kaika);}
+
+/* ======= HERO ======= */
+.hero{position:relative;min-height:82vh;display:flex;align-items:flex-end;overflow:hidden;padding:60px 0 70px;}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,23,43,.85) 0%,rgba(15,23,43,.55) 45%,rgba(15,23,43,.18) 100%);}
+.hero-inner{position:relative;z-index:2;max-width:680px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;font-weight:600;color:#B7C6E8;text-transform:uppercase;margin-bottom:22px;}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:#B7C6E8;}
+.hero-h1{font-size:clamp(28px,4.2vw,46px);color:#fff;font-weight:800;line-height:1.5;text-shadow:0 2px 20px rgba(0,0,0,.4);margin-bottom:22px;}
+.hero-lead{font-size:clamp(14px,1.5vw,16px);color:rgba(255,255,255,.9);margin-bottom:34px;line-height:2;text-shadow:0 1px 8px rgba(0,0,0,.4);}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px;}
+.hero-btn{font-size:13.5px;font-weight:700;padding:15px 28px;border-radius:3px;letter-spacing:.03em;transition:.2s;display:inline-flex;align-items:center;gap:8px;}
+.hero-btn.line{background:#06C755;color:#fff;}
+.hero-btn.line:hover{background:#05a648;}
+.hero-btn.mail{background:#fff;color:var(--kaika-d);}
+.hero-btn.mail:hover{background:var(--kaika-p);}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;}
+.hero-meta div{color:rgba(255,255,255,.75);font-size:12.5px;letter-spacing:.03em;border-left:2px solid #B7C6E8;padding-left:12px;}
+.hero-meta strong{display:block;color:#fff;font-size:14px;font-weight:600;margin-bottom:2px;}
+
+/* ======= SHARED SECTION BITS ======= */
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--kaika);text-transform:uppercase;}
+.eyebrow::before{content:'';flex-shrink:0;width:28px;height:1px;background:var(--kaika);}
+h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:var(--ink);font-weight:700;line-height:1.55;letter-spacing:.02em;}
+
+/* ======= STATEMENT ======= */
+.statement{background:var(--kaika-d);padding:90px 0;text-align:center;}
+.stmt-main{font-size:clamp(24px,3.6vw,40px);color:#fff;font-weight:700;line-height:1.75;max-width:820px;margin:0 auto;}
+.stmt-main span{color:#fff;position:relative;white-space:nowrap;}
+.stmt-main span::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:.4em;background:var(--amber);opacity:.55;z-index:-1;}
+.stmt-sub{margin-top:22px;font-size:13.5px;color:#B7C6E8;letter-spacing:.03em;}
+
+/* ======= INTRO ======= */
+.intro{background:#fff;padding:88px 0 76px;}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:44px;}
+.intro-copy p{font-size:14.5px;color:var(--soft);margin-bottom:16px;line-height:2;}
+.intro-stat{background:var(--kaika-p);border-radius:4px;padding:34px 30px;}
+.intro-stat p{font-size:13.5px;color:var(--kaika-d);line-height:1.95;margin-bottom:14px;}
+.intro-stat p:last-child{margin-bottom:0;}
+.intro-stat strong{font-size:15px;font-weight:700;display:block;margin-bottom:6px;}
+
+/* ======= SUPPORT GRID ======= */
+.support{background:var(--bg);padding:90px 0;}
+.support-head{max-width:680px;}
+.sup-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px;}
+.sup-card{background:#fff;padding:30px 24px;position:relative;}
+.sup-card::before{content:'';position:absolute;top:0;left:0;width:32px;height:3px;background:var(--kaika);}
+.sup-num{font-family:'Shippori Mincho',serif;font-size:12px;color:var(--kaika);font-weight:700;letter-spacing:.08em;margin-bottom:12px;display:block;}
+.sup-card h4{font-family:'Shippori Mincho',serif;font-size:15.5px;color:var(--ink);font-weight:700;margin-bottom:8px;line-height:1.6;}
+.sup-card p{font-size:12.5px;color:var(--soft);line-height:1.85;}
+
+/* ======= FLOW ======= */
+.flow{background:#fff;padding:90px 0;}
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px;counter-reset:step;}
+.flow-step{background:var(--bg);padding:32px 24px;position:relative;}
+.flow-step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  font-family:'Shippori Mincho',serif;font-size:26px;color:var(--kaika-p);font-weight:700;
+  -webkit-text-stroke:1px var(--kaika);display:block;margin-bottom:16px;
+}
+.flow-step h4{font-family:'Shippori Mincho',serif;font-size:15.5px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.flow-step p{font-size:12.5px;color:var(--soft);line-height:1.85;}
+
+/* ======= COURSES / PRICE ======= */
+.courses{background:var(--bg);padding:90px 0;}
+.courses-head{max-width:680px;}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
+.course-card{background:#fff;padding:34px 28px;position:relative;border-top:4px solid var(--line);}
+.course-card.rec{border-top:4px solid var(--kaika);box-shadow:0 16px 44px rgba(40,60,101,.14);transform:translateY(-6px);}
+.course-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:11px;font-weight:700;padding:5px 16px;border-radius:20px;letter-spacing:.05em;white-space:nowrap;}
+.course-tag{font-size:11px;color:var(--soft);letter-spacing:.08em;margin-bottom:10px;}
+.course-name{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.course-target{font-size:12px;color:var(--kaika-d);background:var(--kaika-p);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:18px;}
+.course-price{display:flex;align-items:baseline;gap:6px;margin-bottom:4px;}
+.course-price .cp-main{font-family:'Shippori Mincho',serif;font-size:30px;font-weight:700;color:var(--ink);}
+.course-price .cp-unit{font-size:12px;color:var(--soft);}
+.course-per{font-size:11.5px;color:var(--soft);margin-bottom:18px;}
+.course-detail{font-size:12.5px;color:var(--soft);line-height:1.6;margin-bottom:18px;}
+.course-includes{list-style:none;font-size:12px;color:var(--soft);line-height:1.9;}
+.course-includes li{padding-left:14px;position:relative;}
+.course-includes li::before{content:'—';position:absolute;left:0;color:var(--kaika);}
+.course-foot{max-width:900px;margin:32px auto 0;text-align:center;font-size:12.5px;color:var(--soft);line-height:1.9;}
+.course-enroll{display:flex;justify-content:center;gap:10px;margin-top:20px;font-size:13px;color:var(--soft);}
+.course-enroll strong{color:var(--ink);font-weight:700;}
+
+/* ======= LADDER ======= */
+.ladder{background:var(--kaika-d);padding:90px 0;}
+.ladder-head{max-width:680px;}
+.ladder-head .eyebrow{color:#B7C6E8;}
+.ladder-head .eyebrow::before{background:#B7C6E8;}
+.ladder-head h2{color:#fff;}
+.ladder-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;align-items:stretch;}
+.lad-step{background:rgba(255,255,255,.06);padding:26px 20px;position:relative;text-align:center;}
+.lad-step:not(:last-child)::after{content:'→';position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:#B7C6E8;font-size:18px;z-index:2;}
+.lad-step .ls-tag{font-size:10.5px;color:#B7C6E8;letter-spacing:.06em;margin-bottom:8px;}
+.lad-step .ls-name{font-family:'Shippori Mincho',serif;font-size:14.5px;color:#fff;font-weight:700;margin-bottom:6px;line-height:1.5;}
+.lad-step .ls-price{font-size:12px;color:rgba(255,255,255,.7);}
+.lad-step.tanq{background:rgba(53,96,168,.25);}
+
+/* ======= FAQ ======= */
+.faq{background:#fff;padding:90px 0;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:50px;border-top:1px solid var(--line);}
+.fq{padding:28px 0;border-bottom:1px solid var(--line);}
+.fq:nth-child(odd){padding-right:48px;}
+.fq:nth-child(even){padding-left:48px;border-left:1px solid var(--line);}
+.fq h4{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--ink);margin-bottom:10px;font-weight:600;line-height:1.6;}
+.fq h4::before{content:'Q. ';color:var(--kaika);}
+.fq p{font-size:13.5px;color:var(--soft);padding-left:20px;}
+
+/* ======= CTA ======= */
+.cta{background:var(--kaika);padding:90px 0;text-align:center;}
+.cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,36px);color:#fff;margin-bottom:18px;font-weight:700;}
+.cta p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:38px;max-width:580px;margin-left:auto;margin-right:auto;}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta .btn-a{display:inline-block;background:#06C755;color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:3px;transition:.2s;}
+.cta .btn-a:hover{background:#05a648;}
+.cta .btn-b{display:inline-block;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:700;font-size:14px;padding:15px 32px;border-radius:3px;transition:.2s;}
+.cta .btn-b:hover{background:rgba(255,255,255,.1);}
+
+/* ======= FOOTER ======= */
+footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:48px;}
+.foot-brand{font-size:16px;color:#fff;font-weight:700;margin-bottom:10px;font-family:'Shippori Mincho',serif;}
+.foot-brands{font-size:12.5px;color:#7a7880;margin-bottom:14px;line-height:2;}
+.foot-col h5{font-size:12.5px;color:#fff;font-weight:600;letter-spacing:.06em;margin-bottom:16px;}
+.foot-col ul{list-style:none;}
+.foot-col li{font-size:13px;margin-bottom:9px;}
+.foot-col a:hover{color:#fff;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+
+/* ======= REVEAL ======= */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.rv.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none;}
+}
+</style>
+<noscript><style>.rv{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="nav">
+    <div class="brand-group">
+    <a href="index.html" class="nav-home" aria-label="トップページに戻る">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V19a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1V9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="brand">
+      <span class="co">株式会社 NEXUS</span>
+      <div class="hdr-brandlist">
+        <span><a href="hottroom.html">ホッとルーム</a></span>
+        <span><a href="kodomotankyu.html">子ども探究大学</a></span>
+        <span class="on">総合型選抜対策塾</span>
+      </div>
+    </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#support">サポート内容</a>
+      <a href="#flow">流れ</a>
+      <a href="#courses">コース・料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="nav-cta line">LINE相談</a>
+      <a href="soudan.html" class="nav-cta mail">メール問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="images/kaika-evening.jpg" alt="夜の教室で個別指導を受ける高校生"></div>
+  <div class="hero-inner wrap">
+    <div class="hero-eyebrow">総合型選抜対策塾</div>
+    <h1 class="hero-h1 serif">自分の「好き」で大学受験！<br>総合型選抜対策であなたの未来を拓きます。</h1>
+    <p class="hero-lead">総合型選抜対策塾は、これまでの探究活動や興味関心を、大学入試で評価される「物語」に組み立て直す専門塾です。文系・理系を問わず、志望理由書・小論文・面接まで、チューターが一貫して伴走します。</p>
+    <div class="hero-actions">
+      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="hero-btn line">LINEで無料相談</a>
+      <a href="soudan.html" class="hero-btn mail">個別相談を申し込む</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>授業時間</strong>19:00〜20:30（90分）</div>
+      <div><strong>対象</strong>高校1年生〜3年生</div>
+      <div><strong>会場</strong>文京区本郷 本郷三丁目駅 徒歩2分</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="wrap rv">
+    <h2 class="stmt-main serif">あなたの「好き」を、<br>大学が評価する<span>言葉</span>に。</h2>
+    <p class="stmt-sub">志望理由書・活動報告書・小論文・面接・出願戦略まで、一貫サポート</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">ABOUT</div>
+      <h2 class="hl serif" style="margin-top:14px;">総合型選抜は、<br>「点数」ではなく「物語」で評価される入試です。</h2>
+    </div>
+    <div class="intro-grid rv">
+      <div class="intro-copy">
+        <p>総合型選抜（旧AO入試）は、学力試験の点数だけでなく、これまで何に関心を持ち、何を探究し、どう考えてきたかという「物語」が評価される入試方式です。</p>
+        <p>だからこそ、部活でも、趣味でも、探究活動でも——これまで夢中になってきたことがあるなら、それはすでに大きな武器です。問題は、それをどう言葉にし、大学に伝わる形に組み立てるか。</p>
+        <p>総合型選抜対策塾では、探究学習を専門とするNEXUSのチューターが、その組み立てを一緒に行います。付け焼き刃の対策ではなく、あなた自身の経験に根ざした、説得力のある出願書類と面接を目指します。</p>
+      </div>
+      <div class="intro-stat">
+        <p><strong>「探究」を専門にする塾だからこそ</strong>子ども探究大学を運営するNEXUSだから、探究活動そのものの掘り下げ方を熟知しています。</p>
+        <p><strong>文系・理系、学部を問わず対応</strong>志望学部・研究テーマに合わせて、個別に出願戦略を組み立てます。</p>
+        <p><strong>付け焼き刃ではない、本人の言葉で</strong>テンプレートに当てはめるのではなく、対話を通じて本人の考えを引き出します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="support" id="support">
+  <div class="wrap">
+    <div class="support-head rv">
+      <div class="eyebrow">SUPPORT</div>
+      <h2 class="hl serif" style="margin-top:14px;">伴走するサポート内容</h2>
+      <p style="margin-top:14px;color:var(--soft);font-size:14px;max-width:640px;">出願までに必要なことを、一つひとつ一緒に進めます。</p>
+    </div>
+    <div class="sup-grid rv">
+      <div class="sup-card">
+        <span class="sup-num">01</span>
+        <h4>志望校・学部選定</h4>
+        <p>興味関心と学びたいことをもとに、無理のない志望校・学部を一緒に検討します。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">02</span>
+        <h4>自己分析</h4>
+        <p>これまでの経験や興味を棚卸しし、自分の強み・関心の核を言語化します。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">03</span>
+        <h4>探究・活動実績づくり</h4>
+        <p>まだ実績が少ない場合も、今からできる探究活動・活動計画を一緒に組み立てます。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">04</span>
+        <h4>志望理由書</h4>
+        <p>本人の言葉で、説得力のある志望理由書に仕上がるまで、何度も対話しながら磨きます。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">05</span>
+        <h4>活動報告書</h4>
+        <p>部活・探究・課外活動などの実績を、大学に伝わる形に整理してまとめます。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">06</span>
+        <h4>小論文・作文</h4>
+        <p>テーマの読み解き方から構成、添削まで、繰り返し実践して力をつけます。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">07</span>
+        <h4>面接・プレゼン対策</h4>
+        <p>模擬面接を重ね、想定質問への受け答えやプレゼンの組み立てを練習します。</p>
+      </div>
+      <div class="sup-card">
+        <span class="sup-num">08</span>
+        <h4>出願スケジュール管理</h4>
+        <p>複数校の出願時期・必要書類を整理し、直前で慌てないようスケジュールを管理します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow" id="flow">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <h2 class="hl serif" style="margin-top:14px;">サポートの流れ</h2>
+    </div>
+    <div class="flow-steps rv">
+      <div class="flow-step">
+        <h4 class="serif">個別面談</h4>
+        <p>まずは現状のヒアリング。志望校のイメージや、これまでの活動・興味関心を聞かせてください。</p>
+      </div>
+      <div class="flow-step">
+        <h4 class="serif">自己分析・探究整理</h4>
+        <p>経験を棚卸しし、自分の強みと関心の核を言語化。足りない部分は今からの活動で補います。</p>
+      </div>
+      <div class="flow-step">
+        <h4 class="serif">出願書類の作成</h4>
+        <p>志望理由書・活動報告書・小論文を、対話を重ねながら本人の言葉で仕上げていきます。</p>
+      </div>
+      <div class="flow-step">
+        <h4 class="serif">面接・出願</h4>
+        <p>模擬面接を繰り返し実施。出願スケジュールを管理しながら、本番に備えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="wrap">
+    <div class="courses-head rv">
+      <div class="eyebrow">COURSES &amp; PRICE</div>
+      <h2 class="hl serif" style="margin-top:14px;">コース・料金</h2>
+      <p style="margin-top:14px;color:var(--soft);font-size:14px;max-width:640px;">学年や出願時期に合わせて、3段階から選べます。学年が上がるにつれて回数を増やしていくのが基本の流れです。</p>
+    </div>
+    <div class="course-grid rv">
+      <div class="course-card">
+        <div class="course-tag">週1回</div>
+        <div class="course-name serif">準備コース</div>
+        <div class="course-target">主に高1・高2前半</div>
+        <div class="course-price"><span class="cp-main serif">29,800円</span><span class="cp-unit">／月（税込）</span></div>
+        <div class="course-per">90分×月4回・1回あたり約7,450円</div>
+        <p class="course-detail">まだ時間に余裕がある学年向け。活動づくりと自己分析からスタートします。</p>
+        <ul class="course-includes">
+          <li>自己分析・興味関心の棚卸し</li>
+          <li>探究・活動実績づくりの計画</li>
+          <li>志望校・学部の方向性検討</li>
+        </ul>
+      </div>
+      <div class="course-card rec">
+        <div class="course-badge">おすすめ</div>
+        <div class="course-tag">週2回</div>
+        <div class="course-name serif">総合対策コース</div>
+        <div class="course-target">高2〜高3・出願準備期</div>
+        <div class="course-price"><span class="cp-main serif">49,800円</span><span class="cp-unit">／月（税込）</span></div>
+        <div class="course-per">90分×月8回・1回あたり約6,225円</div>
+        <p class="course-detail">出願準備を本格化する主力コース。書類作成から面接対策まで一貫サポート。</p>
+        <ul class="course-includes">
+          <li>志望校・学部選定／自己分析</li>
+          <li>志望理由書・活動報告書</li>
+          <li>小論文・作文／面接・プレゼン対策</li>
+          <li>出願スケジュール管理</li>
+        </ul>
+      </div>
+      <div class="course-card">
+        <div class="course-tag">週3回</div>
+        <div class="course-name serif">集中対策コース</div>
+        <div class="course-target">高3・出願直前期</div>
+        <div class="course-price"><span class="cp-main serif">69,800円</span><span class="cp-unit">／月（税込）</span></div>
+        <div class="course-per">90分×月12回・1回あたり約5,817円</div>
+        <p class="course-detail">複数校を受験する出願直前期向け。集中的に仕上げます。</p>
+        <ul class="course-includes">
+          <li>総合対策コースの内容すべて</li>
+          <li>複数大学への出願対応</li>
+          <li>書類添削回数の拡大</li>
+          <li>模擬面接の増加・直前集中指導</li>
+        </ul>
+      </div>
+    </div>
+    <div class="course-enroll rv">
+      <div><strong>20,000円</strong>&nbsp;通常入会金（共通）</div>
+    </div>
+    <p class="course-foot rv">※学年・出願時期によって、コース間の変更が可能です。まずは無料相談で現状をお聞かせください。</p>
+  </div>
+</section>
+
+<!-- LADDER -->
+<section class="ladder">
+  <div class="wrap">
+    <div class="ladder-head rv">
+      <div class="eyebrow">STEP UP</div>
+      <h2 class="hl serif" style="margin-top:14px;">探究から、合格まで。</h2>
+      <p style="margin-top:14px;color:rgba(255,255,255,.75);font-size:14px;max-width:640px;">子ども探究大学から総合型選抜対策塾へ、学年に合わせて自然にステップアップできます。</p>
+    </div>
+    <div class="ladder-steps rv">
+      <div class="lad-step tanq">
+        <div class="ls-tag">子ども探究大学</div>
+        <div class="ls-name">アドバンス探究コース</div>
+        <div class="ls-price">19,800円／月</div>
+      </div>
+      <div class="lad-step">
+        <div class="ls-tag">総合型選抜・週1</div>
+        <div class="ls-name">準備コース</div>
+        <div class="ls-price">29,800円／月</div>
+      </div>
+      <div class="lad-step">
+        <div class="ls-tag">総合型選抜・週2</div>
+        <div class="ls-name">総合対策コース</div>
+        <div class="ls-price">49,800円／月</div>
+      </div>
+      <div class="lad-step">
+        <div class="ls-tag">総合型選抜・週3</div>
+        <div class="ls-name">集中対策コース</div>
+        <div class="ls-price">69,800円／月</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="hl serif" style="margin-top:14px;">よくいただくご質問</h2>
+    </div>
+    <div class="faq-grid rv">
+      <div class="fq">
+        <h4>まだ志望校が決まっていません。それでも大丈夫ですか？</h4>
+        <p>もちろんです。多くの生徒が、志望校が定まっていない状態からスタートします。自己分析や興味関心の整理から一緒に進めていきます。</p>
+      </div>
+      <div class="fq">
+        <h4>特別な実績（大会入賞や資格など）がなくても大丈夫ですか？</h4>
+        <p>問題ありません。総合型選抜は「実績の大きさ」よりも「考えてきた過程」が評価されます。日常の興味や部活動からでも、十分な物語を組み立てられます。</p>
+      </div>
+      <div class="fq">
+        <h4>部活や学校の勉強と両立できますか？</h4>
+        <p>19:00〜20:30という時間帯なので、部活後からでも通いやすい設計にしています。学年や忙しさに応じてコースを調整することも可能です。</p>
+      </div>
+      <div class="fq">
+        <h4>子ども探究大学と両方通うことはできますか？</h4>
+        <p>はい。特に高校1年生は、子ども探究大学で探究活動の幅を広げながら、総合型選抜対策塾で少しずつ出願準備を始める組み合わせもおすすめです。</p>
+      </div>
+      <div class="fq">
+        <h4>他の予備校・塾と併用できますか？</h4>
+        <p>可能です。一般入試対策の予備校と並行して、総合型選抜の書類・面接対策だけをNEXUSで受けるという通い方も歓迎します。</p>
+      </div>
+      <div class="fq">
+        <h4>コースの変更はできますか？</h4>
+        <p>学年が上がるタイミングや出願時期に合わせて、週1→週2→週3とコースを変更いただけます。まずは無料相談でご相談ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="rv">
+      <h2 class="serif">まずは、無料相談から。</h2>
+      <p>志望校が決まっていなくても、実績に自信がなくても大丈夫です。<br>これまでの経験を、一緒に言葉にしていきましょう。</p>
+      <div class="cta-actions">
+        <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="btn-a">LINEで相談する</a>
+        <a href="soudan.html" class="btn-b">フォームで問い合わせる</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">株式会社 NEXUS</div>
+        <div class="foot-brands">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>総合型選抜対策塾（文理対応）</div>
+        <p style="font-size:13px;">文京区本郷 ／ 2026年10月1日 開校予定<br>nexusgroup.daihyou@gmail.com</p>
+      </div>
+      <div class="foot-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="hottroom.html">ホッとルーム</a></li>
+          <li><a href="kodomotankyu.html">子ども探究大学</a></li>
+          <li><a href="sogosenbatsu.html">総合型選抜対策塾</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>情報</h5>
+        <ul>
+          <li><a href="#support">サポート内容</a></li>
+          <li><a href="#courses">コース・料金</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener">無料相談（LINE）</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 株式会社NEXUS. All Rights Reserved.</span>
+      <span>探究してきたことが、最大の武器になる。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('s', scrollY > 50);
+});
+const rvEls = document.querySelectorAll('.rv');
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
+}), {threshold:.1});
+rvEls.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
