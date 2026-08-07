@@ -77,10 +77,8 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 }
 .hero-photo{position:relative;overflow:hidden;}
 .hero-photo img{width:100%;height:100%;object-fit:cover;}
-.hero-photo.left img{object-position:8% center;}
-.hero-photo.right img{object-position:92% center;}
-.hero-photo.left::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,43,.15) 0%,rgba(15,23,43,.75) 100%);}
-.hero-photo.right::after{content:'';position:absolute;inset:0;background:linear-gradient(270deg,rgba(15,23,43,.15) 0%,rgba(15,23,43,.75) 100%);}
+.hero-photo.left img{object-position:left center;}
+.hero-photo.right img{object-position:right center;}
 .hero-center{
   position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
   text-align:center;padding:60px 34px;
