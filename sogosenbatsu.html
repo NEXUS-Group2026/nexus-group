@@ -49,9 +49,10 @@ header{
 }
 header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1140px;margin:0 auto;padding:0 28px;}
-.nav-home{display:inline-flex;align-items:center;justify-content:center;color:#fff;opacity:.8;transition:opacity .2s;margin-right:16px;flex-shrink:0;}
+.nav-home{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#fff;opacity:.85;transition:opacity .2s;margin-right:18px;flex-shrink:0;}
 .nav-home:hover{opacity:1;}
-.nav-home svg{width:27px;height:27px;display:block;}
+.nav-home svg{width:34px;height:34px;display:block;}
+.nav-home .home-label{font-size:9.5px;font-weight:700;letter-spacing:.12em;line-height:1;}
 .brand-group{display:flex;align-items:center;}
 .brand{color:#fff;font-size:15px;font-weight:700;letter-spacing:.06em;display:flex;flex-direction:column;gap:4px;line-height:1.2;}
 .brand .co{font-size:11px;opacity:.7;font-weight:400;letter-spacing:.1em;}
@@ -216,6 +217,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     <div class="brand-group">
     <a href="index.html" class="nav-home" aria-label="トップページに戻る">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V19a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1V9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="home-label">HOME</span>
     </a>
     <div class="brand">
       <span class="co">株式会社 NEXUS</span>
