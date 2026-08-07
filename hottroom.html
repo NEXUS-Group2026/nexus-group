@@ -35,13 +35,13 @@ header.s{background:rgba(46,75,55,.97);backdrop-filter:blur(8px);box-shadow:0 4p
 .nav-home{display:inline-flex;align-items:center;justify-content:center;color:#fff;opacity:.8;transition:opacity .2s;margin-right:14px;flex-shrink:0;}
 .nav-home:hover{opacity:1;}
 .nav-home svg{width:27px;height:27px;display:block;}
-.brand .hdr-brandlist{display:flex;gap:10px;font-size:12px;font-weight:400;margin-top:1px;}
+.brand .hdr-brandlist{display:flex;gap:10px;font-size:11.5px;font-weight:400;margin-top:1px;white-space:nowrap;}
 .brand .hdr-brandlist span{opacity:.85;}
 .brand .hdr-brandlist span.on{opacity:1;color:#B7E0C0;font-weight:600;}
 .brand .hdr-brandlist span::after{content:'｜';opacity:.4;margin-left:10px;}
 .brand .hdr-brandlist span:last-child::after{content:'';}
-.nav-links{display:flex;gap:24px;}
-.nav-links a{color:rgba(255,255,255,.85);font-size:13px;}
+.nav-links{display:flex;gap:22px;}
+.nav-links a{color:rgba(255,255,255,.85);font-size:12.5px;white-space:nowrap;}
 .nav-links a:hover{color:#fff;}
 .nav-actions{display:flex;gap:9px;align-items:center;}
 .nav-cta{font-size:12.5px;font-weight:700;padding:10px 18px;border-radius:3px;white-space:nowrap;transition:.2s;}
@@ -89,6 +89,30 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(23px,3vw,34px);color:v
 .split-copy h3{font-family:'Shippori Mincho',serif;font-size:clamp(20px,2.4vw,27px);color:var(--ink);margin-bottom:18px;font-weight:700;line-height:1.55;}
 .split-copy p{font-size:14.5px;color:var(--soft);margin-bottom:14px;line-height:1.95;}
 .split-copy p strong{color:var(--hot-d);font-weight:600;}
+
+/* ai support */
+.ai-support{padding:90px 0;background:#fff;}
+.ai-head{max-width:680px;margin:0 auto;text-align:center;}
+.ai-lead{font-size:14.5px;color:var(--soft);margin-top:16px;line-height:2;}
+.ai-note{
+  max-width:820px;margin:32px auto 0;background:var(--hot-p);border:1px solid var(--line);border-left:4px solid var(--hot);
+  padding:22px 26px;border-radius:6px;font-size:13.5px;color:#41504a;line-height:1.95;text-align:left;
+}
+.ai-note strong{color:var(--hot-d);font-weight:700;}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:44px;max-width:960px;margin-left:auto;margin-right:auto;}
+.ai-card{background:var(--bg);padding:30px 26px;position:relative;text-align:left;}
+.ai-card::before{content:'';position:absolute;top:0;left:0;width:32px;height:3px;background:var(--hot);}
+.ai-num{font-family:'Shippori Mincho',serif;font-size:12px;color:var(--hot);font-weight:700;letter-spacing:.08em;margin-bottom:12px;display:block;}
+.ai-card h4{font-family:'Shippori Mincho',serif;font-size:15.5px;color:var(--ink);font-weight:700;margin-bottom:8px;line-height:1.6;}
+.ai-card p{font-size:12.5px;color:var(--soft);line-height:1.85;}
+
+/* SEL */
+.sel{padding:80px 0;background:var(--hot-p);}
+.sel-inner{max-width:820px;margin:0 auto;text-align:center;}
+.sel-inner p{font-size:14px;color:#41504a;line-height:2;margin-top:16px;text-align:left;}
+.sel-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px;}
+.sel-chips span{font-size:12.5px;background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:20px;color:var(--hot-d);font-weight:600;}
+.sel-msg{margin-top:36px;font-family:'Shippori Mincho',serif;font-size:18px;color:var(--hot-d);font-weight:700;}
 
 /* flow / 1日の過ごし方 */
 .flow{padding:90px 0;background:var(--bg);}
@@ -155,8 +179,10 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;}
 .rv.in{opacity:1;transform:none;}
 
-@media(max-width:860px){
+@media(max-width:1180px){
   .nav-links{display:none;}
+}
+@media(max-width:860px){
   .split-grid{grid-template-columns:1fr;gap:30px;}
   .split.rev .split-grid{direction:ltr;}
   .parts{grid-template-columns:1fr;}
@@ -186,12 +212,13 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
       <div class="hdr-brandlist">
         <span class="on">ホッとルーム</span>
         <span><a href="kodomotankyu.html">子ども探究大学</a></span>
-        <span><a href="tankyukaika.html">総合型選抜対策塾</a></span>
+        <span><a href="sogosenbatsu.html">総合型選抜対策塾</a></span>
       </div>
     </div>
     </div>
     <nav class="nav-links">
       <a href="#about">ホッとルームとは</a>
+      <a href="#ai-support">AIチューター</a>
       <a href="#flow">1日の過ごし方</a>
       <a href="#price">料金</a>
       <a href="#faq">よくある質問</a>
@@ -273,6 +300,57 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
   </div>
 </section>
 
+<!-- AI SUPPORT -->
+<section class="ai-support" id="ai-support">
+  <div class="wrap">
+    <div class="ai-head rv">
+      <div class="eyebrow" style="justify-content:center;">AI CO-TUTOR</div>
+      <h2 class="hl serif">学びも、こころの声も。<br>人とAIが、そばで見守ります。</h2>
+      <p class="ai-lead">ホッとルームでは、人間のチューターに加えて、AIチューターもお子さんを支えます。教科の質問だけでなく、ふとした気持ちの揺れも、話したいときに話せる相手として、いつもそばにいます。</p>
+      <div class="ai-note">
+        <strong>AIチューターについて</strong><br>
+        画面の中にいる、チャット形式の学習・相談パートナーです。人型のキャラクターやロボットではありません。24時間いつでも、勉強のことも、ちょっとした不安や気持ちのことも話しかけられます。AIチューターはSEL（社会性と情動の学習）の理念を学習しており、お子さんの心と体の健康を守ることを第一に設計された、心優しいシステムです。保護者の方は会話の履歴をいつでも確認できるので、安心して見守っていただけます。
+      </div>
+    </div>
+    <div class="ai-grid rv">
+      <div class="ai-card">
+        <span class="ai-num">01</span>
+        <h4>24時間、いつでも</h4>
+        <p>夜中でも、学校のことを考えると眠れない朝でも。話したいと思った瞬間に、AIチューターがそこにいます。</p>
+      </div>
+      <div class="ai-card">
+        <span class="ai-num">02</span>
+        <h4>保護者も安心して見守れる</h4>
+        <p>AIとの会話履歴は、保護者の方もいつでも確認できます。「何を話しているか分からない」という不安がありません。</p>
+      </div>
+      <div class="ai-card">
+        <span class="ai-num">03</span>
+        <h4>SELを学んだ、やさしいAI</h4>
+        <p>社会性と情動の学習（SEL）の理念を土台に設計。お子さんの心と体の健康を第一に考える、心優しきパートナーです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEL -->
+<section class="sel">
+  <div class="wrap">
+    <div class="sel-inner rv">
+      <div class="eyebrow" style="justify-content:center;">ABOUT SEL</div>
+      <h2 class="hl serif" style="margin-top:14px;">SEL（社会性と情動の学習）とは</h2>
+      <p>SEL（Social and Emotional Learning）とは、自分の気持ちに気づき、それをコントロールし、他者と良い関係を築きながら、責任ある選択をしていく力を育てる教育理念です。世界中の教育現場で取り入れられており、学力だけでなく、心の土台を育てることを大切にしています。ホッとルームのAIチューターは、この理念を踏まえて、お子さんの気持ちに寄り添うよう設計されています。</p>
+      <div class="sel-chips">
+        <span>自己認識</span>
+        <span>自己管理</span>
+        <span>社会的認識</span>
+        <span>対人関係スキル</span>
+        <span>責任ある意思決定</span>
+      </div>
+      <p class="sel-msg">すべては、お子さんの成長と幸せのために。</p>
+    </div>
+  </div>
+</section>
+
 <!-- FLOW -->
 <section class="flow" id="flow">
   <div class="wrap">
@@ -280,32 +358,23 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
       <div class="eyebrow" style="justify-content:center;">DAILY FLOW</div>
       <h2 class="hl serif">1日の過ごし方</h2>
     </div>
-    <p class="flow-note rv">第1部・第2部のどちらかに通って過ごし、その後ご帰宅いただくのが基本です。<br>「午前中だけ」「午後だけ」など、お子さんの体調やご家庭の状況に合わせて選べます。</p>
-    <div class="parts rv">
+    <p class="flow-note rv">10:00〜14:00の4時間、来られる時間に、来られる範囲で通っていただけます。<br>「午前中だけ」「1時間だけ」など、お子さんの体調やご家庭の状況に合わせて選べます。</p>
+    <div class="parts rv" style="grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto;">
       <div class="part">
-        <span class="part-label">第1部</span>
-        <div class="part-time">9:30 – 12:00 <span>午前</span></div>
+        <span class="part-label">1日のながれ</span>
+        <div class="part-time">10:00 – 14:00 <span>4時間</span></div>
         <ul>
           <li>登校（来られる時間に、来られる範囲で）</li>
           <li>読書・探究・学習など、自分で選んで過ごす</li>
           <li>チューターとの雑談・相談</li>
-          <li>休憩も自由。疲れたら休んでOK</li>
-        </ul>
-      </div>
-      <div class="part">
-        <span class="part-label">第2部</span>
-        <div class="part-time">13:00 – 15:30 <span>午後</span></div>
-        <ul>
-          <li>午後から登校したいお子さんはこちら</li>
-          <li>制作・工作・PCなど、興味に応じた活動</li>
-          <li>チューターとの1対1の時間</li>
-          <li>その日の振り返り・帰宅</li>
+          <li>休憩や軽食も自由。疲れたら休んでOK</li>
+          <li>帰宅（お迎え、または一人で帰宅）</li>
         </ul>
       </div>
     </div>
     <div class="flow-free rv">
-      <strong>◎ 第1部・第2部の両方で過ごすこともできます。</strong><br>
-      朝から夕方まで、1日を通してここで過ごしたいお子さんは、両方をご利用いただけます（料金は割引適用）。無理に長くいる必要はありません。「今日は午前だけ」でも大丈夫です。
+      <strong>◎ 無理に4時間いる必要はありません。</strong><br>
+      「今日は1時間だけ」「今日はお休み」も自由です。時間の長さより、その日のお子さんのペースを大切にしています。
     </div>
   </div>
 </section>
@@ -317,35 +386,31 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
       <div class="eyebrow" style="justify-content:center;">PRICE</div>
       <h2 class="hl serif">料金のご案内</h2>
     </div>
-    <p class="price-note rv">通う回数に応じて選べます。第1部・第2部は同額。<br>両方を1日通してご利用の場合は、20%割引が適用されます。</p>
+    <p class="price-note rv">10:00〜14:00（4時間）の利用時間で、通う回数に応じて選べます。年齢によって料金が異なります。表示はシステム利用料込みです。</p>
     <div class="ptable rv">
       <table>
         <thead>
           <tr>
             <th>通所回数</th>
-            <th>第1部のみ／第2部のみ</th>
-            <th>1日通し（第1部＋第2部）<br>20%OFF</th>
+            <th>年長〜小学生</th>
+            <th>中学生〜高校生</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>週2回</td><td>20,000<span class="yen">円</span></td><td class="disc">32,000<span class="yen">円</span></td></tr>
-          <tr><td>週3回</td><td>28,000<span class="yen">円</span></td><td class="disc">44,800<span class="yen">円</span></td></tr>
-          <tr><td>週4回</td><td>38,000<span class="yen">円</span></td><td class="disc">60,800<span class="yen">円</span></td></tr>
-          <tr><td>週5回</td><td>46,000<span class="yen">円</span></td><td class="disc">73,600<span class="yen">円</span></td></tr>
+          <tr><td>週2回</td><td>22,000<span class="yen">円</span></td><td>26,000<span class="yen">円</span></td></tr>
+          <tr><td>週3回</td><td>30,000<span class="yen">円</span></td><td>34,000<span class="yen">円</span></td></tr>
+          <tr><td>週4回</td><td>38,000<span class="yen">円</span></td><td>42,000<span class="yen">円</span></td></tr>
+          <tr><td>週5回</td><td>46,000<span class="yen">円</span></td><td>50,000<span class="yen">円</span></td></tr>
         </tbody>
       </table>
     </div>
-    <div class="price-extra rv">
+    <div class="price-extra rv" style="grid-template-columns:1fr;max-width:340px;">
       <div class="pe-card">
         <div class="pe-label">入会金</div>
         <div class="pe-val">20,000<span>円</span></div>
       </div>
-      <div class="pe-card">
-        <div class="pe-label">システム利用料</div>
-        <div class="pe-val">2,000<span>円 / 月</span></div>
-      </div>
     </div>
-    <p class="price-disc rv">※ 表示はすべて月額・税込です。※ 入会金は初回のみ。※ 通所回数・コースはお子さんの状況に合わせてご相談いただけます。詳しくは無料相談にてご案内します。</p>
+    <p class="price-disc rv">※ 表示はすべて月額・税込・システム利用料込みです。※ 入会金は初回のみ。※ 通所回数・コースはお子さんの状況に合わせてご相談いただけます。※ 東京都フリースクール等利用者等支援事業の対象となった場合、利用料の一部について月額上限2万円の助成を受けられる可能性があります（対象条件・対象費用は東京都の制度をご確認ください）。詳しくは無料相談にてご案内します。</p>
   </div>
 </section>
 
@@ -409,7 +474,7 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
         <ul>
           <li><a href="hottroom.html">ホッとルーム</a></li>
           <li><a href="kodomotankyu.html">子ども探究大学</a></li>
-          <li><a href="tankyukaika.html">総合型選抜対策塾</a></li>
+          <li><a href="sogosenbatsu.html">総合型選抜対策塾</a></li>
         </ul>
       </div>
       <div class="foot-col">
