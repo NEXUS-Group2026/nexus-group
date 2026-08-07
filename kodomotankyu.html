@@ -208,16 +208,17 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .monitor-list li{list-style:none;font-size:12.5px;color:rgba(255,255,255,.8);position:relative;padding-left:14px;}
 .monitor-list li::before{content:'—';position:absolute;left:0;color:#9DBBEE;}
 
-.pr-table-wrap{margin-top:36px;}
+.pr-table-wrap{margin-top:36px;overflow-x:auto;}
 .pr-table-head{font-size:12.5px;color:var(--soft);letter-spacing:.05em;margin-bottom:16px;}
-.pr-table{width:100%;border-collapse:collapse;background:#fff;}
-.pr-table th,.pr-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:13.5px;}
-.pr-table th{font-size:11.5px;letter-spacing:.08em;color:var(--soft);font-weight:600;border-bottom:2px solid var(--line);}
-.pr-table td.pt-freq{font-weight:700;color:var(--ink);}
-.pr-table td.pt-unit{color:var(--soft);font-size:12.5px;}
-.pr-table tr.pt-rec{background:var(--tanq-p);}
-.pr-table tr.pt-rec td.pt-freq{color:var(--tanq-d);}
-.pt-badge{display:inline-block;font-size:10.5px;font-weight:700;background:var(--tanq);color:#fff;padding:3px 9px;border-radius:20px;margin-left:8px;letter-spacing:.04em;vertical-align:middle;}
+.pr-table{width:100%;border-collapse:collapse;background:#fff;min-width:560px;}
+.pr-table th,.pr-table td{padding:16px 14px;text-align:center;border-bottom:1px solid var(--line);font-size:13.5px;}
+.pr-table th{font-size:11.5px;letter-spacing:.05em;color:var(--soft);font-weight:600;border-bottom:2px solid var(--line);}
+.pr-table td.pt-freq,.pr-table th.pt-freq{text-align:left;font-weight:700;color:var(--ink);}
+.pr-table td.pt-freq .pt-unit{display:block;font-weight:400;color:var(--soft);font-size:11.5px;margin-top:3px;}
+.pr-table th.pt-rec,.pr-table td.pt-rec{background:var(--tanq-p);}
+.pr-table th.pt-rec{color:var(--tanq-d);}
+.pr-table td.pt-rec{font-weight:700;color:var(--tanq-d);}
+.pt-badge{display:inline-block;font-size:10px;font-weight:700;background:var(--tanq);color:#fff;padding:2px 9px;border-radius:20px;margin-top:4px;letter-spacing:.04em;}
 .pr-foot{font-size:12px;color:var(--soft);margin-top:14px;line-height:1.9;}
 .pr-enroll{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px;}
 .pr-enroll div{font-size:13px;color:var(--soft);}
@@ -314,7 +315,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="hdr-brandlist">
         <span><a href="hottroom.html">ホッとルーム</a></span>
         <span class="on">子ども探究大学</span>
-        <span><a href="tankyukaika.html">総合型選抜対策塾</a></span>
+        <span><a href="sogosenbatsu.html">総合型選抜対策塾</a></span>
       </div>
     </div>
     </div>
@@ -563,39 +564,49 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       </div>
 
       <div class="pr-table-wrap">
-        <div class="pr-table-head">10月以降｜通常コース（税込・月額・週1回）</div>
+        <div class="pr-table-head">10月以降｜通常コース（税込・月額）</div>
         <table class="pr-table">
           <thead>
-            <tr><th>コース</th><th>対象</th><th>授業時間</th><th>月額料金</th></tr>
+            <tr>
+              <th class="pt-freq">コース</th>
+              <th>週1</th>
+              <th class="pt-rec">週2<br><span class="pt-badge">おすすめ</span></th>
+              <th>週3</th>
+              <th>週4</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="pt-freq">スターター探究コース</td>
-              <td class="pt-unit">年長〜小2</td>
-              <td class="pt-unit">60分×月4回</td>
+              <td class="pt-freq">スターター探究コース<span class="pt-unit">年長〜小2・60分</span></td>
               <td>12,100円</td>
+              <td class="pt-rec">19,800円</td>
+              <td>27,500円</td>
+              <td>35,200円</td>
             </tr>
             <tr>
-              <td class="pt-freq">ジュニア探究コース</td>
-              <td class="pt-unit">小3〜小6</td>
-              <td class="pt-unit">90分×月4回</td>
+              <td class="pt-freq">ジュニア探究コース<span class="pt-unit">小3〜小6・90分</span></td>
               <td>16,500円</td>
+              <td class="pt-rec">27,500円</td>
+              <td>38,500円</td>
+              <td>49,500円</td>
             </tr>
             <tr>
-              <td class="pt-freq">ミドル探究コース</td>
-              <td class="pt-unit">中1〜中3</td>
-              <td class="pt-unit">90分×月4回</td>
+              <td class="pt-freq">ミドル探究コース<span class="pt-unit">中1〜中3・90分</span></td>
               <td>18,700円</td>
+              <td class="pt-rec">30,800円</td>
+              <td>42,900円</td>
+              <td>55,000円</td>
             </tr>
             <tr>
-              <td class="pt-freq">アドバンス探究コース</td>
-              <td class="pt-unit">高1〜高3</td>
-              <td class="pt-unit">90分×月4回</td>
+              <td class="pt-freq">アドバンス探究コース<span class="pt-unit">高1〜高3・90分</span></td>
               <td>19,800円</td>
+              <td class="pt-rec">33,000円</td>
+              <td>46,200円</td>
+              <td>59,400円</td>
             </tr>
           </tbody>
         </table>
-        <p class="pr-foot">※学年に応じて授業時間・料金が異なります。<br>※高校生の総合型選抜対策（志望理由書・小論文・面接等）は、別ブランド「総合型選抜対策塾」でご案内します。</p>
+        <p class="pr-foot">※月4週基準。通う回数が増えるほど、1回あたりの単価はお得になります。<br>※高校生の総合型選抜対策（志望理由書・小論文・面接等）は、別ブランド「総合型選抜対策塾」でご案内します。</p>
 
         <div class="pr-enroll">
           <div><strong>20,000円</strong>通常入会金（共通）</div>
@@ -674,7 +685,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <ul>
           <li><a href="hottroom.html">ホッとルーム</a></li>
           <li><a href="kodomotankyu.html">子ども探究大学</a></li>
-          <li><a href="tankyukaika.html">総合型選抜対策塾</a></li>
+          <li><a href="sogosenbatsu.html">総合型選抜対策塾</a></li>
         </ul>
       </div>
       <div class="foot-col">
