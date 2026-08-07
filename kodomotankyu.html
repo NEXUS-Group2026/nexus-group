@@ -71,20 +71,25 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .nav-cta.mail:hover{background:var(--tanq-p);color:var(--tanq);}
 
 /* ======= HERO ======= */
-.hero{position:relative;}
-.hero-photo-full{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;background:var(--kaika-d);}
-.hero-photo-full img{width:100%;height:100%;object-fit:cover;object-position:center 62%;display:block;}
-.hero-photo-full::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,43,.5) 0%,rgba(15,23,43,0) 24%);pointer-events:none;}
-.hero-textband{
-  background:linear-gradient(160deg,var(--kaika-d) 0%,var(--tanq-d) 100%);
-  padding:56px 0 64px;text-align:center;
+.hero{
+  position:relative;min-height:92vh;display:grid;grid-template-columns:25% 50% 25%;
+  overflow:hidden;
 }
-.hero-inner{position:relative;z-index:2;max-width:720px;margin:0 auto;}
+.hero-photo{position:relative;overflow:hidden;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.hero-photo.left img{object-position:40% center;}
+.hero-photo.right img{object-position:22% center;}
+.hero-center{
+  position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:60px 34px;
+  background:linear-gradient(160deg,var(--kaika-d) 0%,var(--tanq-d) 100%);
+}
+.hero-inner{position:relative;z-index:2;max-width:520px;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:19px;letter-spacing:.12em;font-weight:800;color:#9DBBEE;text-transform:uppercase;margin-bottom:18px;justify-content:center;}
 .hero-eyebrow::before{content:'';width:34px;height:2px;background:#9DBBEE;}
-.hero-h1{font-size:clamp(24px,3vw,38px);color:#fff;font-weight:700;line-height:1.55;margin-bottom:20px;}
-.hero-lead{font-size:clamp(13.5px,1.4vw,16px);color:rgba(255,255,255,.88);margin:0 auto 14px;line-height:1.95;}
-.hero-note{font-size:12px;color:rgba(255,255,255,.68);margin:0 auto 30px;line-height:1.85;max-width:640px;}
+.hero-h1{font-size:clamp(24px,2.6vw,34px);color:#fff;font-weight:700;line-height:1.55;text-shadow:0 2px 20px rgba(0,0,0,.4);margin-bottom:20px;}
+.hero-lead{font-size:clamp(13.5px,1.3vw,15px);color:rgba(255,255,255,.88);margin:0 auto 14px;line-height:1.95;}
+.hero-note{font-size:11.5px;color:rgba(255,255,255,.68);margin:0 auto 30px;line-height:1.85;}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;justify-content:center;}
 .hero-btn{font-size:13px;font-weight:700;padding:13px 22px;border-radius:3px;letter-spacing:.03em;transition:.2s;display:inline-flex;align-items:center;gap:8px;}
 .hero-btn.line{background:#06C755;color:#fff;}
@@ -280,6 +285,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   .fq:nth-child(odd){padding-right:0;}
   .foot-grid{grid-template-columns:1fr;}
   .hero-meta{gap:18px;}
+  .hero{grid-template-columns:18% 64% 18%;}
 }
 @media(max-width:600px){
   .wrap{padding:0 18px;}
@@ -288,8 +294,9 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   .nav-cta{font-size:11px;padding:8px 11px;}
   .nav-actions{gap:6px;}
   .flow-steps{grid-template-columns:1fr;}
-  .hero-photo-full{aspect-ratio:4/3;}
-  .hero-textband{padding:44px 0 52px;}
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-photo{display:none;}
+  .hero-center{padding:130px 22px 56px;}
 }
 </style>
 <noscript><style>.rv{opacity:1 !important;transform:none !important;}</style></noscript>
@@ -326,28 +333,25 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-photo-full">
-    <img src="images/kodomotankyu-hero.jpg" alt="理科実験を囲んで盛り上がる子どもたちとチューター">
-  </div>
-  <div class="hero-textband">
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-eyebrow">子ども探究大学</div>
-        <h1 class="hero-h1 serif">精鋭のチューター陣・無限の「知」をもつAIチューターが、<br>あなたの好奇心を能力に。</h1>
-        <p class="hero-lead">子ども探究大学は、AIチューターと人間のチューターが二人三脚で寄り添う探究学習塾です。<br>いつ来てもいい！※<br>科学やテクノロジーだけでなく、哲学やビジネス探究まで<br>——子どもの「もっと知りたい」を、教科の枠で止めません。</p>
-        <p class="hero-note">※子ども探究大学は登校のフレックス制を設けています。基準となる時間を何時からスタートしてもよい、フレックス制を導入した、新世代型の探究学習塾です。</p>
-        <div class="hero-actions">
-          <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="hero-btn line">LINEで無料相談</a>
-          <a href="soudan.html" class="hero-btn mail">体験授業を申し込む</a>
-        </div>
-        <div class="hero-meta">
-          <div><strong>幼・小学生ブロック</strong>15:30〜18:00頃（スターター・ジュニア）</div>
-          <div><strong>中・高生向けブロック</strong>17:00〜19:30頃（ミドル・アドバンス）</div>
-          <div><strong>会場</strong>文京区本郷 本郷三丁目駅 徒歩2分</div>
-        </div>
+  <div class="hero-photo left"><img src="images/kodomotankyu-hero.jpg" alt="理科実験を囲んで盛り上がる子どもたちとチューター"></div>
+  <div class="hero-center">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">子ども探究大学</div>
+      <h1 class="hero-h1 serif">精鋭のチューター陣・無限の「知」をもつAIチューターが、<br>あなたの好奇心を能力に。</h1>
+      <p class="hero-lead">子ども探究大学は、AIチューターと人間のチューターが二人三脚で寄り添う探究学習塾です。<br>いつ来てもいい！※<br>科学やテクノロジーだけでなく、哲学やビジネス探究まで<br>——子どもの「もっと知りたい」を、教科の枠で止めません。</p>
+      <p class="hero-note">※子ども探究大学は登校のフレックス制を設けています。基準となる時間を何時からスタートしてもよい、フレックス制を導入した、新世代型の探究学習塾です。</p>
+      <div class="hero-actions">
+        <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="hero-btn line">LINEで無料相談</a>
+        <a href="soudan.html" class="hero-btn mail">体験授業を申し込む</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>幼・小学生ブロック</strong>15:30〜18:00頃（スターター・ジュニア）</div>
+        <div><strong>中・高生向けブロック</strong>17:00〜19:30頃（ミドル・アドバンス）</div>
+        <div><strong>会場</strong>文京区本郷 本郷三丁目駅 徒歩2分</div>
       </div>
     </div>
   </div>
+  <div class="hero-photo right"><img src="images/kodomotankyu-aitutor.jpg" alt="ノートPCで画面内のAIチューターを使いながら学習する生徒たち"></div>
 </section>
 
 <!-- STATEMENT -->
