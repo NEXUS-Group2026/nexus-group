@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none;}
 
 /* header */
 header{position:fixed;top:0;left:0;right:0;z-index:100;padding:15px 0;
-  background:linear-gradient(180deg,rgba(46,75,55,.5) 0%,rgba(46,75,55,0) 100%);
+  background:linear-gradient(180deg,rgba(46,75,55,.88) 0%,rgba(46,75,55,.55) 100%);
   transition:background .35s,box-shadow .35s,padding .35s;}
 header.s{background:rgba(46,75,55,.97);backdrop-filter:blur(8px);box-shadow:0 4px 24px rgba(0,0,0,.2);padding:11px 0;}
 .nav{display:flex;align-items:center;justify-content:space-between;max-width:1080px;margin:0 auto;padding:0 28px;gap:16px;}
@@ -52,19 +52,22 @@ header.s{background:rgba(46,75,55,.97);backdrop-filter:blur(8px);box-shadow:0 4p
 .nav-cta.mail:hover{background:#fff;color:var(--amber);}
 
 /* hero */
-.hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(30,45,34,.82) 0%,rgba(30,45,34,.55) 50%,rgba(30,45,34,.2) 100%);}
-.hero-inner{position:relative;z-index:2;padding:120px 0 70px;max-width:640px;}
+.hero{position:relative;min-height:88vh;display:grid;grid-template-columns:47% 53%;overflow:hidden;}
+.hero-text{
+  background:linear-gradient(160deg,var(--hot-p) 0%,#EAF3EC 100%);
+  display:flex;align-items:center;padding:110px 5% 70px;
+}
+.hero-inner{position:relative;z-index:2;max-width:560px;}
+.hero-photo{position:relative;overflow:hidden;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:30% center;}
 .hero-tag{display:inline-block;font-size:12px;letter-spacing:.14em;color:#fff;background:var(--hot);padding:7px 15px;border-radius:20px;margin-bottom:24px;}
-.hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(30px,4.6vw,50px);line-height:1.42;color:#fff;font-weight:800;margin-bottom:22px;text-shadow:0 2px 20px rgba(0,0,0,.35);}
-.hero p{font-size:15.5px;color:rgba(255,255,255,.92);margin-bottom:34px;text-shadow:0 1px 10px rgba(0,0,0,.4);}
+.hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(28px,3.6vw,44px);line-height:1.45;color:var(--hot-d);font-weight:800;margin-bottom:22px;}
+.hero p{font-size:15px;color:#41504a;margin-bottom:34px;line-height:2;}
 .hero-btns{display:flex;gap:13px;flex-wrap:wrap;}
 .btn-a{background:var(--amber);color:#fff;font-weight:700;font-size:14px;padding:15px 30px;border-radius:3px;transition:.2s;}
 .btn-a:hover{background:#fff;color:var(--ink);}
-.btn-b{border:1px solid rgba(255,255,255,.6);color:#fff;font-size:14px;padding:14px 26px;border-radius:3px;transition:.2s;}
-.btn-b:hover{background:#fff;color:var(--ink);}
+.btn-b{border:1px solid var(--hot);color:var(--hot-d);font-size:14px;padding:14px 26px;border-radius:3px;transition:.2s;font-weight:600;}
+.btn-b:hover{background:var(--hot);color:#fff;}
 
 /* section basics */
 section{position:relative;}
@@ -184,6 +187,9 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
   .nav-links{display:none;}
 }
 @media(max-width:860px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-photo{height:340px;order:-1;}
+  .hero-text{padding:110px 22px 56px;}
   .split-grid{grid-template-columns:1fr;gap:30px;}
   .split.rev .split-grid{direction:ltr;}
   .parts{grid-template-columns:1fr;}
@@ -194,7 +200,7 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
 @media(max-width:600px){
   .wrap,.narrow{padding:0 18px;}
   section,.empathy,.split,.flow,.price,.faq,.cta{padding:60px 0;}
-  .hero-inner{padding:100px 0 56px;}
+  .hero-photo{height:260px;}
   .ptable th,.ptable td{padding:12px 10px;font-size:12.5px;}
   .brand .hdr-brandlist{display:none;}
 }
@@ -234,15 +240,19 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img src="images/hot-hero.jpg" alt="ホッとルームで思い思いに過ごす子どもたち"></div>
-  <div class="hero-inner wrap">
-    <span class="hero-tag">不登校支援フリースクール</span>
-    <h1 class="serif">学校に行けなくても、<br>ここが「居場所」に。</h1>
-    <p>ホッとルームは、学校に登校できていないお子様のための居場所です。<br>勉強を急かしません。まずは、安心して過ごせることから。</p>
-    <div class="hero-btns">
-      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="btn-a">無料相談を申し込む</a>
-      <a href="#flow" class="btn-b">1日の過ごし方を見る</a>
+  <div class="hero-text">
+    <div class="hero-inner">
+      <span class="hero-tag">不登校支援フリースクール</span>
+      <h1 class="serif">学校に行けなくても、<br>ここが「居場所」に。</h1>
+      <p>ホッとルームは、学校に登校できていないお子様のための居場所です。<br>勉強を急かしません。まずは、安心して過ごせることから。</p>
+      <div class="hero-btns">
+        <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="btn-a">無料相談を申し込む</a>
+        <a href="#flow" class="btn-b">1日の過ごし方を見る</a>
+      </div>
     </div>
+  </div>
+  <div class="hero-photo">
+    <img src="images/hot-hero.jpg" alt="ホッとルームで思い思いに過ごす子どもたち">
   </div>
 </section>
 
