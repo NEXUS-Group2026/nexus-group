@@ -72,24 +72,31 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .nav-cta.mail:hover{background:var(--kaika-p);color:var(--kaika);}
 
 /* ======= HERO ======= */
-.hero{position:relative;min-height:82vh;display:flex;align-items:flex-end;overflow:hidden;padding:60px 0 70px;}
-.hero-bg{position:absolute;inset:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,23,43,.85) 0%,rgba(15,23,43,.55) 45%,rgba(15,23,43,.18) 100%);}
-.hero-inner{position:relative;z-index:2;max-width:680px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;font-weight:600;color:#B7C6E8;text-transform:uppercase;margin-bottom:22px;}
-.hero-eyebrow::before{content:'';width:28px;height:1px;background:#B7C6E8;}
-.hero-h1{font-size:clamp(28px,4.2vw,46px);color:#fff;font-weight:800;line-height:1.5;text-shadow:0 2px 20px rgba(0,0,0,.4);margin-bottom:22px;}
-.hero-lead{font-size:clamp(14px,1.5vw,16px);color:rgba(255,255,255,.9);margin-bottom:34px;line-height:2;text-shadow:0 1px 8px rgba(0,0,0,.4);}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px;}
+.hero{position:relative;min-height:88vh;display:grid;grid-template-columns:53% 47%;overflow:hidden;}
+.hero-photo{position:relative;overflow:hidden;background:#0e1626;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:70% center;}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,43,0) 60%,rgba(15,23,43,.35) 100%);pointer-events:none;}
+.hero-text{
+  background:linear-gradient(160deg,#0f1a30 0%,var(--kaika-d) 55%,var(--kaika) 100%);
+  display:flex;align-items:center;padding:110px 5% 70px;position:relative;
+}
+.hero-text::before{
+  content:'';position:absolute;top:80px;left:5%;width:52px;height:1px;background:var(--amber);opacity:.85;
+}
+.hero-inner{position:relative;z-index:2;max-width:560px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.24em;font-weight:600;color:var(--amber);text-transform:uppercase;margin-bottom:26px;}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--amber);}
+.hero-h1{font-family:'Shippori Mincho',serif;font-size:clamp(28px,3.4vw,42px);color:#fff;font-weight:700;line-height:1.55;letter-spacing:.02em;margin-bottom:28px;}
+.hero-lead{font-size:clamp(14px,1.4vw,15.5px);color:rgba(255,255,255,.82);margin-bottom:38px;line-height:2.05;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px;}
 .hero-btn{font-size:13.5px;font-weight:700;padding:15px 28px;border-radius:3px;letter-spacing:.03em;transition:.2s;display:inline-flex;align-items:center;gap:8px;}
 .hero-btn.line{background:#06C755;color:#fff;}
 .hero-btn.line:hover{background:#05a648;}
-.hero-btn.mail{background:#fff;color:var(--kaika-d);}
-.hero-btn.mail:hover{background:var(--kaika-p);}
-.hero-meta{display:flex;gap:26px;flex-wrap:wrap;}
-.hero-meta div{color:rgba(255,255,255,.75);font-size:12.5px;letter-spacing:.03em;border-left:2px solid #B7C6E8;padding-left:12px;}
-.hero-meta strong{display:block;color:#fff;font-size:14px;font-weight:600;margin-bottom:2px;}
+.hero-btn.mail{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);}
+.hero-btn.mail:hover{background:#fff;color:var(--kaika-d);}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;}
+.hero-meta div{color:rgba(255,255,255,.7);font-size:12px;letter-spacing:.03em;border-left:2px solid var(--amber);padding-left:12px;}
+.hero-meta strong{display:block;color:#fff;font-size:13.5px;font-weight:600;margin-bottom:2px;letter-spacing:.05em;}
 
 /* ======= SHARED SECTION BITS ======= */
 .eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--kaika);text-transform:uppercase;}
@@ -207,6 +214,36 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 @media(prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none;}
 }
+
+/* ======= RESPONSIVE ======= */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-photo{height:340px;}
+  .hero-text{padding:70px 22px 60px;}
+  .hero-text::before{top:52px;}
+  .sup-grid{grid-template-columns:repeat(2,1fr);}
+  .flow-steps{grid-template-columns:repeat(2,1fr);}
+  .course-grid{grid-template-columns:1fr;}
+  .course-card.rec{transform:none;}
+  .ladder-steps{grid-template-columns:1fr 1fr;}
+  .lad-step:not(:last-child)::after{display:none;}
+  .faq-grid{grid-template-columns:1fr;}
+  .fq:nth-child(even){padding-left:0;border-left:none;}
+  .fq:nth-child(odd){padding-right:0;}
+  .foot-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+}
+@media(max-width:600px){
+  .wrap{padding:0 18px;}
+  section,.intro,.support,.flow,.courses,.ladder,.faq,.cta{padding:64px 0;}
+  .hero-photo{height:260px;}
+  .brand .hdr-brandlist{display:none;}
+  .nav-cta{font-size:11px;padding:8px 11px;}
+  .nav-actions{gap:6px;}
+  .sup-grid{grid-template-columns:1fr;}
+  .flow-steps{grid-template-columns:1fr;}
+  .ladder-steps{grid-template-columns:1fr;}
+}
 </style>
 <noscript><style>.rv{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
@@ -243,19 +280,23 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img src="images/kaika-evening.jpg" alt="夜の教室で個別指導を受ける高校生"></div>
-  <div class="hero-inner wrap">
-    <div class="hero-eyebrow">総合型選抜対策塾</div>
-    <h1 class="hero-h1 serif">自分の「好き」で大学受験！<br>総合型選抜対策であなたの未来を拓きます。</h1>
-    <p class="hero-lead">総合型選抜対策塾は、これまでの探究活動や興味関心を、大学入試で評価される「物語」に組み立て直す専門塾です。文系・理系を問わず、志望理由書・小論文・面接まで、チューターが一貫して伴走します。</p>
-    <div class="hero-actions">
-      <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="hero-btn line">LINEで無料相談</a>
-      <a href="soudan.html" class="hero-btn mail">個別相談を申し込む</a>
-    </div>
-    <div class="hero-meta">
-      <div><strong>授業時間</strong>19:00〜20:30（90分）</div>
-      <div><strong>対象</strong>高校1年生〜3年生</div>
-      <div><strong>会場</strong>文京区本郷 本郷三丁目駅 徒歩2分</div>
+  <div class="hero-photo">
+    <img src="images/kaika-evening.jpg" alt="夜の教室で個別指導を受ける高校生">
+  </div>
+  <div class="hero-text">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">総合型選抜対策塾</div>
+      <h1 class="hero-h1">自分の「好き」で大学受験。<br>その先の未来を、拓く。</h1>
+      <p class="hero-lead">総合型選抜対策塾は、これまでの探究活動や興味関心を、大学入試で評価される「物語」に組み立て直す専門塾です。文系・理系を問わず、志望理由書・小論文・面接まで、チューターが一貫して伴走します。</p>
+      <div class="hero-actions">
+        <a href="https://lin.ee/S0xp8SK" target="_blank" rel="noopener" class="hero-btn line">LINEで無料相談</a>
+        <a href="soudan.html" class="hero-btn mail">個別相談を申し込む</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>授業時間</strong>19:00〜20:30（90分）</div>
+        <div><strong>対象</strong>高校1年生〜3年生</div>
+        <div><strong>会場</strong>文京区本郷 本郷三丁目駅 徒歩2分</div>
+      </div>
     </div>
   </div>
 </section>
