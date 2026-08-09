@@ -32,39 +32,38 @@ a{color:inherit;text-decoration:none;}
 .back-top{position:absolute;top:60px;right:28px;color:rgba(255,255,255,.75);font-size:13px;}
 .back-top:hover{color:#fff;}
 
-/* choice */
-.choice{padding:60px 0 30px;background:var(--bg);}
-.choice-head{text-align:center;max-width:640px;margin:0 auto 40px;}
-.choice-head h2{font-family:'Shippori Mincho',serif;font-size:clamp(20px,2.6vw,26px);color:var(--ink);font-weight:700;line-height:1.6;margin-bottom:14px;}
-.choice-head p{font-size:14px;color:var(--soft);line-height:1.95;}
-.line-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto;}
-.line-card{background:#fff;padding:32px 22px 28px;border-radius:8px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.05);border-top:4px solid var(--line);transition:.25s;display:flex;flex-direction:column;}
-.line-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.09);}
-.line-card.hot{border-top-color:var(--hot);}
-.line-card.tanq{border-top-color:var(--tanq);}
-.line-card.kaika{border-top-color:var(--kaika);}
-.line-card h3{font-family:'Shippori Mincho',serif;font-size:16.5px;color:var(--ink);font-weight:700;margin-bottom:6px;line-height:1.5;}
-.line-card .lc-sub{font-size:11.5px;color:var(--soft);margin-bottom:16px;letter-spacing:.03em;}
-.line-card p{font-size:12.5px;color:var(--soft);line-height:1.9;margin-bottom:22px;flex:1;}
-.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 20px;font-size:13px;font-weight:700;border-radius:3px;transition:.2s;letter-spacing:.03em;background:#06C755;color:#fff;}
+/* main contact area (2col: form left, LINE cards right) */
+.contact-main{padding:70px 0 90px;background:var(--bg);}
+.contact-wrap{max-width:1200px;margin:0 auto;padding:0 28px;}
+.contact-grid{display:grid;grid-template-columns:2fr 1fr;gap:44px;align-items:start;}
+
+/* form column */
+.form-head{margin-bottom:30px;}
+.form-head .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--kaika);text-transform:uppercase;margin-bottom:14px;}
+.form-head .eyebrow::before{content:'';width:28px;height:1px;background:var(--kaika);}
+.form-head h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,32px);color:var(--ink);font-weight:700;line-height:1.55;margin-bottom:14px;}
+.form-head p{font-size:14px;color:var(--soft);line-height:1.95;}
+
+/* line column */
+.line-col{position:sticky;top:24px;}
+.line-col-head{margin-bottom:18px;}
+.line-col-head h3{font-family:'Shippori Mincho',serif;font-size:19px;color:var(--ink);font-weight:700;margin-bottom:8px;line-height:1.5;}
+.line-col-head p{font-size:12.5px;color:var(--soft);line-height:1.85;}
+.line-stack{display:flex;flex-direction:column;gap:14px;}
+.line-card{background:#fff;padding:22px 22px 20px;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.05);border-left:4px solid var(--line);transition:.25s;}
+.line-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
+.line-card.hot{border-left-color:var(--hot);}
+.line-card.tanq{border-left-color:var(--tanq);}
+.line-card.kaika{border-left-color:var(--kaika);}
+.line-card h4{font-family:'Shippori Mincho',serif;font-size:15px;color:var(--ink);font-weight:700;margin-bottom:4px;line-height:1.5;}
+.line-card .lc-sub{font-size:11px;color:var(--soft);margin-bottom:12px;letter-spacing:.03em;}
+.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 16px;font-size:12px;font-weight:700;border-radius:3px;transition:.2s;letter-spacing:.03em;background:#06C755;color:#fff;width:100%;}
 .line-btn:hover{background:#05a648;}
-.choice-mail-note{max-width:640px;margin:44px auto 0;text-align:center;font-size:13px;color:var(--soft);line-height:1.95;padding:22px 26px;background:var(--amber-p);border-radius:6px;}
-.choice-mail-note strong{color:var(--amber);font-weight:700;}
-.choice-mail-note a{color:var(--amber);text-decoration:underline;font-weight:700;}
-.choice-mail-note a:hover{color:#8a651c;}
 
 /* form */
 .form-section{padding:70px 0 90px;background:var(--bg);}
-.divider{display:flex;align-items:center;gap:22px;max-width:820px;margin:0 auto 60px;}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--line);}
-.divider span{font-size:12.5px;color:var(--soft);letter-spacing:.1em;white-space:nowrap;}
-.form-head{max-width:640px;margin:0 auto 44px;text-align:center;}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--kaika);text-transform:uppercase;margin-bottom:14px;}
-.eyebrow::before{content:'';width:28px;height:1px;background:var(--kaika);}
-.form-head h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,32px);color:var(--ink);font-weight:700;line-height:1.55;margin-bottom:16px;}
-.form-head p{font-size:14px;color:var(--soft);line-height:1.95;}
 
-.form-wrap{max-width:640px;margin:0 auto;background:#fff;padding:44px 40px 40px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.05);}
+.form-wrap{width:100%;background:#fff;padding:44px 40px 40px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.05);}
 .field{margin-bottom:22px;}
 .field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;letter-spacing:.02em;}
 .field label .req{color:#c94f4f;font-size:11px;margin-left:6px;}
@@ -87,11 +86,13 @@ footer .foot-links{margin-bottom:18px;display:flex;justify-content:center;gap:22
 footer a:hover{color:#fff;}
 footer .foot-copy{font-size:12px;}
 
-@media(max-width:820px){
-  .line-grid{grid-template-columns:1fr;}
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:36px;}
+  .line-col{position:static;}
 }
 @media(max-width:720px){
   .wrap{padding:0 20px;}
+  .contact-wrap{padding:0 20px;}
   .hero{padding:50px 0 70px;}
   .back-top{position:static;display:inline-block;margin-bottom:20px;}
   .hero h1{margin-top:40px;}
@@ -111,89 +112,87 @@ footer .foot-copy{font-size:12px;}
   </div>
 </section>
 
-<!-- LINE 3 SERVICES -->
-<section class="choice">
-  <div class="wrap">
-    <div class="choice-head">
-      <h2 class="serif">LINEで相談する</h2>
-      <p>3事業それぞれに公式LINEをご用意しています。<br>お子さんの状況に合うサービスを選んで、友だち追加のうえメッセージをお送りください。</p>
+<!-- CONTACT MAIN (form left + LINE cards right) -->
+<section class="contact-main" id="form">
+  <div class="contact-wrap">
+    <div class="contact-grid">
+
+      <!-- FORM COLUMN -->
+      <div class="form-col">
+        <div class="form-head">
+          <div class="eyebrow">CONTACT FORM</div>
+          <h2 class="serif">お問い合わせフォーム</h2>
+          <p>いただいた内容を確認のうえ、担当より折り返しご連絡いたします。<br>どのサービスが合うか迷っている方も、状況を含めてお気軽にお送りください。</p>
+        </div>
+        <form class="form-wrap" action="https://formspree.io/f/xojrzyvr" method="POST">
+          <div class="field">
+            <label for="name">お名前<span class="req">必須</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">メールアドレス<span class="req">必須</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">お電話番号<span class="opt">任意</span></label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="field">
+            <label for="service">ご相談先<span class="req">必須</span></label>
+            <select id="service" name="service" required>
+              <option value="">選択してください</option>
+              <option value="ホッとルーム">ホッとルーム（不登校支援フリースクール）</option>
+              <option value="子ども探究大学">子ども探究大学（探究学習塾）</option>
+              <option value="総合型選抜対策塾">総合型選抜対策塾</option>
+              <option value="どれか迷っている">どのサービスが合うか迷っている</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="child_age">お子さんの学年<span class="opt">任意</span></label>
+            <input type="text" id="child_age" name="child_age" placeholder="例：小学3年生、中学2年生 など">
+          </div>
+          <div class="field">
+            <label for="message">お問い合わせ内容<span class="req">必須</span></label>
+            <textarea id="message" name="message" required placeholder="ご相談内容や、お聞きになりたいことを自由にお書きください。"></textarea>
+          </div>
+          <div class="privacy-note">
+            ご記入いただいた情報は、お問い合わせへの対応のみに利用し、第三者に提供することはありません。担当より2〜3営業日以内にご返信いたします。
+          </div>
+          <button type="submit" class="submit-btn">上記の内容で送信する</button>
+          <p class="form-note">※ このフォームはFormspreeを利用しています。<br>お急ぎの場合は右のLINEからのご連絡がスムーズです。</p>
+        </form>
+      </div>
+
+      <!-- LINE COLUMN -->
+      <aside class="line-col">
+        <div class="line-col-head">
+          <h3 class="serif">LINEで相談する</h3>
+          <p>各サービス専用の公式LINEをご用意しています。すぐにやり取りしたい方はこちらから。</p>
+        </div>
+        <div class="line-stack">
+          <div class="line-card hot">
+            <h4 class="serif">ホッとルーム</h4>
+            <div class="lc-sub">不登校支援フリースクール</div>
+            <a href="https://lin.ee/6KINcnu" target="_blank" rel="noopener" class="line-btn">LINEで相談する</a>
+          </div>
+          <div class="line-card tanq">
+            <h4 class="serif">子ども探究大学</h4>
+            <div class="lc-sub">AIチューターと学ぶ探究学習塾</div>
+            <a href="https://lin.ee/NkIRBGI" target="_blank" rel="noopener" class="line-btn">LINEで体験・見学を予約</a>
+          </div>
+          <div class="line-card kaika">
+            <h4 class="serif">総合型選抜対策塾</h4>
+            <div class="lc-sub">大学受験専門・伴走型サポート</div>
+            <a href="https://lin.ee/o3IL0Vr" target="_blank" rel="noopener" class="line-btn">LINEで無料相談・体験を予約</a>
+          </div>
+        </div>
+      </aside>
+
     </div>
-    <div class="line-grid">
-      <div class="line-card hot">
-        <h3 class="serif">ホッとルーム</h3>
-        <div class="lc-sub">不登校支援フリースクール</div>
-        <p>「学校に行けなくなった」「無理をさせたくない」——そんなお悩みに寄り添います。</p>
-        <a href="https://lin.ee/6KINcnu" target="_blank" rel="noopener" class="line-btn">LINEで相談する</a>
-      </div>
-      <div class="line-card tanq">
-        <h3 class="serif">子ども探究大学</h3>
-        <div class="lc-sub">AIチューターと学ぶ探究学習塾</div>
-        <p>「もっと学びたい」「好きを深めたい」お子さんへ。体験・見学のご予約も。</p>
-        <a href="https://lin.ee/NkIRBGI" target="_blank" rel="noopener" class="line-btn">LINEで体験・見学を予約</a>
-      </div>
-      <div class="line-card kaika">
-        <h3 class="serif">総合型選抜対策塾</h3>
-        <div class="lc-sub">大学受験専門・伴走型サポート</div>
-        <p>志望校が決まっていなくても大丈夫。無料相談・体験も承っています。</p>
-        <a href="https://lin.ee/o3IL0Vr" target="_blank" rel="noopener" class="line-btn">LINEで無料相談・体験を予約</a>
-      </div>
-    </div>
-    <p class="choice-mail-note">
-      <strong>どのサービスが合うか迷っている方は</strong>、下のお問い合わせフォームから、状況を含めてお気軽にご連絡ください。<br>
-      担当より、ご家庭に合った学びの形をご提案いたします。<a href="#form">→ フォームへ</a>
-    </p>
   </div>
 </section>
 
-<!-- FORM -->
-<section class="form-section" id="form">
-  <div class="wrap">
-    <div class="divider"><span>メールフォームで相談する</span></div>
-    <div class="form-head">
-      <div class="eyebrow" style="justify-content:center;">CONTACT FORM</div>
-      <h2 class="serif">お問い合わせフォーム</h2>
-      <p>いただいた内容を確認のうえ、担当より折り返しご連絡いたします。</p>
-    </div>
-    <form class="form-wrap" action="https://formspree.io/f/xojrzyvr" method="POST">
-      <div class="field">
-        <label for="name">お名前<span class="req">必須</span></label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="field">
-        <label for="email">メールアドレス<span class="req">必須</span></label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="field">
-        <label for="phone">お電話番号<span class="opt">任意</span></label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-      <div class="field">
-        <label for="service">ご相談先<span class="req">必須</span></label>
-        <select id="service" name="service" required>
-          <option value="">選択してください</option>
-          <option value="ホッとルーム">ホッとルーム（不登校支援フリースクール）</option>
-          <option value="子ども探究大学">子ども探究大学（探究学習塾）</option>
-          <option value="総合型選抜対策塾">総合型選抜対策塾</option>
-          <option value="どれか迷っている">どのサービスが合うか迷っている</option>
-          <option value="その他">その他</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="child_age">お子さんの学年<span class="opt">任意</span></label>
-        <input type="text" id="child_age" name="child_age" placeholder="例：小学3年生、中学2年生 など">
-      </div>
-      <div class="field">
-        <label for="message">お問い合わせ内容<span class="req">必須</span></label>
-        <textarea id="message" name="message" required placeholder="ご相談内容や、お聞きになりたいことを自由にお書きください。"></textarea>
-      </div>
-      <div class="privacy-note">
-        ご記入いただいた情報は、お問い合わせへの対応のみに利用し、第三者に提供することはありません。担当より2〜3営業日以内にご返信いたします。
-      </div>
-      <button type="submit" class="submit-btn">上記の内容で送信する</button>
-      <p class="form-note">※ このフォームはFormspreeを利用しています。<br>お急ぎの場合はLINEからのご連絡がスムーズです。</p>
-    </form>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
