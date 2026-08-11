@@ -64,6 +64,8 @@ header.s{background:rgba(46,75,55,.97);backdrop-filter:blur(8px);box-shadow:0 4p
 .hero-inner{position:relative;z-index:2;max-width:560px;}
 .hero-photo{position:relative;overflow:hidden;}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:30% center;}
+.hp-imgs{display:flex;width:100%;height:100%;}
+.hp-mobile-extra{display:none;}
 .hero-tag{display:inline-block;font-size:12px;letter-spacing:.14em;color:#fff;background:var(--hot);padding:7px 15px;border-radius:20px;margin-bottom:24px;}
 .hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(28px,3.6vw,44px);line-height:1.45;color:var(--hot-d);font-weight:800;margin-bottom:22px;}
 .hero p{font-size:15px;color:#41504a;margin-bottom:34px;line-height:2;}
@@ -206,6 +208,9 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
 @media(max-width:860px){
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-photo{height:340px;order:-1;}
+  .hp-imgs{height:100%;}
+  .hp-imgs img{flex:1 1 50%;width:50%;object-fit:cover;}
+  .hp-mobile-extra{display:block;object-position:center 22%;}
   .hero-text{padding:110px 22px 56px;}
   .split-grid{grid-template-columns:1fr;gap:30px;}
   .split.rev .split-grid{direction:ltr;}
@@ -274,7 +279,10 @@ footer{background:#141414;color:#8a8880;padding:54px 0 26px;}
     </div>
   </div>
   <div class="hero-photo">
-    <img src="images/hot-hero.jpg" alt="ホッとルームで思い思いに過ごす子どもたち">
+    <div class="hp-imgs">
+      <img src="images/hot-hero.jpg" alt="ホッとルームで思い思いに過ごす子どもたち">
+      <img src="images/hot-family-consult.jpg" alt="保護者・お子さんと代表との相談の様子" class="hp-mobile-extra">
+    </div>
   </div>
 </section>
 
