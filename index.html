@@ -124,6 +124,14 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
   .hero-brands{grid-template-columns:1fr;gap:16px;}
   .hero-brand-card{padding:24px 16px;}
 }
+@media(max-width:640px){
+  /* Mobile: fix hero height so the photo is always visible */
+  .hero{min-height:auto;}
+  .hero-bg{position:absolute;top:0;left:0;right:0;height:280px;}
+  .hero-overlay{position:absolute;top:0;left:0;right:0;height:280px;background:linear-gradient(180deg,rgba(26,24,24,.4) 0%,rgba(26,24,24,.75) 70%,rgba(26,24,24,.95) 100%);}
+  .hero-inner{padding-top:230px;position:relative;}
+  .hero{background:var(--kaika-d);}
+}
 
 
 /* ======= STATEMENT (impact banner) ======= */
