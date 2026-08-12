@@ -16,19 +16,15 @@
   --ink:#1A1818;
   --soft:#6B6560;
   --line:#E5DED4;
-
   --hot:#5E8C6A;       /* ホッとルーム */
   --hot-p:#F0F7F2;
   --hot-d:#3A5E45;
-
   --tanq:#3560A8;      /* 子ども探究大学 */
   --tanq-p:#EAF0FA;
   --tanq-d:#1F3E78;
-
   --kaika:#283C65;     /* 総合型選抜対策「探究塾」 */
   --kaika-p:#E7EBF3;
   --kaika-d:#182640;
-
   --amber:#B8893C;
   --amber-p:#FDF5E7;
 }
@@ -39,7 +35,6 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
 img{display:block;max-width:100%;height:auto;}
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
-
 /* ======= HEADER ======= */
 header{
   position:fixed;top:0;left:0;right:0;z-index:100;
@@ -71,7 +66,6 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .nav-cta.line:hover{background:#05a648;}
 .nav-cta.mail{background:var(--amber);color:#fff;}
 .nav-cta.mail:hover{background:var(--amber-p);color:var(--amber);}
-
 /* ======= HERO ======= */
 .hero{
   position:relative;min-height:100vh;display:flex;align-items:flex-start;justify-content:flex-start;
@@ -79,7 +73,7 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 }
 .hero-bg{position:absolute;inset:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,24,24,.72) 0%,rgba(26,24,24,.5) 40%,rgba(26,24,24,.15) 100%);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,24,24,.55) 0%,rgba(26,24,24,.28) 40%,rgba(26,24,24,.05) 100%);}
 .hero-inner{position:relative;z-index:2;text-align:left;max-width:820px;margin-left:0;padding-top:96px;}
 .hero-logo{color:#fff;margin-bottom:22px;font-weight:800;text-shadow:0 2px 24px rgba(0,0,0,.5);line-height:1.35;letter-spacing:.01em;}
 .hero-line{display:block;margin-bottom:8px;}
@@ -119,7 +113,6 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .hbc-page{display:inline-block;font-family:'Noto Sans JP',sans-serif;font-size:12.5px;font-weight:700;color:#fff;background:var(--amber);padding:3px 12px;border-radius:20px;margin-top:6px;letter-spacing:.06em;}
 .hbc-sub{font-size:14px;color:var(--amber);font-weight:600;margin-bottom:12px;letter-spacing:.03em;}
 .hbc-time{font-size:16px;color:var(--soft);letter-spacing:.02em;font-weight:500;}
-
 @media(max-width:900px){
   .hero-brands{grid-template-columns:1fr;gap:16px;}
   .hero-brand-card{padding:24px 16px;}
@@ -129,11 +122,9 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
   .hero{min-height:auto;padding:0;background:var(--kaika-d);display:block;}
   .hero-bg{position:relative;inset:auto;height:340px;}
   .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;}
-  .hero-overlay{position:absolute;top:0;left:0;right:0;height:340px;background:linear-gradient(180deg,rgba(26,24,24,.25) 0%,rgba(26,24,24,.55) 100%);}
+  .hero-overlay{position:absolute;top:0;left:0;right:0;height:340px;background:linear-gradient(180deg,rgba(26,24,24,.1) 0%,rgba(26,24,24,.35) 100%);}
   .hero-inner{padding:40px 18px 60px;max-width:none;}
 }
-
-
 /* ======= STATEMENT (impact banner) ======= */
 .statement{background:var(--kaika-d);padding:100px 0;text-align:center;position:relative;overflow:hidden;}
 .statement::before{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(184,137,60,.16) 0%,rgba(184,137,60,0) 70%);}
@@ -143,7 +134,6 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .stmt-main span{color:#fff;position:relative;white-space:nowrap;}
 .stmt-main span::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:.4em;background:var(--amber);opacity:.6;z-index:-1;}
 .stmt-sub{position:relative;z-index:2;margin-top:30px;font-size:14px;color:rgba(255,255,255,.75);letter-spacing:.03em;max-width:600px;margin-left:auto;margin-right:auto;line-height:2;}
-
 /* ======= GREETING BAND ======= */
 .greet-band{background:var(--kaika-d);padding:0;}
 .greet-inner{
@@ -161,7 +151,6 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
   .greet-inner{flex-direction:column;text-align:center;gap:18px;padding:30px 22px;}
   .greet-link{width:100%;justify-content:center;}
 }
-
 /* ======= TIMELINE ======= */
 .timeline{background:#fff;padding:80px 0;}
 .tl-head{text-align:center;margin-bottom:52px;}
@@ -170,7 +159,6 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .tl-head .eyebrow{justify-content:center;}
 .tl-head .eyebrow::before,.tl-head .eyebrow::after{content:'';width:28px;height:1px;background:var(--amber);}
 h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:var(--ink);font-weight:700;line-height:1.55;letter-spacing:.02em;}
-
 /* Visual bar */
 .tl-bar{
   display:flex;height:54px;border-radius:4px;overflow:hidden;margin-bottom:36px;
@@ -184,11 +172,9 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .tl-seg.kaika{background:var(--kaika);}
 .tl-seg.gap{background:var(--line);cursor:default;}
 .tl-seg.gap:hover{filter:none;}
-
 /* Hour markers */
 .tl-markers{display:flex;position:relative;margin-bottom:40px;}
 .tl-mark{position:absolute;font-size:11px;color:var(--soft);transform:translateX(-50%);letter-spacing:.02em;}
-
 /* Detail rows */
 .tl-rows{display:flex;flex-direction:column;gap:3px;}
 .tl-row{
@@ -205,7 +191,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .tl-row.gap-row .col-time{color:var(--line);}
 .tl-row.gap-row .col-brand{background:var(--bg);color:var(--soft);font-weight:400;font-size:12px;letter-spacing:.05em;}
 .tl-row.gap-row .col-desc{color:var(--line);}
-
 /* ======= BRANDS ======= */
 .brands{padding:90px 0;background:var(--bg);}
 .brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;}
@@ -245,7 +230,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .tanq .bc-link:hover{background:var(--tanq);color:#fff;}
 .kaika .bc-link{border-color:var(--kaika);color:var(--kaika);}
 .kaika .bc-link:hover{background:var(--kaika);color:#fff;}
-
 /* ======= AI TUTOR SHOWCASE ======= */
 .ai-showcase{background:#fff;padding:90px 0;}
 .ai-head{max-width:680px;text-align:left;}
@@ -256,7 +240,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .ai-cta{margin-top:36px;text-align:center;}
 .ai-cta-btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--tanq);padding:16px 34px;border-radius:3px;transition:.2s;box-shadow:0 6px 20px rgba(53,96,168,.3);}
 .ai-cta-btn:hover{background:var(--tanq-d);transform:translateY(-2px);box-shadow:0 10px 28px rgba(53,96,168,.45);}
-
 /* ======= METHOD ======= */
 .method{background:var(--kaika-d);padding:100px 0;position:relative;overflow:hidden;}
 .method::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,137,60,.14) 0%,rgba(184,137,60,0) 70%);}
@@ -288,12 +271,10 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .method-card.c3 .mc-ja{background:rgba(232,169,174,.18);color:#E8A9AE;}
 .method-card .mc-origin{display:inline-block;font-size:10.5px;letter-spacing:.08em;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);padding:3px 10px;border-radius:20px;margin-bottom:18px;}
 .method-card p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.95;}
-
 /* Rousseau explainer inside METHOD */
 .rousseau{max-width:820px;margin:60px auto 0;padding:36px 40px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-left:4px solid var(--amber);border-radius:6px;position:relative;z-index:2;}
 .rousseau .ru-label{font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,22px);color:var(--amber);font-weight:700;margin-bottom:16px;letter-spacing:.03em;}
 .rousseau p{font-size:14.5px;color:rgba(255,255,255,.9);line-height:2;}
-
 /* ======= CLASSROOM ======= */
 .classroom{background:#fff;padding:90px 0;}
 .cl-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:52px;}
@@ -313,7 +294,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .cl-access p strong{font-weight:700;font-size:14px;}
 .cl-access .map-link{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;color:#fff;background:var(--amber);padding:3px 10px;border-radius:20px;letter-spacing:.06em;margin-left:12px;transition:.2s;vertical-align:middle;}
 .cl-access .map-link:hover{background:#fff;color:var(--kaika);}
-
 /* ======= FOUNDER ======= */
 .founder{background:var(--bg);padding:100px 0;}
 .founder-eyebrow{text-align:center;margin-bottom:28px;}
@@ -344,7 +324,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .founder-career li.fc-sub{padding-left:26px;margin-bottom:5px;}
 .founder-career li.fc-sub::before{left:14px;width:4px;height:4px;background:var(--line);border:1px solid var(--amber);}
 .founder-career .fc-divider{border-top:1px dashed var(--line);margin:16px 0;}
-
 /* ======= FAQ ======= */
 .faq{background:#fff;padding:90px 0;}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:50px;border-top:1px solid var(--line);}
@@ -354,7 +333,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .fq h4{font-family:'Shippori Mincho',serif;font-size:16px;color:var(--ink);margin-bottom:10px;font-weight:600;line-height:1.6;}
 .fq h4::before{content:'Q. ';color:var(--amber);}
 .fq p{font-size:13.5px;color:var(--soft);padding-left:20px;}
-
 /* ======= CTA ======= */
 .cta{background:var(--kaika);padding:90px 0;text-align:center;}
 .cta h2{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,36px);color:#fff;margin-bottom:18px;font-weight:700;}
@@ -370,7 +348,6 @@ h2.hl{font-family:'Shippori Mincho',serif;font-size:clamp(24px,3vw,38px);color:v
 .cta-note{margin-top:32px;font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.9;max-width:520px;margin-left:auto;margin-right:auto;}
 .cta-note a{color:rgba(255,255,255,.85);text-decoration:underline;}
 .cta-note a:hover{color:#fff;}
-
 /* ======= FOOTER ======= */
 footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:48px;}
@@ -381,15 +358,12 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 .foot-col li{font-size:13px;margin-bottom:9px;}
 .foot-col a:hover{color:#fff;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-
 /* ======= REVEAL ======= */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
 .rv.in{opacity:1;transform:none;}
 @media(prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none;}
 }
-
-
 /* ======= RESPONSIVE ======= */
 @media(max-width:1200px){
   .nav-links{display:none;}
@@ -424,7 +398,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
 <noscript><style>.rv{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
-
 <header id="hdr">
   <div class="nav">
     <div class="brand-group">
@@ -454,7 +427,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </header>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"><img src="images/hero-future.jpg" alt="世界を見つめる子どもたち"></div>
@@ -462,7 +434,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   <div class="hero-inner wrap">
     <div class="hero-logo serif"><span class="hero-line hero-line-1">NEXUS新世代教育塾！</span><span class="hero-line hero-line-2">イギリス・アメリカ式の最先端教育。</span><span class="hero-line hero-line-3">意欲全開の探求学習を<span class="hero-mark">オーダーメイド</span>。</span></div>
     <a href="#method" class="hero-detail-btn">アメリカ・イギリス式教育「詳細」 →</a>
-
     <div class="hero-ai-callout">
       <p class="hero-ai-copy serif">当スクールオリジナル！<br>「<span class="hero-ai-hl">AIチューター</span>」と学びを楽しもう！</p>
       <a href="#aitutor" class="hero-ai-btn">AIチューターとは？ →</a>
@@ -490,7 +461,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- GREETING BAND -->
 <section class="greet-band">
   <div class="greet-inner">
@@ -504,7 +474,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     <a href="#founder" class="greet-link">学長あいさつを読む →</a>
   </div>
 </section>
-
 <!-- AI TUTOR SHOWCASE -->
 <section class="ai-showcase" id="aitutor">
   <div class="wrap">
@@ -521,7 +490,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- METHOD -->
 <section class="method" id="method">
   <div class="wrap">
@@ -557,14 +525,12 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <p>アメリカで広く導入される、感情を理解し他者と良い関係を築く力を育てる教育。学力の土台となる「心の健やかさ」を大切にします。</p>
       </div>
     </div>
-
     <div class="rousseau rv" id="rousseau">
       <div class="ru-label">ルソーの思想「自然教育」とは</div>
       <p>ルソーの「自然教育」とは、子どもの成長や個性を尊重し、大人が教え込みすぎず、経験を通して自ら学ばせる教育です。</p>
     </div>
   </div>
 </section>
-
 <!-- TIMELINE -->
 <section class="timeline" id="timeline">
   <div class="wrap">
@@ -573,15 +539,13 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <h2 class="hl serif" style="margin-top:14px;">平日の一日で見るNEXUS</h2>
       <p style="margin-top:14px;color:var(--soft);font-size:14px;">3つのサービスが、一つの教室で一日を通してつながっています。</p>
     </div>
-
     <div class="tl-bar rv" style="position:relative;">
       <div class="tl-seg hot" style="width:38.10%"><span class="seg-label">ホッとルーム</span></div>
       <div class="tl-seg gap" style="width:14.29%"><span style="font-size:10px;color:var(--soft);">準備</span></div>
-      <div class="tl-seg tanq" style="width:33.33%"><span class="seg-label">子ども探究大学（フレックス制）</span></div>
+      <div class="tl-seg tanq" style="width:33.33%"><span class="seg-label">子ども探究大学(フレックス制)</span></div>
       <div class="tl-seg kaika" style="flex:1"><span class="seg-label">探究塾</span></div>
     </div>
     <p style="margin-top:-24px;margin-bottom:36px;font-size:12px;color:var(--soft);">※子ども探究大学は「登校フレックス制」。幼・小学生ブロック15:30〜18:00頃／中・高生向けブロック17:00〜19:30頃の中で、お子さんの都合に合わせて登校いただけます。</p>
-
     <div class="tl-markers rv" style="height:22px;position:relative;margin-bottom:32px;">
       <span class="tl-mark" style="left:0%;transform:none;">10:00</span>
       <span class="tl-mark" style="left:38.10%">14:00</span>
@@ -589,7 +553,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <span class="tl-mark" style="left:85.71%">19:00</span>
       <span class="tl-mark" style="left:100%;transform:translateX(-100%);">20:30</span>
     </div>
-
     <div class="tl-rows rv">
       <div class="tl-row hot">
         <div class="col-time">10:00 — 14:00</div>
@@ -599,12 +562,12 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <div class="tl-row tanq">
         <div class="col-time">15:30 — 18:00頃</div>
         <div class="col-brand">子ども探究大学 幼・小学生ブロック</div>
-        <div class="col-desc">年長〜小学6年生対象（スターター探究コース／ジュニア探究コース）。登校フレックス制のため、この時間帯の中で都合に合わせて登校できます。</div>
+        <div class="col-desc">年長〜小学6年生対象(スターター探究コース／ジュニア探究コース)。登校フレックス制のため、この時間帯の中で都合に合わせて登校できます。</div>
       </div>
       <div class="tl-row tanq">
         <div class="col-time">17:00 — 19:30頃</div>
         <div class="col-brand">子ども探究大学 中・高生向けブロック</div>
-        <div class="col-desc">中学1年生〜高校3年生対象（ミドル探究コース／アドバンス探究コース）。同じくフレックス制で、より専門性の高い探究に取り組みます。</div>
+        <div class="col-desc">中学1年生〜高校3年生対象(ミドル探究コース／アドバンス探究コース)。同じくフレックス制で、より専門性の高い探究に取り組みます。</div>
       </div>
       <div class="tl-row kaika">
         <div class="col-time">19:00 — 20:30</div>
@@ -614,7 +577,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- THREE BRANDS -->
 <section class="brands" id="brands">
   <div class="wrap">
@@ -624,7 +586,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
       <p style="margin-top:14px;color:var(--soft);font-size:14px;max-width:620px;">お子さんの状況や興味に合わせて、単独でも組み合わせてもご利用いただけます。</p>
     </div>
     <div class="brands-grid rv" style="margin-top:52px;">
-
       <div class="brand-card hot">
         <div class="bc-media">
           <img src="images/hot-warm.jpg" alt="ホッとルームで子どもと大人が寄り添う様子">
@@ -642,7 +603,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
           <a href="hottroom.html" class="bc-link serif">詳しく見る →</a>
         </div>
       </div>
-
       <div class="brand-card tanq">
         <div class="bc-media">
           <img src="images/tanq-kids.jpg" alt="異年齢の子どもたちが笑い合う子ども探究大学の授業風景">
@@ -660,7 +620,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
           <a href="kodomotankyu.html" class="bc-link serif">詳しく見る →</a>
         </div>
       </div>
-
       <div class="brand-card kaika">
         <div class="bc-media">
           <img src="images/kaika-evening.jpg" alt="総合型選抜対策「探究塾」の夜の授業風景">
@@ -678,11 +637,9 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
           <a href="sogosenbatsu.html" class="bc-link serif">詳しく見る →</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- CLASSROOM -->
 <span id="access" style="display:block;position:relative;top:-20px;"></span>
 <section class="classroom" id="classroom">
@@ -718,7 +675,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- FOUNDER -->
 <section class="founder" id="founder">
   <div class="wrap">
@@ -738,11 +694,11 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
         <div class="founder-career">
           <div class="fc-heading">経　歴</div>
           <ul>
-            <li>荒川区・江戸川区・練馬区 公立中学校 専任主任教諭（10年）</li>
+            <li>荒川区・江戸川区・練馬区 公立中学校 専任主任教諭(10年)</li>
             <li class="fc-sub">JICA教師海外研修 参加</li>
             <li class="fc-sub">東京都研究開発委員</li>
-            <li>台北日本人学校 専任教諭（3年）</li>
-            <li>立教英国学院 専任教諭（3年）</li>
+            <li>台北日本人学校 専任教諭(3年)</li>
+            <li>立教英国学院 専任教諭(3年)</li>
           </ul>
           <div class="fc-divider"></div>
           <ul>
@@ -774,7 +730,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="wrap">
@@ -810,7 +765,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- CTA -->
 <section class="cta">
   <div class="wrap">
@@ -826,14 +780,13 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <div class="foot-brand">株式会社 NEXUS</div>
-        <div class="foot-brands">ホッとルーム（不登校支援フリースクール）<br>子ども探究大学（探究学習塾）<br>総合型選抜対策「探究塾」（文理対応）</div>
+        <div class="foot-brands">ホッとルーム(不登校支援フリースクール)<br>子ども探究大学(探究学習塾)<br>総合型選抜対策「探究塾」(文理対応)</div>
         <p style="font-size:13px;">文京区本郷 ／ 2026年10月1日 開校予定<br>nexusgroup.daihyou@gmail.com</p>
       </div>
       <div class="foot-col">
@@ -860,7 +813,6 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
     </div>
   </div>
 </footer>
-
 <script>
 const hdr = document.getElementById('hdr');
 window.addEventListener('scroll', () => {
