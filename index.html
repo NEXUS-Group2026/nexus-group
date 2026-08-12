@@ -90,11 +90,11 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
 .hero-mark{position:relative;display:inline-block;}
 .hero-mark::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:.36em;background:var(--amber);opacity:.6;z-index:-1;}
 @media(max-width:640px){
-  /* Mobile: shrink sizes and allow wrapping */
-  .hero-line{margin-bottom:10px;}
-  .hero-line-1{font-size:26px;white-space:nowrap;}
-  .hero-line-2{font-size:19px;line-height:1.5;}
-  .hero-line-3{font-size:22px;line-height:1.5;}
+  /* Mobile: each line fits on one row */
+  .hero-line{margin-bottom:10px;white-space:nowrap;}
+  .hero-line-1{font-size:28px;}
+  .hero-line-2{font-size:21px;}
+  .hero-line-3{font-size:22px;}
 }
 .hero-logo span{position:relative;white-space:nowrap;}
 .hero-logo span::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:.36em;background:var(--amber);opacity:.6;z-index:-1;}
@@ -452,7 +452,7 @@ footer{background:#111018;color:#7a7880;padding:60px 0 28px;}
   <div class="hero-bg"><img src="images/hero-future.jpg" alt="世界を見つめる子どもたち"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner wrap">
-    <div class="hero-logo serif"><span class="hero-line hero-line-1">NEXUSの新世代教育！</span><span class="hero-line hero-line-2">イギリス・アメリカ式の最先端教育をあなたに。</span><span class="hero-line hero-line-3">個性に合わせ、教育を<span class="hero-mark">オーダーメイド</span>。</span></div>
+    <div class="hero-logo serif"><span class="hero-line hero-line-1">NEXUSの新世代教育！</span><span class="hero-line hero-line-2">イギリス・アメリカ式の最先端教育。</span><span class="hero-line hero-line-3">個性に合わせ教育を<span class="hero-mark">オーダーメイド</span>。</span></div>
     <a href="#method" class="hero-detail-btn">アメリカ・イギリス式教育「詳細」 →</a>
 
     <div class="hero-ai-callout">
