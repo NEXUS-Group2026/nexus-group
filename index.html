@@ -125,12 +125,12 @@ header.s{background:rgba(26,24,24,.94);backdrop-filter:blur(8px);box-shadow:0 4p
   .hero-brand-card{padding:24px 16px;}
 }
 @media(max-width:640px){
-  /* Mobile: fix hero height so the photo is always visible */
-  .hero{min-height:auto;}
-  .hero-bg{position:absolute;top:0;left:0;right:0;height:280px;}
-  .hero-overlay{position:absolute;top:0;left:0;right:0;height:280px;background:linear-gradient(180deg,rgba(26,24,24,.4) 0%,rgba(26,24,24,.75) 70%,rgba(26,24,24,.95) 100%);}
-  .hero-inner{padding-top:230px;position:relative;}
-  .hero{background:var(--kaika-d);}
+  /* Mobile: photo as top band, content below in dark bg */
+  .hero{min-height:auto;padding:0;background:var(--kaika-d);display:block;}
+  .hero-bg{position:relative;inset:auto;height:340px;}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;}
+  .hero-overlay{position:absolute;top:0;left:0;right:0;height:340px;background:linear-gradient(180deg,rgba(26,24,24,.25) 0%,rgba(26,24,24,.55) 100%);}
+  .hero-inner{padding:40px 18px 60px;max-width:none;}
 }
 
 
